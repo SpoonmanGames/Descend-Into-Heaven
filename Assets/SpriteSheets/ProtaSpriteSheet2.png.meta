@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: d678350024f0bd049b8cdd516b557bc3
-timeCreated: 1439008472
+timeCreated: 1439022038
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -58,7 +58,7 @@ TextureImporter:
   alignment: 0
   spritePivot: {x: .5, y: .5}
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spritePixelsToUnits: 100
+  spritePixelsToUnits: 216
   alphaIsTransparency: 1
   textureType: 8
   buildTargetSettings: []
@@ -71,8 +71,8 @@ TextureImporter:
         y: 294
         width: 18
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_1
       rect:
@@ -81,8 +81,8 @@ TextureImporter:
         y: 294
         width: 18
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_2
       rect:
@@ -92,7 +92,7 @@ TextureImporter:
         width: 19
         height: 25
       alignment: 9
-      pivot: {x: .239999995, y: 0}
+      pivot: {x: .560000002, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_3
       rect:
@@ -101,8 +101,8 @@ TextureImporter:
         y: 252
         width: 17
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_4
       rect:
@@ -112,7 +112,7 @@ TextureImporter:
         width: 21
         height: 33
       alignment: 9
-      pivot: {x: .25, y: 0}
+      pivot: {x: .550000012, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_5
       rect:
@@ -121,8 +121,8 @@ TextureImporter:
         y: 210
         width: 17
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_6
       rect:
@@ -131,8 +131,8 @@ TextureImporter:
         y: 168
         width: 30
         height: 34
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .219999999, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_7
       rect:
@@ -141,8 +141,8 @@ TextureImporter:
         y: 168
         width: 17
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_8
       rect:
@@ -151,8 +151,8 @@ TextureImporter:
         y: 126
         width: 33
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .200000003, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_9
       rect:
@@ -161,8 +161,8 @@ TextureImporter:
         y: 126
         width: 17
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_10
       rect:
@@ -171,8 +171,8 @@ TextureImporter:
         y: 84
         width: 33
         height: 23
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .200000003, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_11
       rect:
@@ -181,8 +181,8 @@ TextureImporter:
         y: 84
         width: 17
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_12
       rect:
@@ -191,8 +191,8 @@ TextureImporter:
         y: 42
         width: 16
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 9
+      pivot: {x: .400000006, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_13
       rect:
@@ -201,8 +201,8 @@ TextureImporter:
         y: 42
         width: 17
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: ProtaSpriteSheet2_14
       rect:
@@ -211,8 +211,8 @@ TextureImporter:
         y: 0
         width: 17
         height: 24
-      alignment: 6
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
