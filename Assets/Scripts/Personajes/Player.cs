@@ -35,24 +35,26 @@ namespace Player {
 
         [HideInInspector]
         public PlayerState PlayerState = PlayerState.Idle;
+        [HideInInspector]
+        public Rigidbody2D PlayerRigidBody2D;
 
         protected bool _isBeingHurt = false;
         protected string _currentDirection = "right";
         protected Animator _animator;
         protected bool _hasAnimatorComponent;
-        protected Rigidbody2D _rigidBody2D;
+        
 
         void Start() {
             _animator = this.GetComponent<Animator>();
             _hasAnimatorComponent = _animator != null;
             
-            _rigidBody2D = this.GetComponent<Rigidbody2D>();
+            PlayerRigidBody2D = this.GetComponent<Rigidbody2D>();
 
             if (!_hasAnimatorComponent) {
                 Debug.LogError("The Player doesn't have an Animator Component.");
             }
 
-            if (_rigidBody2D == null) {
+            if (PlayerRigidBody2D == null) {
                 Debug.LogError("The Player doesn't have a RigidBody2D Component.");
             }
         }

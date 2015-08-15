@@ -14,7 +14,7 @@ namespace Player {
 
             if (!IsInTransition && !IsAttacking && !IsJumping) {
                 if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                    _rigidBody2D.AddForce(Vector2.up * JumpForce);
+                    PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
                     this.ChangePlayerState(PlayerState.Jumping);
                 } else if (Input.GetKeyDown(KeyCode.A)) {
                     this.ChangePlayerState(PlayerState.Attacking);
