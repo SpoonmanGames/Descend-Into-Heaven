@@ -5,21 +5,23 @@ using Player;
 public class JumpAnimationBehaviour : StateMachineBehaviour {
 
     Rigidbody2D _playerRigidBody;
-    bool _goingUp;
+    bool _isGoingUp;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         _playerRigidBody = animator.GetComponentInParent<ProtaController>().PlayerRigidBody2D;
-        _goingUp = true;
+        _isGoingUp = true;
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {        
-        if (_playerRigidBody.velocity.magnitude < 0.01) {
-            if (_goingUp) {
-                animator.speed *= -1;
+        if (_playerRigidBody.velocity.magnitude < 0.4f) {
+            if (_isGoingUp) {
+                animator.SetFloat("SpeedModificator", -1);
+                _isGoingUp = false;
             } else {
                 animator.SetInteger("State", 0);
+                animator.SetFloat("SpeedModificator", 1);
                 animator.GetComponentInParent<ProtaController>().PlayerState = PlayerState.Idle;
             }
         }

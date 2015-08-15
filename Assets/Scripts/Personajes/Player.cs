@@ -42,6 +42,7 @@ namespace Player {
         protected string _currentDirection = "right";
         protected Animator _animator;
         protected bool _hasAnimatorComponent;
+        protected AudioSource audioSource;
         
 
         void Start() {
@@ -49,6 +50,8 @@ namespace Player {
             _hasAnimatorComponent = _animator != null;
             
             PlayerRigidBody2D = this.GetComponent<Rigidbody2D>();
+
+            audioSource = GetComponent<AudioSource>();
 
             if (!_hasAnimatorComponent) {
                 Debug.LogError("The Player doesn't have an Animator Component.");

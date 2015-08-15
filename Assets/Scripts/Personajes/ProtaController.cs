@@ -7,27 +7,29 @@ namespace Player {
 
         [HideInInspector]
         public bool IsInTransition = false;
+		public AudioClip swordMiss;		
+
 
         void FixedUpdate() {
-
-
-
-            if (!IsInTransition && !IsAttacking && !IsJumping) {
-                if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                    PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
-                    this.ChangePlayerState(PlayerState.Jumping);
-                } else if (Input.GetKeyDown(KeyCode.A)) {
-                    this.ChangePlayerState(PlayerState.Attacking);
-                } else if (Input.GetKey(KeyCode.RightArrow)) {
-                    this.HorizontalMovement("right");
-                } else if (Input.GetKey(KeyCode.LeftArrow)) {
-                    this.HorizontalMovement("left");
+            if (!IsInTransition) {
+                if (!IsAttacking && !IsJumping) {
+                    if (Input.GetKeyDown(KeyCode.UpArrow)) {
+                        PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
+                        this.ChangePlayerState(PlayerState.Jumping);
+                    } else if (Input.GetKeyDown(KeyCode.A)) {
+                        this.ChangePlayerState(PlayerState.Attacking);
+                        audioSource.PlayOneShot(swordMiss, 1F);
+                    } else if (Input.GetKey(KeyCode.RightArrow)) {
+                        this.HorizontalMovement("right");
+                    } else if (Input.GetKey(KeyCode.LeftArrow)) {
+                        this.HorizontalMovement("left");
+                    } else {
+                        this.ChangePlayerState(PlayerState.Idle);
+                    }
                 } else {
-                    this.ChangePlayerState(PlayerState.Idle);
-                }
-            } else {
-                if (IsJumping && Input.GetKeyDown(KeyCode.A)) {
-                    this.ChangePlayerState(PlayerState.Attacking);
+                    if (IsJumping && Input.GetKeyDown(KeyCode.A)) {
+                        this.ChangePlayerState(PlayerState.Attacking);
+                    }
                 }
             }
         }
