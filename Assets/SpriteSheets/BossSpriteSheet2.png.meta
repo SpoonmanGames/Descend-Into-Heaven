@@ -1,15 +1,59 @@
 fileFormatVersion: 2
 guid: 0763452ed0beb6f479a11280c0685940
-timeCreated: 1439012395
+timeCreated: 1439674193
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BossSpriteSheet2_1
-    21300002: BossSpriteSheet2_3
+    21300000: BossSpriteSheetAttack_1
+    21300002: BossSpriteSheetHurt_1
     21300004: BossSpriteSheet2_5
-    21300006: BossSpriteSheet2_6
-    21300008: BossSpriteSheet2_7
-    21300010: BossSpriteSheet2_8
+    21300006: BossSpriteSheetAttack_2
+    21300008: BossSpriteSheetShot_3
+    21300010: BossSpriteSheetHurt_2
+    21300012: BossSpriteSheet2_0
+    21300014: BossSpriteSheetShot_1
+    21300016: BossSpriteSheetDead_1
+    21300018: BossSpriteSheetDead_2
+    21300020: BossSpriteSheet2_10
+    21300022: BossSpriteSheetAttack_3
+    21300024: BossSpriteSheetShot_4
+    21300026: BossSpriteSheetHurt_3
+    21300028: BossSpriteSheetDead_3
+    21300030: BossSpriteSheet2_15
+    21300032: BossSpriteSheetAttack_4
+    21300034: BossSpriteSheetHurt_4
+    21300036: BossSpriteSheetDead_4
+    21300038: BossSpriteSheet2_19
+    21300040: BossSpriteSheetAttack_5
+    21300042: BossSpriteSheetHurt_5
+    21300044: BossSpriteSheetDead_5
+    21300046: BossSpriteSheet2_23
+    21300048: BossSpriteSheetAttack_6
+    21300050: BossSpriteSheetHurt_6
+    21300052: BossSpriteSheetDead_6
+    21300054: BossSpriteSheetDead_7
+    21300056: BossSpriteSheetDead_8
+    21300058: BossSpriteSheetDead_9
+    21300060: BossSpriteSheetDead_10
+    21300062: BossSpriteSheetDead_11
+    21300064: BossSpriteSheetDead_12
+    21300066: BossSpriteSheetDead_13
+    21300068: BossSpriteSheetDead_14
+    21300070: BossSpriteSheetDead_15
+    21300072: BossSpriteSheetDead_16
+    21300074: BossSpriteSheetDead_17
+    21300076: BossSpriteSheetDead_18
+    21300078: BossSpriteSheetDead_19
+    21300080: BossSpriteSheetDead_20
+    21300082: BossSpriteSheetDead_21
+    21300084: BossSpriteSheetDead_22
+    21300086: BossSpriteSheetDead_23
+    21300088: BossSpriteSheetShot_2
+    21300090: BossSpriteSheetShot_5
+    21300092: BossSpriteSheetShot_6
+    21300094: BossSpriteSheetShot_7
+    21300096: BossSpriteSheetShot_8
+    21300098: BossSpriteSheetShot_9
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -55,65 +99,505 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: BossSpriteSheet2_1
+    - name: BossSpriteSheet2_0
       rect:
         serializedVersion: 2
-        x: 2
-        y: 280
-        width: 37
-        height: 49
+        x: 0
+        y: 1288
+        width: 48
+        height: 56
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BossSpriteSheet2_3
+    - name: BossSpriteSheetAttack_1
       rect:
         serializedVersion: 2
-        x: 2
-        y: 224
-        width: 37
-        height: 49
+        x: 48
+        y: 1288
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_1
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1327
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetHurt_1
+      rect:
+        serializedVersion: 2
+        x: 145
+        y: 1288
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_1
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1288
+        width: 48
+        height: 56
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
     - name: BossSpriteSheet2_5
       rect:
         serializedVersion: 2
-        x: 2
+        x: 0
+        y: 1232
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetAttack_2
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1232
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_3
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1293
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetHurt_2
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1232
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_2
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1232
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheet2_10
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1176
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetAttack_3
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1176
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_4
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1276
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetHurt_3
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1176
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_3
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1176
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheet2_15
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1120
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetAttack_4
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1120
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetHurt_4
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1120
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_4
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1120
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheet2_19
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1064
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetAttack_5
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1064
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetHurt_5
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1064
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_5
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1064
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheet2_23
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 1008
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetAttack_6
+      rect:
+        serializedVersion: 2
+        x: 48
+        y: 1008
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetHurt_6
+      rect:
+        serializedVersion: 2
+        x: 144
+        y: 1008
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_6
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 1008
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_7
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 952
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_8
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 896
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_9
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 840
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_10
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 784
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_11
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 728
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_12
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 672
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_13
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 616
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_14
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 560
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_15
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 504
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_16
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 448
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_17
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 392
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_18
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 336
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_19
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 280
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_20
+      rect:
+        serializedVersion: 2
+        x: 192
+        y: 224
+        width: 48
+        height: 56
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetDead_21
+      rect:
+        serializedVersion: 2
+        x: 192
         y: 168
-        width: 37
-        height: 49
+        width: 48
+        height: 56
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BossSpriteSheet2_6
+    - name: BossSpriteSheetDead_22
       rect:
         serializedVersion: 2
-        x: 2
+        x: 192
         y: 112
-        width: 37
-        height: 48
+        width: 48
+        height: 56
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BossSpriteSheet2_7
+    - name: BossSpriteSheetDead_23
       rect:
         serializedVersion: 2
-        x: 2
+        x: 192
         y: 56
-        width: 37
-        height: 48
+        width: 48
+        height: 56
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BossSpriteSheet2_8
+    - name: BossSpriteSheetShot_2
       rect:
         serializedVersion: 2
-        x: 2
-        y: 0
-        width: 37
-        height: 48
-      alignment: 7
-      pivot: {x: .5, y: 0}
+        x: 96
+        y: 1310
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_5
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1259
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_6
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1242
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_7
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1225
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_8
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1208
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BossSpriteSheetShot_9
+      rect:
+        serializedVersion: 2
+        x: 96
+        y: 1191
+        width: 17
+        height: 17
+      alignment: 0
+      pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
   spritePackingTag: 
   userData: 
