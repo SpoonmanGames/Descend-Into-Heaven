@@ -9,11 +9,18 @@ public class DoorController : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D collider) {
         if (!_transition) {
             _transition = true;
+
             SuperMetroidCameraController cameraScript = Camera.main.GetComponent<SuperMetroidCameraController>();
-            float targetPosition = transform.parent.position.x + 2.22f;
-            Vector3 targetVector = new Vector3(targetPosition, 0f, 0);
-            cameraScript.MoveCamera(targetVector, TransitionSpeed);
-            cameraScript.ActivateLimits(targetPosition, targetPosition, 0, 0);
+            GameObject player = GameObject.FindGameObjectWithTag("Player");
+
+            float CameraTargetPosition = transform.parent.position.x + 2.22f;
+            float PlayerTargetPositon = player.transform.position.x + 0.45f;
+
+            Vector3 CameraTargetVector = new Vector3(CameraTargetPosition, transform.parent.position.y, 0);
+            Vector3 PlayerTargetVector = new Vector3(PlayerTargetPositon, player.transform.position.y, 0);
+
+            cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
+            cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition, 0, 0);
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Player;
 
 // This is basically how the Super Metroid camera worked. Whichever direction you moved, the camera would 
 // move in the same direction a multiple of the player's speed. Once the center of the camera moved a 
@@ -315,26 +316,33 @@ public class SuperMetroidCameraController : MonoBehaviour {
 	//  cameraScript.ActivateLimits( 60, 60, 10, 100 );
 	//-----------------------------------------------------------------------------
 
-	public void MoveCamera ( Vector3 targetPosition, float moveSpeed )
+	public void MoveCamera ( Vector3 CameraTargetPosition, Vector3 PlayerTargetPosition, float moveSpeed )
 	{
-		StartCoroutine(MoveToPosition(targetPosition, moveSpeed));
+        StartCoroutine(MoveToPosition(CameraTargetPosition, PlayerTargetPosition, moveSpeed));        
 	}
 
 	// This coroutine disables the player tracking to move to a given position, then turns the player 
 	// tracking back on. You'll likely have to change this method if you're doing pixel perfect stuff.
-	IEnumerator MoveToPosition (Vector3 targetPosition, float moveSpeed )
+	IEnumerator MoveToPosition (Vector3 CameraTargetPosition, Vector3 PlayerTargetPosition, float moveSpeed )
 	{
+        player.GetComponent<ProtaController>().IsInTransition = true;
 		activeTracking = false;
 	
 		//Assumes 2D usage
-		targetPosition.z = transform.position.z;
+		CameraTargetPosition.z = transform.position.z;
+        PlayerTargetPosition.z = player.transform.position.z;
 
-		while (transform.position != targetPosition)
+        //Speed of the player relative to the camera
+        float playerSpeed = ( 0.45f * moveSpeed) / 2.22f;
+
+		while (transform.position != CameraTargetPosition)
 		{
-			transform.position = Vector3.MoveTowards(transform.position, targetPosition, moveSpeed * Time.deltaTime);
+			transform.position = Vector3.MoveTowards(transform.position, CameraTargetPosition, moveSpeed * Time.deltaTime);
+            player.transform.position = Vector3.MoveTowards(player.transform.position, PlayerTargetPosition, playerSpeed * Time.deltaTime);
 			yield return 0;
 		}
 
+        player.GetComponent<ProtaController>().IsInTransition = false;
 		activeTracking = true;
 	}
 	
