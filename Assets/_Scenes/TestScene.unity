@@ -417,7 +417,7 @@ MonoBehaviour:
   Life: 1
   AttackDamage: 1
   WalkingSpeed: 1
-  JumpForce: 200
+  JumpForce: 140
   StateVariableName: State
   IdleAnimatorName: Prota-Idle
   WalkingAnimatorName: Prota-Walk
@@ -807,7 +807,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895416bf643aeff4c843c0b5b72e8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionSpeed: 1
+  TransitionSpeed: 4
 --- !u!61 &2114907388
 BoxCollider2D:
   m_ObjectHideFlags: 0

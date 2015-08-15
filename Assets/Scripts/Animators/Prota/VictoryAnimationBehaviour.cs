@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using Player;
 
 public class VictoryAnimationBehaviour : StateMachineBehaviour {
 
@@ -14,6 +15,7 @@ public class VictoryAnimationBehaviour : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (stateInfo.normalizedTime > 1 && !animator.IsInTransition(layerIndex)) {
             animator.Play("Prota-Victory", layerIndex, repeatTime);
+            animator.GetComponentInParent<ProtaController>().PlayerState = PlayerState.Victory;
         }
 	}
 

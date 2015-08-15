@@ -11,26 +11,19 @@ namespace Player {
 
 
         void FixedUpdate() {
-            if (!IsInTransition) {
-                if (!IsAttacking && !IsJumping) {
-                    if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                        this.ChangePlayerState(PlayerState.Jumping);
-                        PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);                        
-                    } else if (Input.GetKeyDown(KeyCode.A)) {
-                        this.ChangePlayerState(PlayerState.Attacking);
-                        audioSource.PlayOneShot(swordMiss, 1F);
-                    } else if (Input.GetKey(KeyCode.RightArrow)) {
-                        this.HorizontalMovement("right");
-                    } else if (Input.GetKey(KeyCode.LeftArrow)) {
-                        this.HorizontalMovement("left");
-                    } else {
-                        this.ChangePlayerState(PlayerState.Idle);
-                    }
-                } else {
-                    if (IsJumping && Input.GetKeyDown(KeyCode.A)) {
-                        this.ChangePlayerState(PlayerState.Attacking);
-                        audioSource.PlayOneShot(swordMiss, 1F);
-                    }
+            if (!IsInTransition) {                
+                if (!IsJumping && !IsAttacking && Input.GetKeyDown(KeyCode.UpArrow)) {
+                    this.ChangePlayerState(PlayerState.Jumping);
+                    PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
+                } else if (!IsAttacking && Input.GetKeyDown(KeyCode.A)) {
+                    this.ChangePlayerState(PlayerState.Attacking);
+                    audioSource.PlayOneShot(swordMiss, 1F);
+                } else if (!IsAttacking && Input.GetKey(KeyCode.RightArrow)) {
+                    this.HorizontalMovement("right");
+                } else if (!IsAttacking &&  Input.GetKey(KeyCode.LeftArrow)) {
+                    this.HorizontalMovement("left");
+                } else if(!IsJumping && !IsAttacking){
+                    this.ChangePlayerState(PlayerState.Idle);
                 }
             }
         }

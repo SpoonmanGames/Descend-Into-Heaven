@@ -22,6 +22,7 @@ public class JumpAnimationBehaviour : StateMachineBehaviour {
             } else if( _playerRigidBody.velocity.magnitude == 0.0f){
                 animator.SetInteger("State", 0);
                 animator.SetFloat("SpeedModificator", 1);
+                animator.Play("Prota-Idle", layerIndex, 1.0f);
                 animator.GetComponentInParent<ProtaController>().PlayerState = PlayerState.Idle;
             }
         }

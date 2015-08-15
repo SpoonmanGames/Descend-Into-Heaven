@@ -13,6 +13,7 @@ public class AttackAnimationBehaviour : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (stateInfo.normalizedTime > 1 && !animator.IsInTransition(layerIndex)) {
             animator.SetInteger("State", 0);
+            animator.Play("Prota-Idle", layerIndex, 1.0f);
             animator.GetComponentInParent<ProtaController>().PlayerState = PlayerState.Idle;
         }
 	}

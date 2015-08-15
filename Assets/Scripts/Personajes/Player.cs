@@ -100,7 +100,10 @@ namespace Player {
             Vector2 direction;
 
             this.ChangePlayerDirection(directionOfMovement);
-            this.ChangePlayerState(PlayerState.Walking);
+
+            if (!IsJumping) {
+                this.ChangePlayerState(PlayerState.Walking);
+            }
 
             if (directionOfMovement == "right") {
                 direction = Vector2.right;
