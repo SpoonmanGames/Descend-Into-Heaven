@@ -422,8 +422,11 @@ MonoBehaviour:
   IdleAnimatorName: Prota-Idle
   WalkingAnimatorName: Prota-Walk
   AttackingAnimatorName: Prota-Attack
-  FallingAnimatorName: 
-  DeadAnimatorName: 
+  JumpingAnimatorName: Prota-Jumping
+  DeadAnimatorName: Prota-Died
+  VictoryAnimatorName: Prota-Victory
+  PlayerState: 0
+  PlayerRigidBody2D: {fileID: 0}
   IsInTransition: 0
   swordMiss: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
 --- !u!82 &532286723
@@ -573,6 +576,14 @@ Prefab:
     - target: {fileID: 11406842, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
       propertyPath: TransitionSpeed
       value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 434696, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: .00120000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 434696, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: .120399997
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}

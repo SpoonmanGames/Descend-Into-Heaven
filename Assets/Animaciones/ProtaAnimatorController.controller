@@ -14,6 +14,12 @@ AnimatorController:
     m_DefaultInt: 0
     m_DefaultBool: 0
     m_Controller: {fileID: 9100000}
+  - m_Name: SpeedModificator
+    m_Type: 1
+    m_DefaultFloat: 1
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -39,6 +45,39 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repeatTime: .300000012
+--- !u!114 &11411334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 61cb5845f567f9d41b1cbda0db3dd7b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11481684
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c02d91b9ef86d4dbd1b2d5c3c6d9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11482156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9e059cfa76999984e86f21f163f1811d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1101 &110107926
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -279,7 +318,7 @@ AnimatorStateTransition:
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
---- !u!1101 &110169156
+--- !u!1101 &110165000
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -319,10 +358,10 @@ AnimatorStateTransition:
   m_Mute: 0
   m_IsExit: 0
   serializedVersion: 3
-  m_TransitionDuration: .25
+  m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: .571428537
-  m_HasExitTime: 1
+  m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
   m_OrderedInterruption: 1
@@ -394,6 +433,30 @@ AnimatorStateTransition:
   m_TransitionDuration: 0
   m_TransitionOffset: 0
   m_ExitTime: .5
+  m_HasExitTime: 0
+  m_HasFixedDuration: 1
+  m_InterruptionSource: 0
+  m_OrderedInterruption: 1
+  m_CanTransitionToSelf: 1
+--- !u!1101 &110188148
+AnimatorStateTransition:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: 
+  m_Conditions:
+  - m_ConditionMode: 6
+    m_ConditionEvent: State
+    m_EventTreshold: 3
+  m_DstStateMachine: {fileID: 0}
+  m_DstState: {fileID: 110295648}
+  m_Solo: 0
+  m_Mute: 0
+  m_IsExit: 0
+  serializedVersion: 3
+  m_TransitionDuration: 0
+  m_TransitionOffset: 0
+  m_ExitTime: .571428537
   m_HasExitTime: 0
   m_HasFixedDuration: 1
   m_InterruptionSource: 0
@@ -472,7 +535,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 905c1aaae7506db4f9d9c6cd6227f82c, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: SpeedModificator
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1102 &110210704
@@ -510,8 +573,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: 110197204}
   - {fileID: 110171600}
-  - {fileID: 110169156}
-  m_StateMachineBehaviours: []
+  - {fileID: 110165000}
+  m_StateMachineBehaviours:
+  - {fileID: 11411334}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -521,7 +585,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 2acd55cfeddfa954893bd73749fa3c8a, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: SpeedModificator
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1102 &110277748
@@ -561,6 +625,7 @@ AnimatorState:
   - {fileID: 110115154}
   - {fileID: 110164752}
   - {fileID: 110141782}
+  - {fileID: 110188148}
   m_StateMachineBehaviours: []
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
@@ -571,7 +636,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: ac9d5b53b2bfeeb438d88a5cb445c659, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: SpeedModificator
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1102 &110295648
@@ -587,17 +652,18 @@ AnimatorState:
   - {fileID: 110152278}
   - {fileID: 110152410}
   - {fileID: 110129414}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11482156}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_SpeedParameterActive: 0
+  m_SpeedParameterActive: 1
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: ad3cbfe891b11ca488e9e6f39f775b3a, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: SpeedModificator
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1102 &110296990
@@ -613,7 +679,8 @@ AnimatorState:
   - {fileID: 110184344}
   - {fileID: 110188300}
   - {fileID: 110174328}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11481684}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -623,7 +690,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 792b539a247cb184590f78198dd08419, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: SpeedModificator
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1107 &110782122

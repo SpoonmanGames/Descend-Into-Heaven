@@ -19,7 +19,7 @@ public class JumpAnimationBehaviour : StateMachineBehaviour {
             if (_isGoingUp) {
                 animator.SetFloat("SpeedModificator", -1);
                 _isGoingUp = false;
-            } else {
+            } else if( _playerRigidBody.velocity.magnitude == 0.0f){
                 animator.SetInteger("State", 0);
                 animator.SetFloat("SpeedModificator", 1);
                 animator.GetComponentInParent<ProtaController>().PlayerState = PlayerState.Idle;

@@ -14,8 +14,8 @@ namespace Player {
             if (!IsInTransition) {
                 if (!IsAttacking && !IsJumping) {
                     if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                        PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
                         this.ChangePlayerState(PlayerState.Jumping);
+                        PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);                        
                     } else if (Input.GetKeyDown(KeyCode.A)) {
                         this.ChangePlayerState(PlayerState.Attacking);
                         audioSource.PlayOneShot(swordMiss, 1F);
@@ -29,6 +29,7 @@ namespace Player {
                 } else {
                     if (IsJumping && Input.GetKeyDown(KeyCode.A)) {
                         this.ChangePlayerState(PlayerState.Attacking);
+                        audioSource.PlayOneShot(swordMiss, 1F);
                     }
                 }
             }
