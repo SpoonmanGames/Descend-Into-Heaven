@@ -9,29 +9,25 @@ namespace Player {
         public bool IsInTransition = false;
 
         void FixedUpdate() {
-            if (!IsInTransition) {
-                if (!IsAttacking) {
-                    if (Input.GetKeyDown(KeyCode.UpArrow)) {
-                        _rigidBody2D.AddForce(Vector2.up * JumpForce);
-                    } else if (Input.GetKeyDown(KeyCode.A)) {
-                        Debug.Log("Attacking");
-                        this.ChangePlayerState(PlayerState.Attacking);
 
 
-                    } else if (Input.GetKey(KeyCode.RightArrow)) {
-                        this.HorizontalMovement("right");
-                    } else if (Input.GetKey(KeyCode.LeftArrow)) {
-                        this.HorizontalMovement("left");
 
-
-                    } else {
-                        this.ChangePlayerState(PlayerState.Idle);
-                    }
+            if (!IsInTransition && !IsAttacking && !IsJumping) {
+                if (Input.GetKeyDown(KeyCode.UpArrow)) {
+                    _rigidBody2D.AddForce(Vector2.up * JumpForce);
+                    this.ChangePlayerState(PlayerState.Jumping);
+                } else if (Input.GetKeyDown(KeyCode.A)) {
+                    this.ChangePlayerState(PlayerState.Attacking);
+                } else if (Input.GetKey(KeyCode.RightArrow)) {
+                    this.HorizontalMovement("right");
+                } else if (Input.GetKey(KeyCode.LeftArrow)) {
+                    this.HorizontalMovement("left");
                 } else {
-                    AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-                    if (this.HasAnimatorStateEnded_ByName(AttackingAnimatorName)) {
-                        this.ChangePlayerState(PlayerState.Idle);
-                    }
+                    this.ChangePlayerState(PlayerState.Idle);
+                }
+            } else {
+                if (IsJumping && Input.GetKeyDown(KeyCode.A)) {
+                    this.ChangePlayerState(PlayerState.Attacking);
                 }
             }
         }

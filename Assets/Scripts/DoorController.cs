@@ -13,6 +13,16 @@ public class DoorController : MonoBehaviour {
             SuperMetroidCameraController cameraScript = Camera.main.GetComponent<SuperMetroidCameraController>();
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
+            if (player == null) {
+                Debug.LogError("Player not found: Your main Player must have the Tag Player");
+                return;
+            }
+
+            if (cameraScript == null) {
+                Debug.LogError("Camera Script not found, please check if it is active");
+                return;
+            }
+
             float CameraTargetPosition = transform.parent.position.x + 2.22f;
             float PlayerTargetPositon = player.transform.position.x + 0.45f;
 

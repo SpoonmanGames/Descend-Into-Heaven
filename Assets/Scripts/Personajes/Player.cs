@@ -7,8 +7,9 @@ namespace Player {
         Idle,
         Walking,
         Attacking,
-        Falling,
-        Dead
+        Jumping,
+        Dead,
+        Victory
     }
 
 
@@ -28,10 +29,13 @@ namespace Player {
         public string IdleAnimatorName = string.Empty;
         public string WalkingAnimatorName = string.Empty;
         public string AttackingAnimatorName = string.Empty;
-        public string FallingAnimatorName = string.Empty;
+        public string JumpingAnimatorName = string.Empty;
         public string DeadAnimatorName = string.Empty;
+        public string VictoryAnimatorName = string.Empty;
 
-        protected PlayerState _playerState = PlayerState.Idle;
+        [HideInInspector]
+        public PlayerState PlayerState = PlayerState.Idle;
+
         protected bool _isBeingHurt = false;
         protected string _currentDirection = "right";
         protected Animator _animator;
@@ -71,9 +75,9 @@ namespace Player {
         }
 
         protected void ChangePlayerState(PlayerState playerState) {
-            if (_playerState != playerState) {
-                _playerState = playerState;
-                _animator.SetInteger(StateVariableName, (int)_playerState);
+            if (PlayerState != playerState) {
+                PlayerState = playerState;
+                _animator.SetInteger(StateVariableName, (int)PlayerState);
             }
         }
 
@@ -106,10 +110,10 @@ namespace Player {
          * Properties, most of them are Helpers for validations 
          */
 
-        public bool IsIdle { get { return _playerState == PlayerState.Idle; } }
-        public bool IsWalking { get { return _playerState == PlayerState.Walking; } }
-        public bool IsAttacking { get { return _playerState == PlayerState.Attacking; } }
-        public bool IsFalling { get { return _playerState == PlayerState.Falling; } }
-        public bool IsDead { get { return _playerState == PlayerState.Dead; } }        
+        public bool IsIdle { get { return PlayerState == PlayerState.Idle; } }
+        public bool IsWalking { get { return PlayerState == PlayerState.Walking; } }
+        public bool IsAttacking { get { return PlayerState == PlayerState.Attacking; } }
+        public bool IsJumping { get { return PlayerState == PlayerState.Jumping; } }
+        public bool IsDead { get { return PlayerState == PlayerState.Dead; } }        
     }
 }
