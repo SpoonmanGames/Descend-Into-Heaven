@@ -7,6 +7,15 @@ namespace Player {
 
         [HideInInspector]
         public bool IsInTransition = false;
+		public AudioClip swordMiss;
+
+		private AudioSource source;
+
+		void Awake () {
+
+			source = GetComponent<AudioSource>();
+
+		}
 
         void FixedUpdate() {
             if (!IsInTransition) {
@@ -16,7 +25,7 @@ namespace Player {
                     } else if (Input.GetKeyDown(KeyCode.A)) {
                         Debug.Log("Attacking");
                         this.ChangePlayerState(PlayerState.Attacking);
-
+						source.PlayOneShot(swordMiss,1F);
 
                     } else if (Input.GetKey(KeyCode.RightArrow)) {
                         this.HorizontalMovement("right");
