@@ -459,7 +459,7 @@ AnimatorStateTransition:
   m_ExitTime: .571428537
   m_HasExitTime: 0
   m_HasFixedDuration: 1
-  m_InterruptionSource: 0
+  m_InterruptionSource: 2
   m_OrderedInterruption: 1
   m_CanTransitionToSelf: 1
 --- !u!1101 &110188300
@@ -609,7 +609,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 9d7e51dcc4348c4499fcf646d0164697, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: SpeedModificator
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1102 &110286790
