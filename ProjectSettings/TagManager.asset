@@ -8,6 +8,8 @@ TagManager:
   - Plataform2
   - Plataform3
   - Plataform4
+  - Boss
+  - Golem
   layers:
   - Default
   - TransparentFX

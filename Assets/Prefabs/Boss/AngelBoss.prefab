@@ -92,12 +92,21 @@ MonoBehaviour:
   DeadAnimatorName: Boss-Dead
   VictoryAnimatorName: 
   HurtAnimatorName: Boss-Hurt
+  soundIdle: {fileID: 0}
+  soundWalking: {fileID: 0}
+  soundAttacking: {fileID: 0}
+  soundJumping: {fileID: 0}
+  soundDead: {fileID: 0}
+  soundVictory: {fileID: 0}
+  soundHurt: {fileID: 0}
   IsFreeToMove: 1
   PlayerState: 0
   PlayerRigidBody2D: {fileID: 0}
   Velocity: .300000012
   PuntoFinal: .856000006
   PuntoInicial: 1.55299997
+  SpawnBullet: {fileID: 0}
+  Fase: 1
 --- !u!212 &21271424
 SpriteRenderer:
   m_ObjectHideFlags: 1

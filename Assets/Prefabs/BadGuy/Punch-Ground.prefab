@@ -1,72 +1,72 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &149090
+--- !u!1 &169976
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 477910}
-  - 61: {fileID: 6127032}
-  - 114: {fileID: 11495736}
-  - 114: {fileID: 11436644}
+  - 4: {fileID: 418048}
+  - 61: {fileID: 6158764}
+  - 114: {fileID: 11450640}
+  - 114: {fileID: 11432066}
   m_Layer: 0
-  m_Name: Sword-Ground
+  m_Name: Punch-Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &477910
+--- !u!4 &418048
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149090}
+  m_GameObject: {fileID: 169976}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!61 &6127032
+--- !u!61 &6158764
 BoxCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149090}
+  m_GameObject: {fileID: 169976}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .245000005, y: .300000012}
+  m_Offset: {x: -.230223089, y: .301111162}
   serializedVersion: 2
-  m_Size: {x: .241999999, y: .349999994}
---- !u!114 &11436644
+  m_Size: {x: .276813149, y: .072603941}
+--- !u!114 &11432066
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149090}
+  m_GameObject: {fileID: 169976}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 520e42860d2c9484792b2e518f8288f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   lifeTime: 1
---- !u!114 &11495736
+--- !u!114 &11450640
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149090}
+  m_GameObject: {fileID: 169976}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 847fe222537f1224290032046172242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAttackingController: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
+  playerAttackingController: {fileID: 11462450, guid: 122e56d63619fc54488f81ad6bb94b7a,
     type: 2}
 --- !u!1001 &100100000
 Prefab:
@@ -76,28 +76,27 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: m_LocalScale.x
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalScale.y
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: protaController
-      value: 
-      objectReference: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
-        type: 2}
-    - target: {fileID: 0}
-      propertyPath: lifeTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
       propertyPath: playerAttackingController
       value: 
-      objectReference: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
+      objectReference: {fileID: 11462450, guid: 122e56d63619fc54488f81ad6bb94b7a,
         type: 2}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.x
+      value: -.230223089
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.y
+      value: .301111162
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: .276813149
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: .072603941
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 149090}
+  m_RootGameObject: {fileID: 169976}
   m_IsPrefabParent: 1

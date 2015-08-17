@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -26,7 +26,99 @@ AnimatorController:
     m_DefaultWeight: 0
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
+--- !u!114 &11447104
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dafcf49bf91144a9e4bc27a82b9dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 0
+  NextStateName: BadGuyReposo
+  StartingPosition: 1
+  WhenChange: 1
+--- !u!114 &11450630
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 4
+  NextStateName: BadGuyDeath
+  StartingPosition: 0
+  Life: 0
+--- !u!114 &11461626
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dafcf49bf91144a9e4bc27a82b9dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 0
+  NextStateName: BadGuyReposo
+  StartingPosition: 1
+  WhenChange: 1
+--- !u!114 &11488520
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bfa28800d1dd2640b3fcbd1d10945be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisableGravity: 1
+--- !u!114 &11489480
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c02d91b9ef86d4dbd1b2d5c3c6d9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackTriggerCollider: {fileID: 169976, guid: 2526911bde2e2a4458e69cea12eb1ceb,
+    type: 2}
+  SpawTime: .275000006
+  DestroyTime: .725000024
+  OffsetDueDirection: -.456
+--- !u!114 &11492056
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 6
+  NextStateName: BadGuyHurt
+  StartingPosition: 0
+  Life: 0
 --- !u!1101 &110101272
 AnimatorStateTransition:
   m_ObjectHideFlags: 1
@@ -280,7 +372,8 @@ AnimatorState:
   - {fileID: 110194996}
   - {fileID: 110121638}
   - {fileID: 110113648}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11492056}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -303,7 +396,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11488520}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -354,7 +448,9 @@ AnimatorState:
   m_Transitions:
   - {fileID: 110118632}
   - {fileID: 110108068}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11447104}
+  - {fileID: 11489480}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -374,12 +470,14 @@ AnimatorState:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_Name: BadGuyHurt
-  m_Speed: 1
+  m_Speed: .5
   m_CycleOffset: 0
   m_Transitions:
   - {fileID: 110101820}
   - {fileID: 110136848}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11450630}
+  - {fileID: 11461626}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -405,16 +503,16 @@ AnimatorStateMachine:
     m_Position: {x: 288, y: 72, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110292668}
-    m_Position: {x: 300, y: 192, z: 0}
+    m_Position: {x: 288, y: 228, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110246204}
-    m_Position: {x: 48, y: 108, z: 0}
+    m_Position: {x: 12, y: 180, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110268176}
-    m_Position: {x: 312, y: 276, z: 0}
+    m_Position: {x: 288, y: 372, z: 0}
   - serializedVersion: 1
     m_State: {fileID: 110288868}
-    m_Position: {x: 552, y: 120, z: 0}
+    m_Position: {x: 576, y: 180, z: 0}
   m_ChildStateMachines: []
   m_AnyStateTransitions: []
   m_EntryTransitions: []
@@ -423,8 +521,8 @@ AnimatorStateMachine:
       first: {fileID: 110744410}
       second: []
   m_StateMachineBehaviours: []
-  m_AnyStatePosition: {x: 60, y: 276, z: 0}
-  m_EntryPosition: {x: 480, y: -24, z: 0}
+  m_AnyStatePosition: {x: -36, y: 348, z: 0}
+  m_EntryPosition: {x: 312, y: -36, z: 0}
   m_ExitPosition: {x: 800, y: 120, z: 0}
   m_ParentStateMachinePosition: {x: 800, y: 20, z: 0}
   m_DefaultState: {fileID: 110274948}

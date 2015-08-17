@@ -5,10 +5,8 @@ namespace Player {
 
     public class ProtaController : Player {
 
-
         [HideInInspector]
         public bool IsInTransition = false;
-
 
         void FixedUpdate() {
             if (IsFreeToMove && !IsInTransition && !IsDead) {                

@@ -3,7 +3,10 @@ using System.Collections;
 
 public class DisableCollitionsBehaviour : StateMachineBehaviour {
 
+    public bool DisableGravity = true;
+
     Collider2D[] _playerCollider2D;
+    
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
     override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -11,6 +14,11 @@ public class DisableCollitionsBehaviour : StateMachineBehaviour {
         for (int i = 0; i < _playerCollider2D.Length; i++) {
             _playerCollider2D[i].enabled = false;
         }
+
+        if (DisableGravity) {
+            animator.GetComponentInParent<Rigidbody2D>().gravityScale = 0.0f;
+        }
+
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

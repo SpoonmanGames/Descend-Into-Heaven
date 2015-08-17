@@ -13,13 +13,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: SpeedModificator
     m_Type: 1
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -60,6 +60,7 @@ MonoBehaviour:
     type: 2}
   SpawTime: .430000007
   DestroyTime: .85799998
+  OffsetDueDirection: 0
 --- !u!114 &11411334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -71,8 +72,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cb5845f567f9d41b1cbda0db3dd7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  AttackTriggerCollider: {fileID: 171046, guid: 5bf404e2f27a9174ea722c34166d592f,
-    type: 2}
 --- !u!114 &11417752
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -137,6 +136,18 @@ MonoBehaviour:
   NextStateName: Prota-Died
   StartingPosition: 0
   Life: 0
+--- !u!114 &11456482
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9bfa28800d1dd2640b3fcbd1d10945be, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  DisableGravity: 1
 --- !u!114 &11464604
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -200,6 +211,7 @@ MonoBehaviour:
     type: 2}
   SpawTime: .333000004
   DestroyTime: .833999991
+  OffsetDueDirection: .492000014
 --- !u!114 &11482156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -682,7 +694,8 @@ AnimatorState:
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11456482}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

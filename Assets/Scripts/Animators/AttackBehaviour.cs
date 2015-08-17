@@ -9,6 +9,8 @@ public class AttackBehaviour : StateMachineBehaviour {
     public float SpawTime;
     [Range(0, 1)]
     public float DestroyTime;
+    [Space(10)]
+    public float OffsetDueDirection = 0.0f;
 
     private bool _attacking;
     private GameObject _spawnedCollider;
@@ -26,7 +28,7 @@ public class AttackBehaviour : StateMachineBehaviour {
             if (animator.transform.localScale.x > 0) {
                 animatorPosition = animator.transform.position;
             } else {
-                animatorPosition = new Vector3(animator.transform.position.x - 0.492f, animator.transform.position.y, animator.transform.position.z);
+                animatorPosition = new Vector3(animator.transform.position.x - OffsetDueDirection, animator.transform.position.y, animator.transform.position.z);
             }
 
             _attacking = true;

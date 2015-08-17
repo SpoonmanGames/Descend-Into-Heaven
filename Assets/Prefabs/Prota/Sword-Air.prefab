@@ -66,7 +66,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847fe222537f1224290032046172242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  protaController: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+  playerAttackingController: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
+    type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -91,6 +92,11 @@ Prefab:
       propertyPath: lifeTime
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: playerAttackingController
+      value: 
+      objectReference: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 171046}

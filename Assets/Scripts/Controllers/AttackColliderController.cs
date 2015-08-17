@@ -4,12 +4,19 @@ using Player;
 
 public class AttackColliderController : MonoBehaviour {
 
-    public ProtaController protaController;
+    public Player.Player playerAttackingController;
 
     void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Enemy") {            
+        Debug.Log("active");
+        if (other.tag == "Boss") {            
             Boss enemy = other.GetComponentInParent<Boss>();
-            enemy.Hurt(protaController.AttackDamage);
+            enemy.Hurt(playerAttackingController.AttackDamage);
+        } else if (other.tag == "Golem") {
+            BadGuy badGuy = other.GetComponentInParent<BadGuy>();
+            badGuy.Hurt(playerAttackingController.AttackDamage);
+        } else if (other.tag == "Player") {
+            ProtaController prota = other.GetComponentInParent<ProtaController>();
+            prota.Life -= playerAttackingController.AttackDamage;
         }
     }
 }
