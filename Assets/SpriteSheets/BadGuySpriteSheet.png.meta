@@ -1,0 +1,451 @@
+fileFormatVersion: 2
+guid: 43ba8f982a5aec949b0405ca0efdb7f8
+timeCreated: 1439752401
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: BadGuySpriteSheet_0
+    21300002: BadGuySpriteSheet_1
+    21300004: BadGuySpriteSheet_2
+    21300006: BadGuySpriteSheet_3
+    21300008: BadGuySpriteSheet_4
+    21300010: BadGuySpriteSheet_5
+    21300012: BadGuySpriteSheet_6
+    21300014: BadGuySpriteSheet_7
+    21300016: BadGuySpriteSheet_8
+    21300018: BadGuySpriteSheet_9
+    21300020: BadGuySpriteSheet_10
+    21300022: BadGuySpriteSheet_11
+    21300024: BadGuySpriteSheet_12
+    21300026: BadGuySpriteSheet_13
+    21300028: BadGuySpriteSheet_14
+    21300030: BadGuySpriteSheet_15
+    21300032: BadGuySpriteSheet_16
+    21300034: BadGuySpriteSheet_17
+    21300036: BadGuySpriteSheet_18
+    21300038: BadGuySpriteSheet_19
+    21300040: BadGuySpriteSheet_20
+    21300042: BadGuySpriteSheet_21
+    21300044: BadGuySpriteSheet_22
+    21300046: BadGuySpriteSheet_23
+    21300048: BadGuySpriteSheet_24
+    21300050: BadGuySpriteSheet_25
+    21300052: BadGuySpriteSheet_26
+    21300054: BadGuySpriteSheet_27
+    21300056: BadGuySpriteSheet_28
+    21300058: BadGuySpriteSheet_29
+    21300060: BadGuySpriteSheet_30
+    21300062: BadGuySpriteSheet_31
+    21300064: BadGuySpriteSheet_32
+    21300066: BadGuySpriteSheet_33
+    21300068: BadGuySpriteSheet_34
+    21300070: BadGuySpriteSheet_35
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 216
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: BadGuySpriteSheet_0
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 672
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_1
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 672
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_2
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 672
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_3
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 672
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_4
+      rect:
+        serializedVersion: 2
+        x: 215
+        y: 672
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_5
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 630
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_6
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 630
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_7
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 630
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_8
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 588
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_9
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 588
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_10
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 588
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_11
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 546
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_12
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 546
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_13
+      rect:
+        serializedVersion: 2
+        x: 151
+        y: 546
+        width: 39
+        height: 36
+      alignment: 9
+      pivot: {x: .699999988, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_14
+      rect:
+        serializedVersion: 2
+        x: 71
+        y: 504
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_15
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 504
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_16
+      rect:
+        serializedVersion: 2
+        x: 148
+        y: 504
+        width: 42
+        height: 36
+      alignment: 9
+      pivot: {x: .699999988, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_17
+      rect:
+        serializedVersion: 2
+        x: 73
+        y: 462
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_18
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 462
+        width: 23
+        height: 36
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_19
+      rect:
+        serializedVersion: 2
+        x: 146
+        y: 462
+        width: 44
+        height: 36
+      alignment: 9
+      pivot: {x: .75, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_20
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 420
+        width: 28
+        height: 35
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_21
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 420
+        width: 38
+        height: 36
+      alignment: 9
+      pivot: {x: .699999988, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_22
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 378
+        width: 22
+        height: 34
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_23
+      rect:
+        serializedVersion: 2
+        x: 152
+        y: 378
+        width: 38
+        height: 36
+      alignment: 9
+      pivot: {x: .699999988, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_24
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 336
+        width: 20
+        height: 32
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_25
+      rect:
+        serializedVersion: 2
+        x: 162
+        y: 336
+        width: 28
+        height: 36
+      alignment: 9
+      pivot: {x: .600000024, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_26
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 294
+        width: 20
+        height: 26
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_27
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 294
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_28
+      rect:
+        serializedVersion: 2
+        x: 119
+        y: 252
+        width: 21
+        height: 20
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_29
+      rect:
+        serializedVersion: 2
+        x: 169
+        y: 252
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_30
+      rect:
+        serializedVersion: 2
+        x: 120
+        y: 210
+        width: 20
+        height: 14
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_31
+      rect:
+        serializedVersion: 2
+        x: 121
+        y: 168
+        width: 18
+        height: 11
+      alignment: 7
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_32
+      rect:
+        serializedVersion: 2
+        x: 122
+        y: 126
+        width: 15
+        height: 8
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_33
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 84
+        width: 14
+        height: 5
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_34
+      rect:
+        serializedVersion: 2
+        x: 126
+        y: 42
+        width: 8
+        height: 5
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuySpriteSheet_35
+      rect:
+        serializedVersion: 2
+        x: 127
+        y: 0
+        width: 6
+        height: 3
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
