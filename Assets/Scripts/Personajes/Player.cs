@@ -48,7 +48,6 @@ namespace Player {
         protected bool _hasAnimatorComponent;
         protected AudioSource audioSource;
 
-
         virtual protected void Start() {
             _animator = this.GetComponent<Animator>();
             _hasAnimatorComponent = _animator != null;
@@ -58,11 +57,11 @@ namespace Player {
             audioSource = GetComponent<AudioSource>();
 
             if (!_hasAnimatorComponent) {
-                Debug.LogError("The Player doesn't have an Animator Component.");
+                Debug.LogWarning("The Player doesn't have an Animator Component.");
             }
 
             if (PlayerRigidBody2D == null) {
-                Debug.LogError("The Player doesn't have a RigidBody2D Component.");
+                Debug.LogWarning("The Player doesn't have a RigidBody2D Component.");
             }
         }
 

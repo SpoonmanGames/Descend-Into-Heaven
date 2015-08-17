@@ -207,6 +207,27 @@ SpriteRenderer:
   m_SortingOrder: -2
   m_Sprite: {fileID: 21300004, guid: 25b1b02446ecd1f41b24db05520d1d2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &427518247 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+  m_PrefabInternal: {fileID: 1578798192}
+--- !u!114 &427518250
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 427518247}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934fff840a3545243a85fb07845296c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "Da\xF1o": 0
+  Tiempo: 1
+  DestruirAlTerminar: 0
+  PlayerController: {fileID: 0}
+  Direccion: -1
+  TargetPosition: {x: 0, y: 0}
 --- !u!1001 &472836478
 Prefab:
   m_ObjectHideFlags: 0
@@ -216,7 +237,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454518, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .0786999986
+      value: -.0786999986
       objectReference: {fileID: 0}
     - target: {fileID: 454518, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -257,6 +278,10 @@ Prefab:
     - target: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_Name
       value: MediumStarsPlataform-2
+      objectReference: {fileID: 0}
+    - target: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+      propertyPath: m_TagString
+      value: Plataform2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
@@ -423,6 +448,27 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300002, guid: 25b1b02446ecd1f41b24db05520d1d2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1084277231 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+  m_PrefabInternal: {fileID: 2111859040}
+--- !u!114 &1084277234
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084277231}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934fff840a3545243a85fb07845296c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "Da\xF1o": 0
+  Tiempo: 1
+  DestruirAlTerminar: 0
+  PlayerController: {fileID: 0}
+  Direccion: -1
+  TargetPosition: {x: 0, y: 0}
 --- !u!1 &1262562772
 GameObject:
   m_ObjectHideFlags: 0
@@ -464,6 +510,27 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!1 &1382634824 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+  m_PrefabInternal: {fileID: 472836478}
+--- !u!114 &1382634827
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1382634824}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934fff840a3545243a85fb07845296c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "Da\xF1o": 0
+  Tiempo: 1
+  DestruirAlTerminar: 0
+  PlayerController: {fileID: 0}
+  Direccion: -1
+  TargetPosition: {x: 0, y: 0}
 --- !u!4 &1453841226 stripped
 Transform:
   m_PrefabParentObject: {fileID: 454518, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
@@ -481,7 +548,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454518, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.0786999986
+      value: -.235300004
       objectReference: {fileID: 0}
     - target: {fileID: 454518, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -514,6 +581,10 @@ Prefab:
     - target: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_Name
       value: MediumStarsPlataform-1
+      objectReference: {fileID: 0}
+    - target: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+      propertyPath: m_TagString
+      value: Plataform1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
@@ -569,9 +640,34 @@ Prefab:
       propertyPath: m_Name
       value: MediumStarsPlataform-4
       objectReference: {fileID: 0}
+    - target: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+      propertyPath: m_TagString
+      value: Plataform4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1603429507 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+  m_PrefabInternal: {fileID: 1561857137}
+--- !u!114 &1603429510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1603429507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 934fff840a3545243a85fb07845296c2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  "Da\xF1o": 0
+  Tiempo: 1
+  DestruirAlTerminar: 0
+  PlayerController: {fileID: 0}
+  Direccion: -1
+  TargetPosition: {x: 0, y: 0}
 --- !u!1001 &1757544116
 Prefab:
   m_ObjectHideFlags: 0
@@ -699,6 +795,10 @@ Prefab:
       propertyPath: JumpForce
       value: 160
       objectReference: {fileID: 0}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: jump
+      value: 
+      objectReference: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0
@@ -711,7 +811,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 454518, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -.235300004
+      value: .0786999986
       objectReference: {fileID: 0}
     - target: {fileID: 454518, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_LocalPosition.y
@@ -752,6 +852,10 @@ Prefab:
     - target: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
       propertyPath: m_Name
       value: MediumStarsPlataform-3
+      objectReference: {fileID: 0}
+    - target: {fileID: 197302, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}
+      propertyPath: m_TagString
+      value: Plataform3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34b9d33c294663d43a1d0770847693ff, type: 2}

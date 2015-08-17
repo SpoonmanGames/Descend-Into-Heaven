@@ -8,8 +8,6 @@ public class BulletController : MonoBehaviour {
     public bool DestruirAlTerminar = false;
     
     [HideInInspector]
-    public Player.Player PlayerController;
-    [HideInInspector]
     public float Direccion = -1;
     [HideInInspector]
     public Vector2 TargetPosition;
@@ -17,7 +15,7 @@ public class BulletController : MonoBehaviour {
     private float _velocidadX;
     private float _velocidadY;
 
-    void Start() {
+    public void SetVelocity() {
         _velocidadX = (this.transform.position.x - TargetPosition.x) / Tiempo;
         _velocidadY = (this.transform.position.y - TargetPosition.y) / Tiempo;
 
@@ -27,19 +25,24 @@ public class BulletController : MonoBehaviour {
         }
     }
 
+    void Start() {
+        SetVelocity();
+    }
+
     void LateUpdate(){
-        Vector3 newPosition;
+        Vector2 actualPosition = new Vector2(this.transform.position.x, this.transform.position.y);
 
-        newPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
-        newPosition += new Vector3(_velocidadX * Time.deltaTime * Direccion, _velocidadY * Time.deltaTime * Direccion, 0.0f);
+        if (actualPosition != TargetPosition) {
+            Vector3 newPosition;
 
-        this.transform.position = newPosition;
-    }
+            newPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
+            newPosition += new Vector3(_velocidadX * Time.deltaTime * Direccion, _velocidadY * Time.deltaTime * Direccion, 0.0f);
 
-    void OnTriggerEnter2D(Collider2D other) {
-        if (other.tag == "Player") {
-            PlayerController.Life--;
+            this.transform.position = newPosition;
+        } else {
+            if (DestruirAlTerminar) {
+                Destroy(this.gameObject);
+            }
         }
-    }
-    
+    }    
 }
