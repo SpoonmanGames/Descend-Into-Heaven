@@ -7,9 +7,7 @@ public class BulletController : MonoBehaviour {
     public float Tiempo = 1;
     public bool DestruirAlTerminar = false;
     
-    [HideInInspector]
-    public float Direccion = -1;
-    [HideInInspector]
+    public float Direccion = -1;    
     public Vector2 TargetPosition;
 
     private float _velocidadX;
@@ -30,9 +28,7 @@ public class BulletController : MonoBehaviour {
     }
 
     void LateUpdate(){
-        Vector2 actualPosition = new Vector2(this.transform.position.x, this.transform.position.y);
-
-        if (actualPosition != TargetPosition) {
+        if (!IsOnDestiny()) {
             Vector3 newPosition;
 
             newPosition = new Vector3(this.transform.position.x, this.transform.position.y, this.transform.position.z);
@@ -40,9 +36,26 @@ public class BulletController : MonoBehaviour {
 
             this.transform.position = newPosition;
         } else {
+            this.transform.position = TargetPosition;
             if (DestruirAlTerminar) {
                 Destroy(this.gameObject);
             }
         }
-    }    
+    }
+
+    bool IsOnDestiny() {
+        Vector2 actualPosition = new Vector2(this.transform.position.x, this.transform.position.y);
+
+        if (Direccion == -1) {
+            if (actualPosition.x <= TargetPosition.x && actualPosition.y <= TargetPosition.y) {
+                return true;
+            }
+        } else {
+            if (actualPosition.x >= TargetPosition.x && actualPosition.y >= TargetPosition.y) {
+                return true;
+            }
+        }
+
+        return false;
+    }
 }
