@@ -60,7 +60,7 @@ MonoBehaviour:
     type: 2}
   SpawTime: .430000007
   DestroyTime: .85799998
-  OffsetDueDirection: 0
+  OffsetDueDirection: .492000014
 --- !u!114 &11411334
 MonoBehaviour:
   m_ObjectHideFlags: 1
