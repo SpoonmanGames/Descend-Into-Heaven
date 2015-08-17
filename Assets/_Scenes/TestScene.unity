@@ -913,6 +913,10 @@ Prefab:
       propertyPath: _protaController
       value: 
       objectReference: {fileID: 532286717}
+    - target: {fileID: 11462450, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
+      propertyPath: RangeOfAttack
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
   m_IsPrefabParent: 0

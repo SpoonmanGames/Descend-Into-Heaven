@@ -48,7 +48,14 @@ namespace Player {
                         _delayToAttackCounter += Time.deltaTime;
 
                         if (_delayToAttackCounter >= DelayToAttack) {
-                            this.ChangePlayerState(PlayerState.Attacking);
+                            if (!IsAttacking && !IsHurt && this.transform.position.x > _protaController.transform.position.x) {
+                                this.ChangePlayerDirection("left");
+                                this.ChangePlayerState(PlayerState.Attacking);
+                            } else if (!IsAttacking && !IsHurt) {
+                                this.ChangePlayerDirection("right");
+                                this.ChangePlayerState(PlayerState.Attacking);
+                            }
+                            
                             _delayToAttackCounter = 0.0f;
                         }
                     } else  if (!IsAttacking && !IsHurt 
