@@ -506,7 +506,7 @@ MonoBehaviour:
   PlayerController: {fileID: 52714971}
   BossController: {fileID: 272839439}
   endSnapshot: {fileID: 24571144, guid: 9a7732bdb34eb524990b955784e59363, type: 2}
-  victoryAudio: {fileID: 8300000, guid: cfd5635b769c6f04c82b0e1751b2d328, type: 3}
+  victoryAudio: {fileID: 8300000, guid: 2ec9deb9e2a3e874bb0dd281c2319490, type: 3}
   bpm: 150
   endLoopSource: {fileID: 1262562775}
 --- !u!4 &1262562774
@@ -531,7 +531,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24352344, guid: 9a7732bdb34eb524990b955784e59363,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: cfd5635b769c6f04c82b0e1751b2d328, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -639,7 +639,7 @@ AudioSource:
     type: 2}
   m_audioClip: {fileID: 8300000, guid: a62e0de4081614649a25815314838e9d, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 1
+  m_Volume: .879999995
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -905,6 +905,10 @@ Prefab:
       value: 
       objectReference: {fileID: 24310168, guid: 9a7732bdb34eb524990b955784e59363,
         type: 2}
+    - target: {fileID: 11425528, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
+      propertyPath: soundDead
+      value: 
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
   m_IsPrefabParent: 0
