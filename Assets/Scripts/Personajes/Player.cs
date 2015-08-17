@@ -9,7 +9,8 @@ namespace Player {
         Attacking,
         Jumping,
         Dead,
-        Victory
+        Victory,
+        Hurt
     }
 
 
@@ -32,7 +33,10 @@ namespace Player {
         public string JumpingAnimatorName = string.Empty;
         public string DeadAnimatorName = string.Empty;
         public string VictoryAnimatorName = string.Empty;
+        public string HurtAnimatorName = string.Empty;
 
+        [HideInInspector]
+        public bool IsFreeToMove = true;
         [HideInInspector]
         public PlayerState PlayerState = PlayerState.Idle;
         [HideInInspector]
@@ -43,9 +47,9 @@ namespace Player {
         protected Animator _animator;
         protected bool _hasAnimatorComponent;
         protected AudioSource audioSource;
-        
 
-        void Start() {
+
+        virtual protected void Start() {
             _animator = this.GetComponent<Animator>();
             _hasAnimatorComponent = _animator != null;
             
@@ -62,24 +66,17 @@ namespace Player {
             }
         }
 
+        void Update() {            
+            if (Life <= 0 && !IsDead) {
+                ChangePlayerState(PlayerState.Dead);
+            }
+        }
+
         /*
          * Methods
          */
 
-        protected bool HasAnimatorStateEnded_ByName(string animatorName) {
-            if (animatorName != string.Empty) {
-                AnimatorStateInfo stateInfo = _animator.GetCurrentAnimatorStateInfo(0);
-
-                return stateInfo.IsName(animatorName) && stateInfo.normalizedTime > 1 && !_animator.IsInTransition(0);
-            }
-
-            Debug.LogError("The Animator State Name is Empty, please write the exact name of the Animator State that you will use.");
-            Debug.LogError("Returning true for safety.");
-
-            return true;
-        }
-
-        protected void ChangePlayerState(PlayerState playerState) {
+        public void ChangePlayerState(PlayerState playerState) {
             if (PlayerState != playerState) {
                 PlayerState = playerState;
                 _animator.SetInteger(StateVariableName, (int)PlayerState);
@@ -122,6 +119,7 @@ namespace Player {
         public bool IsWalking { get { return PlayerState == PlayerState.Walking; } }
         public bool IsAttacking { get { return PlayerState == PlayerState.Attacking; } }
         public bool IsJumping { get { return PlayerState == PlayerState.Jumping; } }
-        public bool IsDead { get { return PlayerState == PlayerState.Dead; } }        
+        public bool IsDead { get { return PlayerState == PlayerState.Dead; } }
+        public bool IsHurt { get { return PlayerState == PlayerState.Hurt; } }
     }
 }
