@@ -86,7 +86,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24310168, guid: 9a7732bdb34eb524990b955784e59363,
     type: 2}
-  m_audioClip: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+  m_audioClip: {fileID: 0}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -186,11 +186,16 @@ MonoBehaviour:
   DeadAnimatorName: Prota-Died
   VictoryAnimatorName: Prota-Victory
   HurtAnimatorName: 
+  soundIdle: {fileID: 0}
+  soundWalking: {fileID: 0}
+  soundAttacking: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+  soundJumping: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
+  soundDead: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
+  soundVictory: {fileID: 0}
+  soundHurt: {fileID: 0}
   IsFreeToMove: 1
   PlayerState: 0
   PlayerRigidBody2D: {fileID: 0}
-  swordMiss: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
-  jump: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
   IsInTransition: 0
 --- !u!212 &21253300
 SpriteRenderer:
@@ -224,7 +229,23 @@ Prefab:
   serializedVersion: 2
   m_Modification:
     m_TransformParent: {fileID: 0}
-    m_Modifications: []
+    m_Modifications:
+    - target: {fileID: 0}
+      propertyPath: m_audioClip
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: soundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 0}
+      propertyPath: soundJumping
+      value: 
+      objectReference: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
+    - target: {fileID: 0}
+      propertyPath: soundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 145990}
