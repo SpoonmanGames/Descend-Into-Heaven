@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -49,6 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfa28800d1dd2640b3fcbd1d10945be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisableGravity: 0
 --- !u!114 &11436528
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,6 +89,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9bfa28800d1dd2640b3fcbd1d10945be, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DisableGravity: 0
 --- !u!114 &11446402
 MonoBehaviour:
   m_ObjectHideFlags: 1

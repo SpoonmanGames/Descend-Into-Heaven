@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
 
 namespace Player {
     public class Boss : Player {
@@ -25,21 +26,24 @@ namespace Player {
         private float _waitTimerLimit = 1.0f;
 
         private int _roundCounter = 0;
+        private int _waveCounter = 0;
+        private List<int> holeList = new List<int>();
 
         private Vector2 _spawnPosition;
         private bool _isOutofScene = false;
-        private bool _isMoningIntoTheScene = false;
+        private bool _isMovingIntoTheScene = false;
 
         public void Hurt(int damage) {            
             Life -= damage;
             Fase++;
             _isOutofScene = false;
-            _isMoningIntoTheScene = false;
+            _isMovingIntoTheScene = false;
             ChangePlayerState(PlayerState.Hurt);
         }
 
         override protected void Start() {
             base.Start();
+            this._currentDirection = "left";
             _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();            
         }
 
@@ -68,7 +72,9 @@ namespace Player {
                         if (!_isOutofScene) {
                             _isOutofScene = MoveAroundTheScene(-1, 1.0f, -1.444f);
                         }
-                        LateUpdateFase3();
+                        if (_isOutofScene) {
+                            LateUpdateFase3();
+                        }   
                         break;
                     case 4:
                         LateUpdateFase4();
@@ -127,11 +133,11 @@ namespace Player {
 
                 if (_attackTimer >= _attackTimerLimit + 1.0f) {
                     if (_roundCounter == 0) {
-                        HorizontalHoleShot(-1, 2);
+                        HorizontalHoleShot(-1, 1.0f, 0.8661139f, 0.4131139f, 5, 2);
                     } else if (_roundCounter == 1) {
                         VerticalHoleShot(-1, 1);
                     } else if (_roundCounter == 2) {
-                        HorizontalHoleShot(1, 1);
+                        HorizontalHoleShot(1, 1.0f, 0.8661139f, 0.4131139f, 5, 1);
                     } else if (_roundCounter == 3) {
                         VerticalHoleShot(1, 2);
                     }
@@ -139,25 +145,26 @@ namespace Player {
                     _roundCounter++;
                     _roundCounter %= 4;
 
-                    if (_roundCounter == 0 && !_isMoningIntoTheScene) {
-                        this.ChangePlayerDirection("left");
+                    if (_roundCounter == 0 && !_isMovingIntoTheScene) {
+                        this.ChangePlayerDirection("right");
                         this.transform.position = new Vector3(-1.444f, -0.209f, this.transform.position.z);
-                        _isMoningIntoTheScene = true;
+                        _isMovingIntoTheScene = true;
                     }
 
                     _attackTimer = 0.0f;
                 }
             }
 
-            if (_isMoningIntoTheScene) {
+            if (_isMovingIntoTheScene) {
                 MoveAroundTheScene(1, 1.0f, -0.91f);
             }
         }
 
-        void HorizontalHoleShot(int direction, int hole) {
+        void HorizontalHoleShot(int direction, float time, float initialY, float gap, int numberfShots, params int[] holes) {
             float initialX;
             float finalX;
             float fixedY;
+            bool dontSpawn = false;
 
             if (direction == -1) {
                 initialX = 1.256f;
@@ -167,13 +174,25 @@ namespace Player {
                 finalX = 1.256f;
             }
 
-            for (int i = 0; i < 5; i++) {
-                fixedY = 0.8661139f - i * 0.4131139f;
+            for (int i = 0; i < numberfShots; i++) {
+                fixedY = initialY - i * gap;
 
-                if (i != hole) {
+                for (int j = 0; j < holes.Length; j++) {
+                    if (holes[j] == i) {
+                        dontSpawn = true;
+                        break;
+                    }   
+                }
+
+                if (!dontSpawn) {
                     SpawnBullet.GetComponent<BulletController>().Direccion = direction;
+                    SpawnBullet.GetComponent<BulletController>().Tiempo = time;
+                    SpawnBullet.GetComponent<DestroyByTime>().lifeTime = 1 + time;
                     SpawnBullet.GetComponent<BulletController>().TargetPosition = new Vector2(finalX, fixedY);
+                    SpawnBullet.GetComponent<BulletController>().SetVelocity();
                     SpawnBulletInHand(initialX, fixedY);
+                } else {
+                    dontSpawn = false;
                 }
             }
         }
@@ -204,6 +223,93 @@ namespace Player {
 
         void LateUpdateFase3() {
 
+            _waitTimer += Time.deltaTime;
+
+            if (_waitTimer >= _waitTimerLimit) {
+                if (!_isMovingIntoTheScene) {
+                    this.ChangePlayerDirection("left");
+                    this.transform.position = new Vector3(1.553f, 0.264f, this.transform.position.z);
+                    _isMovingIntoTheScene = true;
+                    _roundCounter = 0;
+                }
+            }
+
+            if (_isMovingIntoTheScene) {
+                if (MoveAroundTheScene(-1, 1.0f, 0.839f)) {
+                    _attackTimer += Time.deltaTime;
+
+                    if(_attackTimer >= _attackTimerLimit){
+                        if (_waveCounter == 0) {
+                            holeList.Clear();
+                            holeList.Add(7);
+                            holeList.Add(8);
+                        } else if (_waveCounter == 1) {
+                            holeList.Clear();
+                            holeList.Add(5);
+                            holeList.Add(6);
+                            holeList.Add(7);
+                        } else if (_waveCounter == 2) {
+                            holeList.Clear();
+                            holeList.Add(7);
+                            holeList.Add(8);
+                        } else if (_waveCounter == 3) {
+                            holeList.Clear();
+                            holeList.Add(5);
+                            holeList.Add(6);
+                            holeList.Add(7);
+                        } else if (_waveCounter == 4) {
+                            holeList.Clear();
+                            holeList.Add(3);
+                            holeList.Add(4);
+                        } else if (_waveCounter == 5) {
+                            holeList.Clear();
+                            holeList.Add(5);
+                            holeList.Add(6);
+                            holeList.Add(7);
+                        } else if (_waveCounter == 6) {
+                            holeList.Clear();
+                            holeList.Add(7);
+                            holeList.Add(8);
+                        } else if (_waveCounter == 7) {
+                            holeList.Clear();
+                            holeList.Add(5);
+                            holeList.Add(6);
+                            holeList.Add(7);
+                        } else if (_waveCounter == 8) {
+                            holeList.Clear();
+                            holeList.Add(3);
+                            holeList.Add(4);
+                        } else if (_waveCounter == 9) {
+                            holeList.Clear();
+                            holeList.Add(0);
+                            holeList.Add(1);
+                            holeList.Add(2);
+                            holeList.Add(3);
+                        }
+
+                        HorizontalHoleShot(
+                                -1,
+                                0.6f,
+                                0.8661139f,
+                                0.4131139f / 2,
+                                13,
+                                holeList.ToArray()
+                            );
+
+                        _roundCounter++;
+                        _attackTimer = 0.7f;
+
+                        if (_roundCounter % 7 == 0) {
+                            _waveCounter++;
+
+                            if (_waveCounter % 10 == 0) {
+                                _waveCounter = 0;
+                                _attackTimer = 0.0f;
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         void LateUpdateFase4() {

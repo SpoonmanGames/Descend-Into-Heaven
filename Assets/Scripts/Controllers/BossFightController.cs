@@ -71,6 +71,36 @@ public class BossFightController : MonoBehaviour {
                     )
                 );
                 break;
+            case 3:
+                MoverPlataforma(
+                    0,
+                    new Vector2(
+                        _plataforms[0].transform.position.x,
+                        -0.28f * 3
+                    )
+                );
+                MoverPlataforma(
+                    1,
+                    new Vector2(
+                        _plataforms[1].transform.position.x,
+                        -0.148f * 3
+                    )
+                );
+                MoverPlataforma(
+                    2,
+                    new Vector2(
+                        _plataforms[2].transform.position.x,
+                        -0.016f * 3
+                    )
+                );
+                MoverPlataforma(
+                    3,
+                    new Vector2(
+                        _plataforms[3].transform.position.x,
+                        0.116f * 3
+                    )
+                );
+                break;
         }
     }
 

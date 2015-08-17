@@ -747,6 +747,10 @@ Prefab:
       propertyPath: m_Color.a
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 122784, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
+      propertyPath: m_TagString
+      value: Boss
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
   m_IsPrefabParent: 0
@@ -830,6 +834,10 @@ Prefab:
     - target: {fileID: 21253300, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: m_Color.g
       value: .628000021
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: Life
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}

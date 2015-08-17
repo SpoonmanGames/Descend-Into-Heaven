@@ -665,6 +665,14 @@ Prefab:
       propertyPath: m_LocalPosition.x
       value: .382999986
       objectReference: {fileID: 0}
+    - target: {fileID: 21236904, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 21252298, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+      propertyPath: m_SortingOrder
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
   m_IsPrefabParent: 0
@@ -2090,7 +2098,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532286715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.910000026, y: -.479999989, z: 0}
+  m_LocalPosition: {x: -.74000001, y: -.479999989, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -2491,6 +2499,10 @@ Prefab:
       propertyPath: m_TagString
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: _protaController
+      value: 
+      objectReference: {fileID: 532286722}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_IsPrefabParent: 0
@@ -2537,6 +2549,10 @@ Prefab:
       propertyPath: m_Name
       value: BadGuyRed (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: _protaController
+      value: 
+      objectReference: {fileID: 532286722}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_IsPrefabParent: 0
@@ -3822,6 +3838,10 @@ Prefab:
       propertyPath: m_Name
       value: BadGuyRed (4)
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: _protaController
+      value: 
+      objectReference: {fileID: 532286722}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_IsPrefabParent: 0
@@ -5700,6 +5720,14 @@ Prefab:
       propertyPath: m_TagString
       value: Golem
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: _protaController
+      value: 
+      objectReference: {fileID: 532286722}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: WalkingSpeed
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_IsPrefabParent: 0
@@ -7167,7 +7195,6 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300004, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
   m_Color: {r: .727941155, g: 0, b: 0, a: 1}
-
 --- !u!1001 &1989320550
 Prefab:
   m_ObjectHideFlags: 0
