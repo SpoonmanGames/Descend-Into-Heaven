@@ -132,6 +132,9 @@ namespace Player {
                 _attackTimer += Time.deltaTime;
 
                 if (_attackTimer >= _attackTimerLimit + 1.0f) {
+
+                    ChangePlayerState(PlayerState.Attacking);
+
                     if (_roundCounter == 0) {
                         HorizontalHoleShot(-1, 1.0f, 0.8661139f, 0.4131139f, 5, 2);
                     } else if (_roundCounter == 1) {
@@ -240,6 +243,9 @@ namespace Player {
                     _attackTimer += Time.deltaTime;
 
                     if(_attackTimer >= _attackTimerLimit){
+
+                        ChangePlayerState(PlayerState.Attacking);
+
                         if (_waveCounter == 0) {
                             speed = 1.2f;
                             holeList.Clear();

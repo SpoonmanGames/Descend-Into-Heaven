@@ -23,6 +23,7 @@ public class ChangeOnLifeBehaviour : StateMachineBehaviour {
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (_playerController.Life <= Life) {
             animator.SetInteger(StateVariableName, (int)NextPlayerState);
+            _playerController.ChangePlayerState(NextPlayerState);
             _playerController.PlayerState = NextPlayerState;
             animator.Play(NextStateName, layerIndex, StartingPosition);
         }
