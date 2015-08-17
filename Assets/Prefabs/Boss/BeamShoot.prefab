@@ -13,6 +13,7 @@ GameObject:
   - 58: {fileID: 5880096}
   - 114: {fileID: 11468462}
   - 114: {fileID: 11454760}
+  - 114: {fileID: 11488548}
   m_Layer: 0
   m_Name: BeamShoot
   m_TagString: Respawn
@@ -88,9 +89,19 @@ MonoBehaviour:
   "Da\xF1o": 1
   Tiempo: 1
   DestruirAlTerminar: 1
-  PlayerController: {fileID: 0}
   Direccion: -1
-  TargetPosition: {x: -.426000297, y: .161869615}
+  TargetPosition: {x: -.220000297, y: -.565780461}
+--- !u!114 &11488548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165868}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21f145c7d33aea43a8ce8a030b64285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &21231802
 SpriteRenderer:
   m_ObjectHideFlags: 1
