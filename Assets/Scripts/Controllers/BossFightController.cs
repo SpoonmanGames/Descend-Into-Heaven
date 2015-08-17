@@ -26,7 +26,7 @@ public class BossFightController : MonoBehaviour {
     void Start() {
 
         _quarterNote = 60 / bpm;
-        _transitionOut = _quarterNote * 2; // cuantas negras de transición al otro tema
+        _transitionOut = _quarterNote * 1; // cuantas negras de transición al otro tema
         endLoopSource = GetComponent<AudioSource>();
 
         PlayerController.IsFreeToMove = false;

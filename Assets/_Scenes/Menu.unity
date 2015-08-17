@@ -528,8 +528,8 @@ MonoBehaviour:
   - {x: -.75, y: -.573000073}
   - {x: -.540000021, y: -.851999879}
   SceneToLoad: SceneDungeon1
-  moveSelectorSound: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
-  pressSelectorSound: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+  moveSelectorSound: {fileID: 8300000, guid: d40fbb9aa00de37408488eb80a2f918f, type: 3}
+  pressSelectorSound: {fileID: 8300000, guid: d857f71c407200445bcb5a36acfc27a5, type: 3}
   selectorSource: {fileID: 1113220017}
 --- !u!114 &1113220015
 MonoBehaviour:
