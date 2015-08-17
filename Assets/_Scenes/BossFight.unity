@@ -751,6 +751,10 @@ Prefab:
       propertyPath: m_TagString
       value: Boss
       objectReference: {fileID: 0}
+    - target: {fileID: 11425528, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
+      propertyPath: Life
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
   m_IsPrefabParent: 0
@@ -837,7 +841,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: Life
-      value: 1
+      value: 1000000
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}

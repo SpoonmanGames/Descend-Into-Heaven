@@ -222,6 +222,7 @@ namespace Player {
         }
 
         void LateUpdateFase3() {
+            float speed = 1.0f;
 
             _waitTimer += Time.deltaTime;
 
@@ -235,51 +236,61 @@ namespace Player {
             }
 
             if (_isMovingIntoTheScene) {
-                if (MoveAroundTheScene(-1, 1.0f, 0.839f)) {
+                if (MoveAroundTheScene(-1, 1.0f, 0.982f)) {
                     _attackTimer += Time.deltaTime;
 
                     if(_attackTimer >= _attackTimerLimit){
                         if (_waveCounter == 0) {
+                            speed = 1.2f;
                             holeList.Clear();
                             holeList.Add(7);
                             holeList.Add(8);
                         } else if (_waveCounter == 1) {
+                            speed = 1.1f;
                             holeList.Clear();
                             holeList.Add(5);
                             holeList.Add(6);
                             holeList.Add(7);
                         } else if (_waveCounter == 2) {
+                            speed = 1.0f;
                             holeList.Clear();
                             holeList.Add(7);
                             holeList.Add(8);
                         } else if (_waveCounter == 3) {
+                            speed = 0.9f;
                             holeList.Clear();
                             holeList.Add(5);
                             holeList.Add(6);
                             holeList.Add(7);
                         } else if (_waveCounter == 4) {
+                            speed = 0.8f;
                             holeList.Clear();
                             holeList.Add(3);
                             holeList.Add(4);
                         } else if (_waveCounter == 5) {
+                            speed = 0.9f;
                             holeList.Clear();
                             holeList.Add(5);
                             holeList.Add(6);
                             holeList.Add(7);
                         } else if (_waveCounter == 6) {
+                            speed = 1.0f;
                             holeList.Clear();
                             holeList.Add(7);
                             holeList.Add(8);
                         } else if (_waveCounter == 7) {
+                            speed = 0.9f;
                             holeList.Clear();
                             holeList.Add(5);
                             holeList.Add(6);
                             holeList.Add(7);
                         } else if (_waveCounter == 8) {
+                            speed = 0.8f;
                             holeList.Clear();
                             holeList.Add(3);
                             holeList.Add(4);
                         } else if (_waveCounter == 9) {
+                            speed = 0.7f;
                             holeList.Clear();
                             holeList.Add(0);
                             holeList.Add(1);
@@ -289,7 +300,7 @@ namespace Player {
 
                         HorizontalHoleShot(
                                 -1,
-                                0.6f,
+                                speed,
                                 0.8661139f,
                                 0.4131139f / 2,
                                 13,
@@ -301,6 +312,7 @@ namespace Player {
 
                         if (_roundCounter % 7 == 0) {
                             _waveCounter++;
+                            _attackTimer = 0.4f;
 
                             if (_waveCounter % 10 == 0) {
                                 _waveCounter = 0;
