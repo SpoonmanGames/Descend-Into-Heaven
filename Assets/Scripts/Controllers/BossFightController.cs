@@ -1,16 +1,34 @@
 ﻿using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.Audio;
 
 public class BossFightController : MonoBehaviour {
 
     public Player.Player PlayerController;
     public Player.Player BossController;
 
+    [Header("Audio Setup")]
+    public AudioMixerSnapshot endSnapshot;
+    public AudioClip victoryAudio;
+    public float bpm = 150;
+    public AudioSource endLoopSource;
+
     private List<GameObject> _plataforms = new List<GameObject>();
     private Player.Boss _enemyBoss;
+    private float _transitionOut;
+    private float _quarterNote;
+    private bool _victoryAudio = false;
+
+
+
 
     void Start() {
+
+        _quarterNote = 60 / bpm;
+        _transitionOut = _quarterNote * 2; // cuantas negras de transición al otro tema
+        endLoopSource = GetComponent<AudioSource>();
+
         PlayerController.IsFreeToMove = false;
         BossController.IsFreeToMove = false;
         _enemyBoss = (Player.Boss)BossController;
@@ -41,6 +59,14 @@ public class BossFightController : MonoBehaviour {
         if (BossController.IsDead && !PlayerController.IsDead) {
             PlayerController.IsFreeToMove = false;
             PlayerController.ChangePlayerState(Player.PlayerState.Victory);
+            if (!_victoryAudio){
+
+                endLoopSource.PlayOneShot(victoryAudio,1F);
+                endSnapshot.TransitionTo(_transitionOut);
+                _victoryAudio = true;
+
+            }
+
         }
     }
 
