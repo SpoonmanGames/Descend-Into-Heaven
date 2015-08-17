@@ -11,7 +11,7 @@ GameObject:
   - 61: {fileID: 6141608}
   - 114: {fileID: 11488956}
   m_Layer: 0
-  m_Name: TransitionDoor
+  m_Name: NormalTransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -53,8 +53,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 895416bf643aeff4c843c0b5b72e8a19, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TransitionSpeed: 1
-  IsTransitioningRight: 1
+  TransitionSpeed: 4
+  TransitionDirection: 2
+  IsTransitioningToScene: 0
+  SceneName: 
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3.4000001
+  TargetXPosition: -.143999994
+  TargetYPosition: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -65,6 +72,38 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_LocalScale.x
       value: .0199999996
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TransitionSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: PathBlocker
+      value: 
+      objectReference: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+    - target: {fileID: 0}
+      propertyPath: ColorOfPathBlocker.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ColorOfPathBlocker.a
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TimeOffSet
+      value: 3.4000001
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TargetXPosition
+      value: -.143999994
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ColorOfPathBlocker.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: ColorOfPathBlocker.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

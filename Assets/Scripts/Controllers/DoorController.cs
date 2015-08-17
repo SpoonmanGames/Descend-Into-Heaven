@@ -13,8 +13,16 @@ public class DoorController : MonoBehaviour {
     public TransitionDirection TransitionDirection = TransitionDirection.Right;
     public bool IsTransitioningToScene = false;
     public string SceneName = string.Empty;
+    [Space(10)]
+    public GameObject PathBlocker;
+    public Color ColorOfPathBlocker;
+    public float TimeOffSet = 0.0f;
+    public float TargetXPosition = 0.0f;
+    public float TargetYPosition = 0.0f;
 
     private bool _transition = false;
+    private GameObject _spawedPathBloquer;
+    private bool _isSpawned = false;
 
 
     
@@ -74,5 +82,40 @@ public class DoorController : MonoBehaviour {
                 Application.LoadLevel(SceneName);
             }
         }
+
+        if (collider.tag == "Player" && _transition && !_isSpawned) {
+            _isSpawned = true;
+            Vector3 spawPositon = Vector3.zero;
+            Quaternion spawnQuaternion = Quaternion.identity;
+            BulletController bulletController = PathBlocker.GetComponent<BulletController>();
+            bulletController.Tiempo = TransitionSpeed - TimeOffSet;
+
+            switch (TransitionDirection) {
+                case TransitionDirection.Down:
+                    Debug.Log("down");
+                    spawPositon = this.transform.position + Vector3.up * 2.5f;
+                    spawnQuaternion = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
+                    bulletController.Direccion = -1;
+                    bulletController.TargetPosition = new Vector2(this.transform.position.x, this.transform.position.y + TargetYPosition);
+                    break;
+                case TransitionDirection.Left:
+                    spawPositon = this.transform.position + Vector3.right * 2.5f;
+                    spawnQuaternion = new Quaternion(0.0f, 0.0f, -1.0f, 1.0f);
+                    bulletController.Direccion = -1;                    
+                    bulletController.TargetPosition = new Vector2(this.transform.position.x + TargetXPosition, this.transform.position.y);
+                    break;
+                case TransitionDirection.Right:
+                    spawPositon = this.transform.position - Vector3.right * 2.5f;
+                    spawnQuaternion = new Quaternion(0.0f, 0.0f, 1.0f, 1.0f);
+                    bulletController.Direccion = 1;
+                    bulletController.TargetPosition = new Vector2(this.transform.position.x + TargetXPosition, this.transform.position.y);
+                    break;
+            }
+
+            _spawedPathBloquer = Instantiate(PathBlocker, spawPositon, spawnQuaternion) as GameObject;
+            _spawedPathBloquer.transform.localScale = new Vector3(3.0f, 3.0f, 1.0f);
+            _spawedPathBloquer.GetComponent<SpriteRenderer>().color = ColorOfPathBlocker;
+        }
+
     }
 }
