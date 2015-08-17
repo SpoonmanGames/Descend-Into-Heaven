@@ -1,45 +1,47 @@
 fileFormatVersion: 2
 guid: 43ba8f982a5aec949b0405ca0efdb7f8
-timeCreated: 1439752401
+timeCreated: 1439776682
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: BadGuySpriteSheet_0
-    21300002: BadGuySpriteSheet_1
-    21300004: BadGuySpriteSheet_2
-    21300006: BadGuySpriteSheet_3
-    21300008: BadGuySpriteSheet_4
-    21300010: BadGuySpriteSheet_5
-    21300012: BadGuySpriteSheet_6
-    21300014: BadGuySpriteSheet_7
-    21300016: BadGuySpriteSheet_8
-    21300018: BadGuySpriteSheet_9
-    21300020: BadGuySpriteSheet_10
-    21300022: BadGuySpriteSheet_11
-    21300024: BadGuySpriteSheet_12
-    21300026: BadGuySpriteSheet_13
-    21300028: BadGuySpriteSheet_14
-    21300030: BadGuySpriteSheet_15
-    21300032: BadGuySpriteSheet_16
-    21300034: BadGuySpriteSheet_17
-    21300036: BadGuySpriteSheet_18
-    21300038: BadGuySpriteSheet_19
-    21300040: BadGuySpriteSheet_20
-    21300042: BadGuySpriteSheet_21
-    21300044: BadGuySpriteSheet_22
-    21300046: BadGuySpriteSheet_23
-    21300048: BadGuySpriteSheet_24
-    21300050: BadGuySpriteSheet_25
-    21300052: BadGuySpriteSheet_26
-    21300054: BadGuySpriteSheet_27
-    21300056: BadGuySpriteSheet_28
-    21300058: BadGuySpriteSheet_29
-    21300060: BadGuySpriteSheet_30
-    21300062: BadGuySpriteSheet_31
-    21300064: BadGuySpriteSheet_32
-    21300066: BadGuySpriteSheet_33
-    21300068: BadGuySpriteSheet_34
-    21300070: BadGuySpriteSheet_35
+    21300000: BadGuyReposo
+    21300002: BadGuyWalk1
+    21300004: BadGuyDeath1
+    21300006: BadGuyAttack
+    21300008: BadGuyHurt
+    21300010: BadGuyWalk2
+    21300012: BadGuyDeath2
+    21300014: BadGuyAttack2
+    21300016: BadGuyWalk3
+    21300018: BadGuyDeath3
+    21300020: BadGuyAttack3
+    21300022: BadGuyWalk4
+    21300024: BadGuyDeath4
+    21300026: BadGuyAttack4
+    21300028: BadGuyWalk5
+    21300030: BadGuyDeath5
+    21300032: BadGuyAttack5
+    21300034: BadGuyWalk6
+    21300036: BadGuyDeath6
+    21300038: BadGuyAttack6
+    21300040: BadGuyDeath7
+    21300042: BadGuyAttack7
+    21300044: BadGuyDeath8
+    21300046: BadGuyAttack8
+    21300048: BadGuyDeath9
+    21300050: BadGuyAttack9
+    21300052: BadGuyDeath10
+    21300054: BadGuyAttack10
+    21300056: BadGuyDeath11
+    21300058: BadGuyAttack11
+    21300060: BadGuyDeath12
+    21300062: BadGuyDeath13
+    21300064: BadGuyDeath14
+    21300066: BadGuyDeath15
+    21300068: BadGuyDeath16
+    21300070: BadGuyDeath17
+    21300072: BadGuyReposo2
+    21300074: BadGuyHurt2
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -85,7 +87,7 @@ TextureImporter:
   buildTargetSettings: []
   spriteSheet:
     sprites:
-    - name: BadGuySpriteSheet_0
+    - name: BadGuyReposo
       rect:
         serializedVersion: 2
         x: 25
@@ -95,7 +97,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_1
+    - name: BadGuyWalk1
       rect:
         serializedVersion: 2
         x: 73
@@ -105,7 +107,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_2
+    - name: BadGuyDeath1
       rect:
         serializedVersion: 2
         x: 119
@@ -113,9 +115,9 @@ TextureImporter:
         width: 23
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_3
+    - name: BadGuyAttack
       rect:
         serializedVersion: 2
         x: 169
@@ -125,7 +127,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_4
+    - name: BadGuyHurt
       rect:
         serializedVersion: 2
         x: 215
@@ -135,7 +137,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_5
+    - name: BadGuyWalk2
       rect:
         serializedVersion: 2
         x: 73
@@ -145,7 +147,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_6
+    - name: BadGuyDeath2
       rect:
         serializedVersion: 2
         x: 119
@@ -153,9 +155,9 @@ TextureImporter:
         width: 23
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_7
+    - name: BadGuyAttack2
       rect:
         serializedVersion: 2
         x: 169
@@ -165,7 +167,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_8
+    - name: BadGuyWalk3
       rect:
         serializedVersion: 2
         x: 73
@@ -173,9 +175,9 @@ TextureImporter:
         width: 21
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_9
+    - name: BadGuyDeath3
       rect:
         serializedVersion: 2
         x: 119
@@ -183,9 +185,9 @@ TextureImporter:
         width: 23
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_10
+    - name: BadGuyAttack3
       rect:
         serializedVersion: 2
         x: 169
@@ -195,7 +197,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_11
+    - name: BadGuyWalk4
       rect:
         serializedVersion: 2
         x: 73
@@ -203,9 +205,9 @@ TextureImporter:
         width: 21
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_12
+    - name: BadGuyDeath4
       rect:
         serializedVersion: 2
         x: 119
@@ -215,7 +217,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_13
+    - name: BadGuyAttack4
       rect:
         serializedVersion: 2
         x: 151
@@ -225,7 +227,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .699999988, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_14
+    - name: BadGuyWalk5
       rect:
         serializedVersion: 2
         x: 71
@@ -235,7 +237,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_15
+    - name: BadGuyDeath5
       rect:
         serializedVersion: 2
         x: 119
@@ -243,9 +245,9 @@ TextureImporter:
         width: 23
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_16
+    - name: BadGuyAttack5
       rect:
         serializedVersion: 2
         x: 148
@@ -255,7 +257,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .699999988, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_17
+    - name: BadGuyWalk6
       rect:
         serializedVersion: 2
         x: 73
@@ -263,9 +265,9 @@ TextureImporter:
         width: 21
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_18
+    - name: BadGuyDeath6
       rect:
         serializedVersion: 2
         x: 119
@@ -273,9 +275,9 @@ TextureImporter:
         width: 23
         height: 36
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_19
+    - name: BadGuyAttack6
       rect:
         serializedVersion: 2
         x: 146
@@ -285,7 +287,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .75, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_20
+    - name: BadGuyDeath7
       rect:
         serializedVersion: 2
         x: 119
@@ -293,9 +295,9 @@ TextureImporter:
         width: 28
         height: 35
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_21
+    - name: BadGuyAttack7
       rect:
         serializedVersion: 2
         x: 152
@@ -305,7 +307,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .699999988, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_22
+    - name: BadGuyDeath8
       rect:
         serializedVersion: 2
         x: 119
@@ -313,9 +315,9 @@ TextureImporter:
         width: 22
         height: 34
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_23
+    - name: BadGuyAttack8
       rect:
         serializedVersion: 2
         x: 152
@@ -325,7 +327,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .699999988, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_24
+    - name: BadGuyDeath9
       rect:
         serializedVersion: 2
         x: 119
@@ -333,9 +335,9 @@ TextureImporter:
         width: 20
         height: 32
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_25
+    - name: BadGuyAttack9
       rect:
         serializedVersion: 2
         x: 162
@@ -345,7 +347,7 @@ TextureImporter:
       alignment: 9
       pivot: {x: .600000024, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_26
+    - name: BadGuyDeath10
       rect:
         serializedVersion: 2
         x: 119
@@ -353,9 +355,9 @@ TextureImporter:
         width: 20
         height: 26
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_27
+    - name: BadGuyAttack10
       rect:
         serializedVersion: 2
         x: 169
@@ -365,7 +367,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_28
+    - name: BadGuyDeath11
       rect:
         serializedVersion: 2
         x: 119
@@ -373,9 +375,9 @@ TextureImporter:
         width: 21
         height: 20
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_29
+    - name: BadGuyAttack11
       rect:
         serializedVersion: 2
         x: 169
@@ -385,7 +387,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_30
+    - name: BadGuyDeath12
       rect:
         serializedVersion: 2
         x: 120
@@ -393,9 +395,9 @@ TextureImporter:
         width: 20
         height: 14
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_31
+    - name: BadGuyDeath13
       rect:
         serializedVersion: 2
         x: 121
@@ -403,9 +405,9 @@ TextureImporter:
         width: 18
         height: 11
       alignment: 7
-      pivot: {x: 0, y: 0}
+      pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_32
+    - name: BadGuyDeath14
       rect:
         serializedVersion: 2
         x: 122
@@ -415,7 +417,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_33
+    - name: BadGuyDeath15
       rect:
         serializedVersion: 2
         x: 124
@@ -425,7 +427,7 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_34
+    - name: BadGuyDeath16
       rect:
         serializedVersion: 2
         x: 126
@@ -435,13 +437,33 @@ TextureImporter:
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: BadGuySpriteSheet_35
+    - name: BadGuyDeath17
       rect:
         serializedVersion: 2
         x: 127
         y: 0
         width: 6
         height: 3
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuyReposo2
+      rect:
+        serializedVersion: 2
+        x: 25
+        y: 630
+        width: 21
+        height: 36
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: BadGuyHurt2
+      rect:
+        serializedVersion: 2
+        x: 213
+        y: 630
+        width: 23
+        height: 36
       alignment: 7
       pivot: {x: .5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}

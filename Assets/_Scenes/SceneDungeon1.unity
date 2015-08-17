@@ -1009,6 +1009,7 @@ MonoBehaviour:
   PlayerRigidBody2D: {fileID: 0}
   IsInTransition: 0
   swordMiss: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+  jump: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
 --- !u!82 &532286723
 AudioSource:
   m_ObjectHideFlags: 0
@@ -1841,9 +1842,9 @@ Animator:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1413659021}
-  m_Enabled: 0
+  m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: f39bb5dbdd6ad73418c5733545512a2f, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5045ddbcf6c540c47bf254822a483b63, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
