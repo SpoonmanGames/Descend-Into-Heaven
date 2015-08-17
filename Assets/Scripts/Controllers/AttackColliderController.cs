@@ -7,7 +7,6 @@ public class AttackColliderController : MonoBehaviour {
     public Player.Player playerAttackingController;
 
     void OnTriggerEnter2D(Collider2D other) {
-        Debug.Log("active");
         if (other.tag == "Boss") {            
             Boss enemy = other.GetComponentInParent<Boss>();
             enemy.Hurt(playerAttackingController.AttackDamage);

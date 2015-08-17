@@ -12,10 +12,10 @@ GameObject:
   - 95: {fileID: 9507872}
   - 60: {fileID: 6034036}
   - 114: {fileID: 11425528}
-  - 82: {fileID: 8290600}
+  - 82: {fileID: 8216164}
   m_Layer: 0
   m_Name: AngelBoss
-  m_TagString: Enemy
+  m_TagString: Boss
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -53,7 +53,7 @@ PolygonCollider2D:
       - {x: .0689420924, y: .000375211239}
       - {x: .0696988702, y: .195054829}
       - {x: -.0453738198, y: .195214078}
---- !u!82 &8290600
+--- !u!82 &8216164
 AudioSource:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -63,7 +63,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 24310168, guid: 9a7732bdb34eb524990b955784e59363,
     type: 2}
-  m_audioClip: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 94e694913456a7246879bdf51ca5fea9, type: 3}
   m_PlayOnAwake: 0
   m_Volume: 1
   m_Pitch: 1
@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 1b76b8e710e536c44b8e6b21b687d8fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  Life: 5
+  Life: 3
   AttackDamage: 1
   WalkingSpeed: 1
   JumpForce: 0
@@ -165,18 +165,18 @@ MonoBehaviour:
   HurtAnimatorName: Boss-Hurt
   soundIdle: {fileID: 0}
   soundWalking: {fileID: 0}
-  soundAttacking: {fileID: 0}
+  soundAttacking: {fileID: 8300000, guid: 94e694913456a7246879bdf51ca5fea9, type: 3}
   soundJumping: {fileID: 0}
-  soundDead: {fileID: 0}
+  soundDead: {fileID: 8300000, guid: a57735772ed3d8b47a1c4c344922d27b, type: 3}
   soundVictory: {fileID: 0}
-  soundHurt: {fileID: 0}
+  soundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
   IsFreeToMove: 1
   PlayerState: 0
   PlayerRigidBody2D: {fileID: 0}
   Velocity: .300000012
   PuntoFinal: .856000006
   PuntoInicial: 1.55299997
-  SpawnBullet: {fileID: 0}
+  SpawnBullet: {fileID: 165868, guid: 07991353ebbd29f4184493d36f946dc8, type: 2}
   Fase: 1
 --- !u!212 &21271424
 SpriteRenderer:
@@ -203,7 +203,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 1
   m_Sprite: {fileID: 21300012, guid: 0763452ed0beb6f479a11280c0685940, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: .720588207, g: .628000021, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -212,14 +212,17 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: OutputAudioMixerGroup
+      propertyPath: soundDead
       value: 
-      objectReference: {fileID: 24310168, guid: 9a7732bdb34eb524990b955784e59363,
-        type: 2}
+      objectReference: {fileID: 8300000, guid: a57735772ed3d8b47a1c4c344922d27b, type: 3}
     - target: {fileID: 0}
-      propertyPath: m_PlayOnAwake
-      value: 0
-      objectReference: {fileID: 0}
+      propertyPath: soundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+    - target: {fileID: 0}
+      propertyPath: soundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 94e694913456a7246879bdf51ca5fea9, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 122784}
