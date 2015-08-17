@@ -248,6 +248,7 @@ namespace Player {
                         } else if (_waveCounter == 1) {
                             speed = 1.1f;
                             holeList.Clear();
+                            holeList.Add(4);
                             holeList.Add(5);
                             holeList.Add(6);
                             holeList.Add(7);
@@ -259,12 +260,14 @@ namespace Player {
                         } else if (_waveCounter == 3) {
                             speed = 0.9f;
                             holeList.Clear();
+                            holeList.Add(4);
                             holeList.Add(5);
                             holeList.Add(6);
                             holeList.Add(7);
                         } else if (_waveCounter == 4) {
                             speed = 0.8f;
                             holeList.Clear();
+                            holeList.Add(2);
                             holeList.Add(3);
                             holeList.Add(4);
                         } else if (_waveCounter == 5) {
@@ -287,6 +290,7 @@ namespace Player {
                         } else if (_waveCounter == 8) {
                             speed = 0.8f;
                             holeList.Clear();
+                            holeList.Add(2);
                             holeList.Add(3);
                             holeList.Add(4);
                         } else if (_waveCounter == 9) {
