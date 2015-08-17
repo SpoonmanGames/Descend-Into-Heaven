@@ -2,7 +2,7 @@
 using System.Collections;
 
 namespace Player {
-    public class Enemy : Player {
+    public class Boss : Player {
 
         [Header("Boss Intro")]
         public float Velocity = 1f;
@@ -27,32 +27,25 @@ namespace Player {
         private int _roundCounter = 0;
 
         private Vector2 _spawnPosition;
+        private bool _isOutofScene = false;
+        private bool _isMoningIntoTheScene = false;
 
-        public void Hurt(int damage) {
+        public void Hurt(int damage) {            
             Life -= damage;
             Fase++;
+            _isOutofScene = false;
+            _isMoningIntoTheScene = false;
             ChangePlayerState(PlayerState.Hurt);
         }
 
         override protected void Start() {
             base.Start();
-            _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+            _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();            
         }
 
         void LateUpdate() {
             if (!IsFreeToMove) {
-                float newPosition;
-
-                newPosition = this.transform.position.x;
-
-                newPosition += (Velocity * Time.deltaTime * -1);
-                newPosition = Mathf.Clamp(newPosition, PuntoFinal, PuntoInicial);
-
-                this.transform.position = new Vector3(newPosition, this.transform.position.y, this.transform.position.z);
-
-                if (this.transform.position.x == PuntoFinal) {
-                    IsFreeToMove = true;
-                }
+                IsFreeToMove = MoveAroundTheScene(-1, Velocity, PuntoFinal);
             } else if(!IsDead) {
                 HandPositon = new Vector2(
                     this.transform.position.x - 0.392f,
@@ -64,11 +57,17 @@ namespace Player {
                         LateUpdateFase1();
                         break;
                     case 2:
-                        if (MoveOutOfScene(1, 1.0f, 1.553f)) {
-                            LateUpdateFase2();
+                        if (!_isOutofScene) {
+                            _isOutofScene = MoveAroundTheScene(1, 1.0f, 1.553f);
                         }
+                        if(_isOutofScene){
+                            LateUpdateFase2();
+                        }                        
                         break;
                     case 3:
+                        if (!_isOutofScene) {
+                            _isOutofScene = MoveAroundTheScene(-1, 1.0f, -1.444f);
+                        }
                         LateUpdateFase3();
                         break;
                     case 4:
@@ -81,10 +80,14 @@ namespace Player {
             }
         }
 
-        bool MoveOutOfScene(int direccion, float speed, float targetPosition) {
+        bool MoveAroundTheScene(int direccion, float speed, float targetPosition) {
             float position = 0.0f;
 
-            if (this.transform.position.x >= targetPosition) {
+            if (direccion == 1 && this.transform.position.x >= targetPosition) {
+                return true;
+            }
+
+            if (direccion == -1 && this.transform.position.x <= targetPosition) {
                 return true;
             }
 
@@ -136,10 +139,18 @@ namespace Player {
                     _roundCounter++;
                     _roundCounter %= 4;
 
-
+                    if (_roundCounter == 0 && !_isMoningIntoTheScene) {
+                        this.ChangePlayerDirection("left");
+                        this.transform.position = new Vector3(-1.444f, -0.209f, this.transform.position.z);
+                        _isMoningIntoTheScene = true;
+                    }
 
                     _attackTimer = 0.0f;
                 }
+            }
+
+            if (_isMoningIntoTheScene) {
+                MoveAroundTheScene(1, 1.0f, -0.91f);
             }
         }
 
