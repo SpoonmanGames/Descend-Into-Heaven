@@ -8,7 +8,7 @@ public class AttackColliderController : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D other) {
         if (other.tag == "Enemy") {            
-            Enemy enemy = other.GetComponentInParent<Enemy>();
+            Boss enemy = other.GetComponentInParent<Boss>();
             enemy.Hurt(protaController.AttackDamage);
         }
     }

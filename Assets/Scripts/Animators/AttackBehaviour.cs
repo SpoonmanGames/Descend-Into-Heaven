@@ -21,9 +21,17 @@ public class AttackBehaviour : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (stateInfo.normalizedTime > SpawTime && !_attacking) {
+            Vector3 animatorPosition;
+
+            if (animator.transform.localScale.x > 0) {
+                animatorPosition = animator.transform.position;
+            } else {
+                animatorPosition = new Vector3(animator.transform.position.x - 0.492f, animator.transform.position.y, animator.transform.position.z);
+            }
+
             _attacking = true;
-            _spawnedCollider = Instantiate(AttackTriggerCollider, animator.transform.position, animator.transform.rotation) as GameObject;
-            _spawnedCollider.transform.parent = animator.transform;
+            _spawnedCollider = Instantiate(AttackTriggerCollider, animatorPosition, animator.transform.rotation) as GameObject;
+            _spawnedCollider.transform.parent = animator.transform;            
         }
 
         if (stateInfo.normalizedTime > DestroyTime) {

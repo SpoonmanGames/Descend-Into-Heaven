@@ -325,7 +325,11 @@ public class SuperMetroidCameraController : MonoBehaviour {
 	// tracking back on. You'll likely have to change this method if you're doing pixel perfect stuff.
 	IEnumerator MoveToPosition (Vector3 CameraTargetPosition, Vector3 PlayerTargetPosition, float moveSpeed )
 	{
+        Vector2 previousVelocity = player.GetComponent<Rigidbody2D>().velocity;
+        Player.PlayerState previousPlayerState = player.GetComponent<Player.Player>().PlayerState;
+
         player.GetComponent<Rigidbody2D>().gravityScale = 0;
+        player.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         player.GetComponent<ProtaController>().IsInTransition = true;
 		activeTracking = false;
 	
@@ -343,8 +347,10 @@ public class SuperMetroidCameraController : MonoBehaviour {
 			yield return 0;
 		}
 
-        player.GetComponent<ProtaController>().IsInTransition = false;
+        player.GetComponent<Player.Player>().PlayerState = previousPlayerState;
+        player.GetComponent<ProtaController>().IsInTransition = false;        
         player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        player.GetComponent<Rigidbody2D>().velocity = previousVelocity;
 		activeTracking = true;
 	}
 	

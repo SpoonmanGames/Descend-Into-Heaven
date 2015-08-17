@@ -8,12 +8,12 @@ public class BossFightController : MonoBehaviour {
     public Player.Player BossController;
 
     private List<GameObject> _plataforms = new List<GameObject>();
-    private Player.Enemy _enemyBoss;
+    private Player.Boss _enemyBoss;
 
     void Start() {
         PlayerController.IsFreeToMove = false;
         BossController.IsFreeToMove = false;
-        _enemyBoss = (Player.Enemy)BossController;
+        _enemyBoss = (Player.Boss)BossController;
 
         _plataforms.Add(GameObject.FindGameObjectWithTag("Plataform1"));
         _plataforms.Add(GameObject.FindGameObjectWithTag("Plataform2"));

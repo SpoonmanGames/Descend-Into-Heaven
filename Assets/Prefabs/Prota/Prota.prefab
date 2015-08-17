@@ -29,7 +29,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.900000036, y: -.680999994, z: 0}
+  m_LocalPosition: {x: -.846000016, y: 1, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -177,7 +177,7 @@ MonoBehaviour:
   Life: 1
   AttackDamage: 1
   WalkingSpeed: 1
-  JumpForce: 140
+  JumpForce: 160
   StateVariableName: State
   IdleAnimatorName: Prota-Idle
   WalkingAnimatorName: Prota-Walk
@@ -190,6 +190,7 @@ MonoBehaviour:
   PlayerState: 0
   PlayerRigidBody2D: {fileID: 0}
   swordMiss: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+  jump: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
   IsInTransition: 0
 --- !u!212 &21253300
 SpriteRenderer:

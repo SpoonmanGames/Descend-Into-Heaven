@@ -225,7 +225,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  PlayerController: {fileID: 0}
   Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!1001 &472836478
@@ -466,7 +465,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  PlayerController: {fileID: 0}
   Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!1 &1262562772
@@ -528,7 +526,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  PlayerController: {fileID: 0}
   Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!4 &1453841226 stripped
@@ -665,7 +662,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  PlayerController: {fileID: 0}
   Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!1001 &1757544116
@@ -787,18 +783,6 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
-      propertyPath: Life
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
-      propertyPath: JumpForce
-      value: 160
-      objectReference: {fileID: 0}
-    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
-      propertyPath: jump
-      value: 
-      objectReference: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0
