@@ -1,18 +1,33 @@
 ﻿using UnityEngine;
 using System.Collections;
-using Player;
 
-public class JumpAttackAnimationBehaviour : StateMachineBehaviour {
+public class ChangeOnLifeBehaviour : StateMachineBehaviour {
+
+    public string StateVariableName;
+    [Space(10)]
+    public Player.PlayerState NextPlayerState;
+    public string NextStateName;
+    [Space(10)]
+    [Range(0, 1)]
+    public float StartingPosition;    
+    public int Life = 0;
+
+    Player.Player _playerController;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        animator.SetFloat("SpeedModificator", 1);
+        _playerController = animator.GetComponentInParent<Player.Player>();
 	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
-    //override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-    //
-    //}
+	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        if (_playerController.Life <= Life) {
+            Debug.Log("To dead");
+            animator.SetInteger(StateVariableName, (int)NextPlayerState);
+            _playerController.PlayerState = NextPlayerState;
+            animator.Play(NextStateName, layerIndex, StartingPosition);
+        }
+	}
 
 	// OnStateExit is called when a transition ends and the state machine finishes evaluating this state
 	//override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

@@ -45,6 +45,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   repeatTime: .300000012
+--- !u!114 &11402806
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5c02d91b9ef86d4dbd1b2d5c3c6d9d6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  AttackTriggerCollider: {fileID: 171046, guid: 5bf404e2f27a9174ea722c34166d592f,
+    type: 2}
+  SpawTime: .430000007
+  DestroyTime: .85799998
 --- !u!114 &11411334
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -56,6 +71,120 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 61cb5845f567f9d41b1cbda0db3dd7b0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackTriggerCollider: {fileID: 171046, guid: 5bf404e2f27a9174ea722c34166d592f,
+    type: 2}
+--- !u!114 &11417752
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 4
+  NextStateName: Prota-Died
+  StartingPosition: 0
+  Life: 0
+--- !u!114 &11423494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 4
+  NextStateName: Prota-Died
+  StartingPosition: 0
+  Life: 0
+--- !u!114 &11446156
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dafcf49bf91144a9e4bc27a82b9dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 3
+  NextStateName: Prota-Jump
+  StartingPosition: 1
+  WhenChange: 1
+--- !u!114 &11446706
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 4
+  NextStateName: Prota-Died
+  StartingPosition: 0
+  Life: 0
+--- !u!114 &11464604
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 4
+  NextStateName: Prota-Died
+  StartingPosition: 0
+  Life: 0
+--- !u!114 &11466940
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 37dafcf49bf91144a9e4bc27a82b9dcb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 0
+  NextStateName: Prota-Idle
+  StartingPosition: 1
+  WhenChange: 1
+--- !u!114 &11481310
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 4
+  NextStateName: Prota-Died
+  StartingPosition: 0
+  Life: 0
 --- !u!114 &11481684
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -67,6 +196,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5c02d91b9ef86d4dbd1b2d5c3c6d9d6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  AttackTriggerCollider: {fileID: 149090, guid: a702cb9af0de9f44ebaf21e499f0d030,
+    type: 2}
+  SpawTime: .333000004
+  DestroyTime: .833999991
 --- !u!114 &11482156
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -525,7 +658,8 @@ AnimatorState:
   - {fileID: 110113828}
   - {fileID: 110132976}
   - {fileID: 110174674}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11423494}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -558,7 +692,7 @@ AnimatorState:
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 7994440ad4824c04eaf980c8939f3c38, type: 2}
   m_Tag: 
-  m_SpeedParameter: 
+  m_SpeedParameter: SpeedModificator
   m_MirrorParameter: 
   m_CycleOffsetParameter: 
 --- !u!1102 &110233646
@@ -576,6 +710,9 @@ AnimatorState:
   - {fileID: 110165000}
   m_StateMachineBehaviours:
   - {fileID: 11411334}
+  - {fileID: 11402806}
+  - {fileID: 11417752}
+  - {fileID: 11446156}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -626,7 +763,8 @@ AnimatorState:
   - {fileID: 110164752}
   - {fileID: 110141782}
   - {fileID: 110188148}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11481310}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -654,6 +792,7 @@ AnimatorState:
   - {fileID: 110129414}
   m_StateMachineBehaviours:
   - {fileID: 11482156}
+  - {fileID: 11464604}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
@@ -681,6 +820,8 @@ AnimatorState:
   - {fileID: 110174328}
   m_StateMachineBehaviours:
   - {fileID: 11481684}
+  - {fileID: 11446706}
+  - {fileID: 11466940}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1

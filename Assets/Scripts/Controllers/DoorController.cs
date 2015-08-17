@@ -7,7 +7,7 @@ public class DoorController : MonoBehaviour {
     public float TransitionSpeed = 1f;
 
     void OnTriggerEnter2D(Collider2D collider) {
-        if (!_transition) {
+        if (collider.tag == "Player" && !_transition) {
             _transition = true;
 
             SuperMetroidCameraController cameraScript = Camera.main.GetComponent<SuperMetroidCameraController>();

@@ -1,21 +1,23 @@
 ﻿using UnityEngine;
 using System.Collections;
 
-namespace Player {    
+namespace Player {
 
     public class ProtaController : Player {
 
+        [Header("Audio Setup")]
+        public AudioClip swordMiss;                
+	public AudioClip jump;
+
         [HideInInspector]
         public bool IsInTransition = false;
-		public AudioClip swordMiss;
-		public AudioClip jump;
 
 
         void FixedUpdate() {
-            if (!IsInTransition) {                
-                if (!IsJumping && !IsAttacking && Input.GetKeyDown(KeyCode.UpArrow)) {
+            if (IsFreeToMove && !IsInTransition && !IsDead) {                
+                if (!IsJumping && !IsAttacking && Input.GetKey(KeyCode.UpArrow)) {
                     this.ChangePlayerState(PlayerState.Jumping);
-					audioSource.PlayOneShot(jump, 1F);
+			audioSource.PlayOneShot(jump, 1F);
                     PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
                 } else if (!IsAttacking && Input.GetKeyDown(KeyCode.A)) {
                     this.ChangePlayerState(PlayerState.Attacking);

@@ -2,19 +2,34 @@
 using System.Collections;
 using Player;
 
-public class AttackAnimationBehaviour : StateMachineBehaviour {
+public class AttackBehaviour : StateMachineBehaviour {
+
+    public GameObject AttackTriggerCollider;
+    [Range(0,1)]
+    public float SpawTime;
+    [Range(0, 1)]
+    public float DestroyTime;
+
+    private bool _attacking;
+    private GameObject _spawnedCollider;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-	//
-	//}
+	override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        _attacking = false;
+	}
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (stateInfo.normalizedTime > 1 && !animator.IsInTransition(layerIndex)) {
-            animator.SetInteger("State", 0);
-            animator.Play("Prota-Idle", layerIndex, 1.0f);
-            animator.GetComponentInParent<ProtaController>().PlayerState = PlayerState.Idle;
+        if (stateInfo.normalizedTime > SpawTime && !_attacking) {
+            _attacking = true;
+            _spawnedCollider = Instantiate(AttackTriggerCollider, animator.transform.position, animator.transform.rotation) as GameObject;
+            _spawnedCollider.transform.parent = animator.transform;
+        }
+
+        if (stateInfo.normalizedTime > DestroyTime) {
+            if (_spawnedCollider != null) {
+                Destroy(_spawnedCollider);
+            }
         }
 	}
 
