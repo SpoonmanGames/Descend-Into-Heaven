@@ -27,6 +27,22 @@ AnimatorController:
     m_IKPass: 0
     m_SyncedLayerAffectsTiming: 0
     m_Controller: {fileID: 9100000}
+--- !u!114 &11421548
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  StateVariableName: State
+  NextPlayerState: 6
+  NextStateName: BadGuyHurt
+  StartingPosition: 0
+  Life: 0
 --- !u!114 &11447104
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -439,7 +455,8 @@ AnimatorState:
   - {fileID: 110115844}
   - {fileID: 110143960}
   - {fileID: 110101272}
-  m_StateMachineBehaviours: []
+  m_StateMachineBehaviours:
+  - {fileID: 11421548}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
