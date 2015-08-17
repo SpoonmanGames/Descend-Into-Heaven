@@ -347,10 +347,11 @@ public class SuperMetroidCameraController : MonoBehaviour {
 			yield return 0;
 		}
 
-        player.GetComponent<Player.Player>().PlayerState = previousPlayerState;
-        player.GetComponent<ProtaController>().IsInTransition = false;        
-        player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        player.GetComponent<ProtaController>().IsInTransition = false;
+        player.GetComponent<Player.Player>().ChangePlayerState(previousPlayerState);
         player.GetComponent<Rigidbody2D>().velocity = previousVelocity;
+        player.GetComponent<Rigidbody2D>().gravityScale = 1;
+        
 		activeTracking = true;
 	}
 	
