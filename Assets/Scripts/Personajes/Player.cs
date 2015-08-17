@@ -35,6 +35,15 @@ namespace Player {
         public string VictoryAnimatorName = string.Empty;
         public string HurtAnimatorName = string.Empty;
 
+        [Header("Audio Setup")]
+        public AudioClip soundIdle;                
+	public AudioClip soundWalking;
+	public AudioClip soundAttacking;
+	public AudioClip soundJumping;
+	public AudioClip soundDead;
+	public AudioClip soundVictory;
+	public AudioClip soundHurt;
+
         [HideInInspector]
         public bool IsFreeToMove = true;
         [HideInInspector]
@@ -77,6 +86,31 @@ namespace Player {
 
         public void ChangePlayerState(PlayerState playerState) {
             if (PlayerState != playerState) {
+		switch (playerState)
+		{
+			case PlayerState.Idle:
+			audioSource.PlayOneShot(soundIdle, 1F);
+  			break;
+  			case PlayerState.Walking:
+			audioSource.PlayOneShot(soundWalking, 1F);
+  			break;
+  			case PlayerState.Attacking:
+			audioSource.PlayOneShot(soundAttacking, 1F);
+  			break;
+  			case PlayerState.Jumping:
+			audioSource.PlayOneShot(soundJumping, 1F);
+  			break;
+  			case PlayerState.Dead:
+			audioSource.PlayOneShot(soundDead, 1F);
+  			break;
+  			case PlayerState.Victory:
+			audioSource.PlayOneShot(soundVictory, 1F);
+  			break;
+  			case PlayerState.Hurt:
+			audioSource.PlayOneShot(soundHurt, 1F);
+  			break;
+  }
+	
                 PlayerState = playerState;
                 _animator.SetInteger(StateVariableName, (int)PlayerState);
             }
