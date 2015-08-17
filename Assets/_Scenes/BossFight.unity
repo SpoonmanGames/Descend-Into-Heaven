@@ -727,34 +727,11 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
-    - target: {fileID: 11425528, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: SpawnBullet
+    - target: {fileID: 8216164, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
+      propertyPath: OutputAudioMixerGroup
       value: 
-      objectReference: {fileID: 165868, guid: 07991353ebbd29f4184493d36f946dc8, type: 2}
-    - target: {fileID: 21271424, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: m_Color.r
-      value: .720588207
-      objectReference: {fileID: 0}
-    - target: {fileID: 21271424, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: m_Color.g
-      value: .628000021
-      objectReference: {fileID: 0}
-    - target: {fileID: 21271424, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: m_Color.b
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 21271424, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: m_Color.a
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 122784, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: m_TagString
-      value: Boss
-      objectReference: {fileID: 0}
-    - target: {fileID: 11425528, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: Life
-      value: 3
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 24310168, guid: 9a7732bdb34eb524990b955784e59363,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
   m_IsPrefabParent: 0
@@ -843,6 +820,18 @@ Prefab:
       propertyPath: Life
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: soundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: soundJumping
+      value: 
+      objectReference: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: soundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0

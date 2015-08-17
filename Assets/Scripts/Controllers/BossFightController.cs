@@ -37,6 +37,11 @@ public class BossFightController : MonoBehaviour {
         PlayerController.IsFreeToMove = BossController.IsFreeToMove;
 
         ReposicionarPlataformas(_enemyBoss.Fase);
+
+        if (BossController.IsDead && !PlayerController.IsDead) {
+            PlayerController.IsFreeToMove = false;
+            PlayerController.ChangePlayerState(Player.PlayerState.Victory);
+        }
     }
 
     void ReposicionarPlataformas(int Fase) {
@@ -98,6 +103,36 @@ public class BossFightController : MonoBehaviour {
                     new Vector2(
                         _plataforms[3].transform.position.x,
                         0.116f * 3
+                    )
+                );
+                break;
+            case 4:
+                MoverPlataforma(
+                    0,
+                    new Vector2(
+                        _plataforms[0].transform.position.x,
+                        0.0f
+                    )
+                );
+                MoverPlataforma(
+                    1,
+                    new Vector2(
+                        _plataforms[1].transform.position.x,
+                        0.0f
+                    )
+                );
+                MoverPlataforma(
+                    2,
+                    new Vector2(
+                        _plataforms[2].transform.position.x,
+                        0.0f
+                    )
+                );
+                MoverPlataforma(
+                    3,
+                    new Vector2(
+                        _plataforms[3].transform.position.x,
+                        0.0f
                     )
                 );
                 break;

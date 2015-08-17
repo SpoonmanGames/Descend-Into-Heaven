@@ -11,8 +11,12 @@ public class DoorController : MonoBehaviour {
 
     public float TransitionSpeed = 1f;
     public TransitionDirection TransitionDirection = TransitionDirection.Right;
+    public bool IsTransitioningToScene = false;
+    public string SceneName = string.Empty;
 
     private bool _transition = false;
+
+
     
 
     void OnTriggerEnter2D(Collider2D collider) {
@@ -32,38 +36,42 @@ public class DoorController : MonoBehaviour {
                 return;
             }
 
-            float CameraTargetPosition;
-            float PlayerTargetPositon;
-            Vector3 CameraTargetVector;
-            Vector3 PlayerTargetVector;
+            if (!IsTransitioningToScene) {
+                float CameraTargetPosition;
+                float PlayerTargetPositon;
+                Vector3 CameraTargetVector;
+                Vector3 PlayerTargetVector;
 
-            if (this.TransitionDirection == TransitionDirection.Right) {
-                CameraTargetPosition = transform.parent.position.x + 2.22f;
-                PlayerTargetPositon = player.transform.position.x + 0.45f;
+                if (this.TransitionDirection == TransitionDirection.Right) {
+                    CameraTargetPosition = transform.parent.position.x + 2.22f;
+                    PlayerTargetPositon = player.transform.position.x + 0.45f;
 
-                CameraTargetVector = new Vector3(CameraTargetPosition, transform.parent.position.y, transform.parent.position.z);
-                PlayerTargetVector = new Vector3(PlayerTargetPositon, player.transform.position.y, player.transform.position.z);
+                    CameraTargetVector = new Vector3(CameraTargetPosition, transform.parent.position.y, transform.parent.position.z);
+                    PlayerTargetVector = new Vector3(PlayerTargetPositon, player.transform.position.y, player.transform.position.z);
 
-                cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
-                cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition,transform.parent.position.y,transform.parent.position.y);
-            } else if (this.TransitionDirection == TransitionDirection.Down) {
-                CameraTargetPosition = transform.parent.position.y - 2.0f;
-                PlayerTargetPositon = player.transform.position.y - 0.522f;
+                    cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
+                    cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition, transform.parent.position.y, transform.parent.position.y);
+                } else if (this.TransitionDirection == TransitionDirection.Down) {
+                    CameraTargetPosition = transform.parent.position.y - 2.0f;
+                    PlayerTargetPositon = player.transform.position.y - 0.522f;
 
-                CameraTargetVector = new Vector3(transform.parent.position.x, CameraTargetPosition, transform.parent.position.z);
-                PlayerTargetVector = new Vector3(player.transform.position.x, PlayerTargetPositon, player.transform.position.z);
+                    CameraTargetVector = new Vector3(transform.parent.position.x, CameraTargetPosition, transform.parent.position.z);
+                    PlayerTargetVector = new Vector3(player.transform.position.x, PlayerTargetPositon, player.transform.position.z);
 
-                cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
-                cameraScript.ActivateLimits(transform.parent.position.x, transform.parent.position.x, CameraTargetPosition, CameraTargetPosition);
-            } else if (this.TransitionDirection == TransitionDirection.Left) {
-                CameraTargetPosition = transform.parent.position.x - 2.22f;
-                PlayerTargetPositon = player.transform.position.x - 0.45f;
+                    cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
+                    cameraScript.ActivateLimits(transform.parent.position.x, transform.parent.position.x, CameraTargetPosition, CameraTargetPosition);
+                } else if (this.TransitionDirection == TransitionDirection.Left) {
+                    CameraTargetPosition = transform.parent.position.x - 2.22f;
+                    PlayerTargetPositon = player.transform.position.x - 0.45f;
 
-                CameraTargetVector = new Vector3(CameraTargetPosition, transform.parent.position.y, transform.parent.position.z);
-                PlayerTargetVector = new Vector3(PlayerTargetPositon, player.transform.position.y, player.transform.position.z);
+                    CameraTargetVector = new Vector3(CameraTargetPosition, transform.parent.position.y, transform.parent.position.z);
+                    PlayerTargetVector = new Vector3(PlayerTargetPositon, player.transform.position.y, player.transform.position.z);
 
-                cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
-                cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition, transform.parent.position.y, transform.parent.position.y);
+                    cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
+                    cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition, transform.parent.position.y, transform.parent.position.y);
+                }
+            } else {
+                Application.LoadLevel(SceneName);
             }
         }
     }
