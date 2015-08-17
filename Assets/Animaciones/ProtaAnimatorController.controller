@@ -11,15 +11,15 @@ AnimatorController:
   - m_Name: State
     m_Type: 3
     m_DefaultFloat: 0
-    m_DefaultInt: 0
+    m_DefaultInt: 5
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   - m_Name: SpeedModificator
     m_Type: 1
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -44,7 +44,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 98ca1f3f754fd3545a3735cbacf88b8e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  repeatTime: .300000012
+  repeatTime: .400000006
 --- !u!114 &11402806
 MonoBehaviour:
   m_ObjectHideFlags: 1
