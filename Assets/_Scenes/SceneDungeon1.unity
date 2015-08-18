@@ -1448,7 +1448,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
   m_Color: {r: .727941155, g: 0, b: 0, a: 1}
 --- !u!1001 &367171594
@@ -1943,6 +1943,10 @@ Prefab:
     - target: {fileID: 21280264, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: m_SortingOrder
       value: -2
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: DelayBeforeAttack
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
@@ -2803,7 +2807,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
   m_Color: {r: .727941155, g: 0, b: 0, a: 1}
 --- !u!1001 &672722333
@@ -6484,7 +6488,7 @@ MonoBehaviour:
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
-  TimeOffSet: 3.4000001
+  TimeOffSet: 2
   TargetXPosition: 0
   TargetYPosition: -.0140000004
 --- !u!61 &1450591635
@@ -7055,7 +7059,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: LeftRangeOfSight
-      value: 0
+      value: .100000001
       objectReference: {fileID: 0}
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: Life
