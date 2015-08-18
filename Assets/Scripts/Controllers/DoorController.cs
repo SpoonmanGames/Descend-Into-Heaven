@@ -14,6 +14,7 @@ public class DoorController : MonoBehaviour {
     public bool IsTransitioningToScene = false;
     public string SceneName = string.Empty;
     [Space(10)]
+    public bool UsePathBlocker = true;
     public GameObject PathBlocker;
     public Color ColorOfPathBlocker;
     public float TimeOffSet = 0.0f;
@@ -83,7 +84,7 @@ public class DoorController : MonoBehaviour {
             }
         }
 
-        if (collider.tag == "Player" && _transition && !_isSpawned) {
+        if (UsePathBlocker && collider.tag == "Player" && _transition && !_isSpawned) {
             _isSpawned = true;
             Vector3 spawPositon = Vector3.zero;
             Quaternion spawnQuaternion = Quaternion.identity;
