@@ -6,9 +6,9 @@ Material:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_Name: GBRenderMaterial
+  m_Name: GBGoldRenderMaterial
   m_Shader: {fileID: 4800000, guid: 60c6c045ad26b4cafbae420de9f9748e, type: 3}
-  m_ShaderKeywords: PIXELSNAP_ON
+  m_ShaderKeywords: 
   m_LightmapFlags: 5
   m_CustomRenderQueue: -1
   stringTagMap: {}
@@ -82,14 +82,7 @@ Material:
         first:
           name: _PaletteTexture
         second:
-          m_Texture: {fileID: 2800000, guid: 7a5f22fc6b7d94d599a544ecd9eb1bf3, type: 3}
-          m_Scale: {x: 1, y: 1}
-          m_Offset: {x: 0, y: 0}
-      data:
-        first:
-          name: _node_9850
-        second:
-          m_Texture: {fileID: 2800000, guid: b3fcd8f241ade4c0288809a6776c5632, type: 3}
+          m_Texture: {fileID: 2800000, guid: 2660d7deea5788f4dbf6a241c964529d, type: 3}
           m_Scale: {x: 1, y: 1}
           m_Offset: {x: 0, y: 0}
     m_Floats:
@@ -108,7 +101,7 @@ Material:
       data:
         first:
           name: PixelSnap
-        second: 1
+        second: 0
       data:
         first:
           name: _Parallax
@@ -145,10 +138,6 @@ Material:
         first:
           name: _Metallic
         second: 0
-      data:
-        first:
-          name: _EmissionScaleUI
-        second: 0
     m_Colors:
       data:
         first:
@@ -157,8 +146,4 @@ Material:
       data:
         first:
           name: _Color
-        second: {r: 1, g: 1, b: 1, a: 1}
-      data:
-        first:
-          name: _EmissionColorUI
         second: {r: 1, g: 1, b: 1, a: 1}

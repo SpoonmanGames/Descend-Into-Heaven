@@ -11,7 +11,6 @@ GameObject:
   - 212: {fileID: 21259650}
   - 95: {fileID: 9532322}
   - 61: {fileID: 6189244}
-  - 58: {fileID: 5852200}
   - 50: {fileID: 5011634}
   - 114: {fileID: 11462450}
   - 82: {fileID: 8256548}
@@ -50,19 +49,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &5852200
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 183566}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: -.00499999989, y: .0350000001}
-  serializedVersion: 2
-  m_Radius: .0337045193
 --- !u!61 &6189244
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -73,9 +59,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: -.00416761637, y: .109999999}
+  m_Offset: {x: -.00416755676, y: .0824961662}
   serializedVersion: 2
-  m_Size: {x: .0500000007, y: .100000001}
+  m_Size: {x: .0500000045, y: .155007735}
 --- !u!82 &8256548
 AudioSource:
   m_ObjectHideFlags: 1
@@ -300,6 +286,26 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_PlayOnAwake
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.x
+      value: -.00416755676
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.y
+      value: .0824961662
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.x
+      value: .0500000045
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: .155007735
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

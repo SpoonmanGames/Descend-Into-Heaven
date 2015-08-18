@@ -10,6 +10,7 @@ TagManager:
   - Plataform4
   - Boss
   - Golem
+  - RenderCamera
   layers:
   - Default
   - TransparentFX

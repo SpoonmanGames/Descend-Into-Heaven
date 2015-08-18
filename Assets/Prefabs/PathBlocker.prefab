@@ -11,7 +11,7 @@ GameObject:
   - 212: {fileID: 21201098}
   - 68: {fileID: 6835670}
   - 114: {fileID: 11450830}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: PathBlocker
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -59,7 +59,7 @@ MonoBehaviour:
   Tiempo: .599999905
   DestruirAlTerminar: 0
   Direccion: -1
-  TargetPosition: {x: 3.43400002, y: -2.02099991}
+  TargetPosition: {x: -5.50400019, y: 0}
 --- !u!212 &21201098
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -108,6 +108,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_SortingOrder
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 476828}
   - 212: {fileID: 21214162}
   - 68: {fileID: 6829450}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: UpperRockCeiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -78,6 +78,10 @@ Prefab:
     m_Modifications:
     - target: {fileID: 0}
       propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []

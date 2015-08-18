@@ -44,7 +44,7 @@ public class DoorController : MonoBehaviour {
         if (collider.tag == "Player" && !_transition) {
             _transition = true;
 
-            SuperMetroidCameraController cameraScript = Camera.main.GetComponent<SuperMetroidCameraController>();
+            SuperMetroidCameraController cameraScript = GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SuperMetroidCameraController>();
             GameObject player = GameObject.FindGameObjectWithTag("Player");
 
             if (player == null) {
