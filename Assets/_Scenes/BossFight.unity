@@ -234,7 +234,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -2
+  m_SortingOrder: -8
   m_Sprite: {fileID: 21300004, guid: 25b1b02446ecd1f41b24db05520d1d2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &427518247 stripped
@@ -378,7 +378,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -3
+  m_SortingOrder: -10
   m_Sprite: {fileID: 21300000, guid: 25b1b02446ecd1f41b24db05520d1d2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &542070205 stripped
@@ -636,7 +636,7 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: -1
+  m_SortingOrder: -9
   m_Sprite: {fileID: 21300002, guid: 25b1b02446ecd1f41b24db05520d1d2a, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &956661774
@@ -811,6 +811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 52714971}
   BossController: {fileID: 272839439}
+  TransitionOut: {fileID: 0}
+  Credits: {fileID: 148176, guid: 720252322b8bbdf428a76e6ba84d32ec, type: 2}
   endSnapshot: {fileID: 24571144, guid: 9a7732bdb34eb524990b955784e59363, type: 2}
   victoryAudio: {fileID: 8300000, guid: 2ec9deb9e2a3e874bb0dd281c2319490, type: 3}
   bpm: 150
@@ -1232,7 +1234,7 @@ Prefab:
       objectReference: {fileID: 8300000, guid: a57735772ed3d8b47a1c4c344922d27b, type: 3}
     - target: {fileID: 11425528, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
       propertyPath: Life
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
