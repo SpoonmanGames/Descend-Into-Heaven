@@ -176,7 +176,7 @@ MonoBehaviour:
   Velocity: .300000012
   PuntoFinal: .856000006
   PuntoInicial: 1.55299997
-  SpawnBullet: {fileID: 165868, guid: 07991353ebbd29f4184493d36f946dc8, type: 2}
+  SpawnBullet: {fileID: 132844, guid: f8c9008f3f8b3664cbf5ac2d79bacd22, type: 2}
   Fase: 1
 --- !u!212 &21271424
 SpriteRenderer:
@@ -235,6 +235,10 @@ Prefab:
       propertyPath: m_Color.b
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: SpawnBullet
+      value: 
+      objectReference: {fileID: 132844, guid: f8c9008f3f8b3664cbf5ac2d79bacd22, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 122784}

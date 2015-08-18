@@ -5,7 +5,9 @@ public class ChangeOnEndBehaviour : StateMachineBehaviour {
     
     public string StateVariableName;
     [Space(10)]
+    public bool IsPlayer = true;    
     public Player.PlayerState NextPlayerState;
+    public int NextStateValue;
     public string NextStateName;
     [Space(10)]
     [Range(0,1)]
@@ -13,16 +15,24 @@ public class ChangeOnEndBehaviour : StateMachineBehaviour {
     [Range(0, 1)]
     public float WhenChange;
 
+    private int _nextState;        
+
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    //override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-    //
-    //}
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
+        if (IsPlayer) {
+            _nextState = (int)NextPlayerState;
+        } else {
+            _nextState = NextStateValue;
+        }
+    }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
     override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {        
         if (stateInfo.normalizedTime > WhenChange && !animator.IsInTransition(layerIndex)) {
-            animator.SetInteger(StateVariableName, (int)NextPlayerState);
-            animator.GetComponentInParent<Player.Player>().PlayerState = NextPlayerState;
+            animator.SetInteger(StateVariableName, _nextState);
+            if (IsPlayer) {
+                animator.GetComponentInParent<Player.Player>().PlayerState = NextPlayerState;
+            }
             animator.Play(NextStateName, layerIndex, StartingPosition);
         }
     }

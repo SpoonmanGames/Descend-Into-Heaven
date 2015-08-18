@@ -60,7 +60,7 @@ public class BossFightController : MonoBehaviour {
             PlayerController.IsFreeToMove = false;
             PlayerController.ChangePlayerState(Player.PlayerState.Victory);
             if (!_victoryAudio){
-
+                GameObject.FindGameObjectWithTag("MusicPlayer").GetComponent<AudioSource>().Stop();
                 endLoopSource.PlayOneShot(victoryAudio,1F);
                 endSnapshot.TransitionTo(_transitionOut);
                 _victoryAudio = true;

@@ -44,7 +44,12 @@ namespace Player {
         override protected void Start() {
             base.Start();
             this._currentDirection = "left";
-            _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();            
+            _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
+
+            SpawnBullet.GetComponent<BulletController>().Direccion = -1;
+            SpawnBullet.GetComponent<BulletController>().Tiempo = 1.0f;
+            SpawnBullet.GetComponent<ChangeByTime>().LifeTime = 0.9f;
+            SpawnBullet.GetComponent<BulletController>().SetVelocity();
         }
 
         void LateUpdate() {
@@ -159,7 +164,10 @@ namespace Player {
             }
 
             if (_isMovingIntoTheScene) {
-                MoveAroundTheScene(1, 1.0f, -0.91f);
+                if (!MoveAroundTheScene(1, 1.0f, -0.91f)) {
+                    _waitTimer = _waitTimerLimit;
+                    _attackTimer = _attackTimerLimit;
+                }
             }
         }
 
@@ -190,7 +198,7 @@ namespace Player {
                 if (!dontSpawn) {
                     SpawnBullet.GetComponent<BulletController>().Direccion = direction;
                     SpawnBullet.GetComponent<BulletController>().Tiempo = time;
-                    SpawnBullet.GetComponent<DestroyByTime>().lifeTime = 1 + time;
+                    SpawnBullet.GetComponent<ChangeByTime>().LifeTime = 0.6f;
                     SpawnBullet.GetComponent<BulletController>().TargetPosition = new Vector2(finalX, fixedY);
                     SpawnBullet.GetComponent<BulletController>().SetVelocity();
                     SpawnBulletInHand(initialX, fixedY);

@@ -1,44 +1,44 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &165868
+--- !u!1 &132844
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 4
   m_Component:
-  - 4: {fileID: 465538}
-  - 212: {fileID: 21231802}
-  - 95: {fileID: 9596340}
-  - 58: {fileID: 5880096}
-  - 114: {fileID: 11468462}
-  - 114: {fileID: 11454760}
-  - 114: {fileID: 11488548}
+  - 4: {fileID: 454868}
+  - 212: {fileID: 21287602}
+  - 95: {fileID: 9552706}
+  - 58: {fileID: 5849328}
+  - 114: {fileID: 11497760}
+  - 114: {fileID: 11456810}
+  - 114: {fileID: 11488556}
   m_Layer: 0
-  m_Name: BeamShoot
+  m_Name: FullBeamShoot
   m_TagString: Respawn
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &465538
+--- !u!4 &454868
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165868}
+  m_GameObject: {fileID: 132844}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.222, y: -.532000005, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
---- !u!58 &5880096
+--- !u!58 &5849328
 CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165868}
+  m_GameObject: {fileID: 132844}
   m_Enabled: 1
   m_Material: {fileID: 0}
   m_IsTrigger: 1
@@ -46,16 +46,16 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: .0130000003
---- !u!95 &9596340
+--- !u!95 &9552706
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165868}
+  m_GameObject: {fileID: 132844}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: bde6e698d8ff594488677b9c1805a657, type: 2}
+  m_Controller: {fileID: 9100000, guid: 5fcadde14dcf2df4ab85776f28bb0e4d, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -63,24 +63,37 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!114 &11454760
+--- !u!114 &11456810
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165868}
+  m_GameObject: {fileID: 132844}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 520e42860d2c9484792b2e518f8288f4, type: 3}
+  m_Script: {fileID: 11500000, guid: 012454bc8b54a3846b6635dff1445749, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lifeTime: 4
---- !u!114 &11468462
+  LifeTime: .899999976
+  StateVariableName: State
+  NextStateVariableValue: 2
+--- !u!114 &11488556
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165868}
+  m_GameObject: {fileID: 132844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e21f145c7d33aea43a8ce8a030b64285, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &11497760
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 132844}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 934fff840a3545243a85fb07845296c2, type: 3}
@@ -88,26 +101,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "Da\xF1o": 1
   Tiempo: 1
-  DestruirAlTerminar: 1
+  DestruirAlTerminar: 0
   Direccion: -1
-  TargetPosition: {x: -.220000297, y: -.565780461}
---- !u!114 &11488548
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165868}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: e21f145c7d33aea43a8ce8a030b64285, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!212 &21231802
+  TargetPosition: {x: .393999785, y: .16181916}
+--- !u!212 &21287602
 SpriteRenderer:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 165868}
+  m_GameObject: {fileID: 132844}
   m_Enabled: 1
   m_CastShadows: 0
   m_ReceiveShadows: 0
@@ -136,47 +138,26 @@ Prefab:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: 0}
-      propertyPath: PlayerController
-      value: 
-      objectReference: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
-        type: 2}
+      propertyPath: LifeTime
+      value: .899999976
+      objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_TagString
-      value: Respawn
+      propertyPath: StateVariableName
+      value: State
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: NextStateVariableValue
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: DestruirAlTerminar
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 0}
-      propertyPath: m_LocalScale.x
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_LocalScale.y
-      value: 2
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Radius
-      value: .0130000003
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: lifeTime
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.r
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.g
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Color.b
-      value: 1
+      propertyPath: Direccion
+      value: -1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 165868}
+  m_RootGameObject: {fileID: 132844}
   m_IsPrefabParent: 1

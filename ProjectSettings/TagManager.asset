@@ -11,6 +11,7 @@ TagManager:
   - Boss
   - Golem
   - RenderCamera
+  - MusicPlayer
   layers:
   - Default
   - TransparentFX
