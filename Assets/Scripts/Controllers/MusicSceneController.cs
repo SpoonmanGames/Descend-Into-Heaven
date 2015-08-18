@@ -8,7 +8,7 @@ public class MusicSceneController : MonoBehaviour {
 	void Awake(){
         AudioSource audio = GameObject.FindGameObjectWithTag("MusicPlayer").GetComponent<AudioSource>();
 
-        if (audio.clip == null) {
+        if (audio.clip == null || audio.clip.name != MusicToPlay.name) {
             audio.clip = MusicToPlay;
             audio.Play();
         }

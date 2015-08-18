@@ -13,7 +13,6 @@ namespace Player {
         Hurt
     }
 
-
     public abstract class Player : MonoBehaviour {
 
         [Header("Base Setup")]

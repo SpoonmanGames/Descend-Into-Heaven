@@ -2612,7 +2612,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532286715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.718999982, y: .273000002, z: 0}
+  m_LocalPosition: {x: -.720000029, y: .289999992, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -8606,8 +8606,8 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 1
   SceneName: BossFight
-  TransitionEffect: {fileID: 0}
-  UsePathBlocker: 1
+  TransitionEffect: {fileID: 136930, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
+  UsePathBlocker: 0
   PathBlocker: {fileID: 0}
   ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
   TimeOffSet: 0

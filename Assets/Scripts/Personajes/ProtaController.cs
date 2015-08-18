@@ -26,6 +26,13 @@ namespace Player {
                     this.ChangePlayerState(PlayerState.Idle);
                 }
             }
+
+            if (IsFreeToMove) {
+                if (Input.GetKeyDown(KeyCode.Escape)) {
+                    IsFreeToMove = false;
+                    Application.LoadLevel("Menu");
+                }
+            }
         }
 
         void Update() {
