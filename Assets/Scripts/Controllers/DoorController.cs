@@ -110,7 +110,6 @@ public class DoorController : MonoBehaviour {
 
             switch (TransitionDirection) {
                 case TransitionDirection.Down:
-                    Debug.Log("down");
                     spawPositon = this.transform.position + Vector3.up * 2.5f;
                     spawnQuaternion = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
                     bulletController.Direccion = -1;
