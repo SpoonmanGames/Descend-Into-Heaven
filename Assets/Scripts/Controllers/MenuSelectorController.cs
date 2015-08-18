@@ -4,8 +4,10 @@ using System.Collections.Generic;
 
 public class MenuSelectorController : MonoBehaviour {
 
+    [Header("General Setup")]
     public List<Vector2> OptionPositions;
     public string SceneToLoad;
+    public BulletController TitleCreditScreen;
 
     [Header("Audio Setup")]
     public AudioClip moveSelectorSound;
@@ -13,11 +15,11 @@ public class MenuSelectorController : MonoBehaviour {
     public AudioSource selectorSource;
 
     private int _actualPosition = 0;
+    private Vector2 _creditTargetPosition;
 
     void Start() {
-
         selectorSource = GetComponent<AudioSource>();
-
+        _creditTargetPosition = new Vector2(0.0f, -6.0f);
     }
 
 
@@ -41,6 +43,10 @@ public class MenuSelectorController : MonoBehaviour {
         } else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) {
             ActionInMenu();
         }
+
+        if (TitleCreditScreen.transform.position.y == _creditTargetPosition.y) {
+            Debug.Log("asd");
+        }
 	}
 
     private void ActionInMenu() {
@@ -50,7 +56,7 @@ public class MenuSelectorController : MonoBehaviour {
         if (_actualPosition == 0) {
             Application.LoadLevel(SceneToLoad);
         } else if (_actualPosition == 1) {
-
+            TitleCreditScreen.TargetPosition = _creditTargetPosition;
         } else if (_actualPosition == 2) {
             Application.Quit();
         }
