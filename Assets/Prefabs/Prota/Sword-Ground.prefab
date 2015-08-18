@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 477910}
   - 61: {fileID: 6127032}
   - 114: {fileID: 11495736}
-  - 114: {fileID: 11436644}
   m_Layer: 0
   m_Name: Sword-Ground
   m_TagString: Untagged
@@ -40,21 +39,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .239999995, y: .273473501}
+  m_Offset: {x: .245000005, y: .300000012}
   serializedVersion: 2
-  m_Size: {x: .129999995, y: .403052807}
---- !u!114 &11436644
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 149090}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 520e42860d2c9484792b2e518f8288f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 1
+  m_Size: {x: .241999999, y: .349999994}
 --- !u!114 &11495736
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -66,8 +53,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 847fe222537f1224290032046172242a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerAttackingController: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
-    type: 2}
+  protaController: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -88,31 +74,6 @@ Prefab:
       value: 
       objectReference: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
         type: 2}
-    - target: {fileID: 0}
-      propertyPath: lifeTime
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: playerAttackingController
-      value: 
-      objectReference: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
-        type: 2}
-    - target: {fileID: 0}
-      propertyPath: m_Offset.x
-      value: .239999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Size.x
-      value: .129999995
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Offset.y
-      value: .273473501
-      objectReference: {fileID: 0}
-    - target: {fileID: 0}
-      propertyPath: m_Size.y
-      value: .403052807
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 149090}
