@@ -13,6 +13,7 @@ public class DoorController : MonoBehaviour {
     public TransitionDirection TransitionDirection = TransitionDirection.Right;
     public bool IsTransitioningToScene = false;
     public string SceneName = string.Empty;
+    public GameObject TransitionEffect;
     [Space(10)]
     public bool UsePathBlocker = true;
     public GameObject PathBlocker;
@@ -24,9 +25,20 @@ public class DoorController : MonoBehaviour {
     private bool _transition = false;
     private GameObject _spawedPathBloquer;
     private bool _isSpawned = false;
+    private GameObject _transitionToLevel;
+    private bool _isTransitioningOut = false;
+    private float _deadTimeCounter = 0.0f;
+    private float _deadTime = 1.0f;
 
+    void Update() {
+        if (_isTransitioningOut) {
+            _deadTimeCounter += Time.deltaTime;
 
-    
+            if (_deadTimeCounter >= _deadTime) {
+                Application.LoadLevel(SceneName);
+            }
+        }
+    }
 
     void OnTriggerEnter2D(Collider2D collider) {
         if (collider.tag == "Player" && !_transition) {
@@ -80,7 +92,12 @@ public class DoorController : MonoBehaviour {
                     cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition, transform.parent.position.y, transform.parent.position.y);
                 }
             } else {
-                Application.LoadLevel(SceneName);
+                if (!_isTransitioningOut) {
+                    _isTransitioningOut = true;
+                    _transitionToLevel = Instantiate(TransitionEffect, this.transform.parent.position, this.transform.parent.rotation) as GameObject;
+                    _transitionToLevel.GetComponent<Animator>().SetFloat("Speed", -1.0f);
+                    _transitionToLevel.GetComponent<Animator>().Play("LoadingTransition", 0, 1.0f);
+                }
             }
         }
 

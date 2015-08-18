@@ -156,7 +156,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   FadeFromBlack: 1
   WaitingTimeBeforeFadeIn: 4
-  FadeInTime: 150
+  FadeInTime: .100000001
   WaitingTimeBeforeFadeOut: 0
   FadeOutTime: 0
 --- !u!1 &393966298
@@ -327,7 +327,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!114 &873437335
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -336,14 +336,16 @@ MonoBehaviour:
   m_GameObject: {fileID: 873437334}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3fcc80f5350a05f438af574bce923c86, type: 3}
+  m_Script: {fileID: 11500000, guid: 42614595d419beb48bd895b8e9d530bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  FadeFromBlack: 1
-  WaitingTimeBeforeFadeIn: 0
-  FadeInTime: 1
-  WaitingTimeBeforeFadeOut: 2
-  FadeOutTime: 1
+  WaitingTimeBeforeFadeIn: 2
+  TransitionUsedToFadeIn: {fileID: 196954, guid: 328b65f722909a94994fcf37d29f04d4,
+    type: 2}
+  WaitingTimeBeforeFadeOut: 4
+  TransitionUsedToFadeOut: {fileID: 196954, guid: 328b65f722909a94994fcf37d29f04d4,
+    type: 2}
+  DeadOffSet: 1
 --- !u!212 &873437336
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -368,7 +370,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: -1
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!4 &873437337
 Transform:
@@ -377,8 +379,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 873437334}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.0120000001, y: .0140000004, z: 0}
-  m_LocalScale: {x: 22.056797, y: 20.3811283, z: 1.12602913}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1605169019}
   m_Father: {fileID: 0}
@@ -433,7 +435,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1050062151}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: .99000001, z: 0}
+  m_LocalPosition: {x: 0, y: 1.62100005, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1310820091}
@@ -530,6 +532,8 @@ MonoBehaviour:
   - {x: -.540000021, y: -.851999879}
   SceneToLoad: SceneDungeon1
   TitleCreditScreen: {fileID: 1050062154}
+  MenuOptions: {fileID: 1730101081}
+  TransitionToScene: {fileID: 136930, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
   moveSelectorSound: {fileID: 8300000, guid: d40fbb9aa00de37408488eb80a2f918f, type: 3}
   pressSelectorSound: {fileID: 8300000, guid: d857f71c407200445bcb5a36acfc27a5, type: 3}
   selectorSource: {fileID: 1113220017}
@@ -802,7 +806,7 @@ GameObject:
   - 4: {fileID: 1605169019}
   - 212: {fileID: 1605169020}
   m_Layer: 0
-  m_Name: sp-presentacion-trans2
+  m_Name: sp-presentacion
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -815,8 +819,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1605169018}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .00039999999, y: .00139999995, z: 0}
-  m_LocalScale: {x: .0272025056, y: .0318922661, z: .888076484}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 873437337}
   m_RootOrder: 0
@@ -843,8 +847,8 @@ SpriteRenderer:
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: fd7292a1ba117aa48b7e903a1fd79b54, type: 3}
+  m_SortingOrder: 10
+  m_Sprite: {fileID: 21300000, guid: 4671e73f74641e04694248e1ba87ccfe, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &1668045883
 Prefab:

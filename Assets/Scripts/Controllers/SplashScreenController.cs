@@ -22,8 +22,17 @@ public class SplashScreenController : MonoBehaviour {
     private float _fadeOutColor;
 
     private List<SpriteRenderer> _childRenders = new List<SpriteRenderer>();
+
+    private bool _showNow = false;
 	
 	void Start () {
+        StartSplash();
+	}
+
+    public void StartSplash() {
+        _waitingTimeFadeInCounter = 0.0f;
+        _waitingTimeFadeOutCounter = 0.0f;
+
         if (FadeFromBlack) {
             this.GetComponent<SpriteRenderer>().color = new Color(0.0f, 0.0f, 0.0f, 1.0f);
         } else {
@@ -51,46 +60,55 @@ public class SplashScreenController : MonoBehaviour {
             _fadeOutFactor = 1.0f / FadeOutTime;
             _fadeOutColor = 1.0f;
         }
-	}
+    }
 	
 	void Update () {
+        if (!_showNow) {
+            _waitingTimeFadeInCounter += Time.deltaTime;
 
-        _waitingTimeFadeInCounter += Time.deltaTime;
+            if (_waitingTimeFadeInCounter >= WaitingTimeBeforeFadeIn) {
+                if (FadeInTime > 0.0f && _fadeInColor < 1.0f) {
+                    _fadeInColor += _fadeInFactor;
+                    _fadeInColor = Mathf.Clamp(_fadeInColor, 0.0f, 1.0f);
 
-        if (_waitingTimeFadeInCounter >= WaitingTimeBeforeFadeIn) {
-            if (FadeInTime > 0.0f && _fadeInColor < 1.0f) {
-                _fadeInColor += _fadeInFactor;
-                _fadeInColor = Mathf.Clamp(_fadeInColor, 0.0f, 1.0f);
-
-                for (int i = 0; i < _childRenders.Count; i++) {
-                    if (FadeFromBlack) {
-                        _childRenders[i].color = new Color(_fadeInColor, _fadeInColor, _fadeInColor, 1f);
-                    } else {
-                        _childRenders[i].color = new Color(1.0f, 1.0f, 1.0f, _fadeInColor);
-                    }                    
-                }
-            } else {
-                _waitingTimeFadeOutCounter += Time.deltaTime;
-
-                if (_waitingTimeFadeOutCounter >= WaitingTimeBeforeFadeOut) {
-                    if (FadeOutTime > 0.0f && _fadeOutColor > 0) {
-                        _fadeOutColor -= _fadeOutFactor;
-                        _fadeOutColor = Mathf.Clamp(_fadeOutColor, 0.0f, 1.0f);
-
-                        for (int i = 0; i < _childRenders.Count; i++) {
-                            if (FadeFromBlack) {
-                                _childRenders[i].color = new Color(_fadeOutColor, _fadeOutColor, _fadeOutColor, 1f);
-                            } else {
-                                _childRenders[i].color = new Color(1.0f, 1.0f, 1.0f, _fadeOutColor);
-                            }
+                    for (int i = 0; i < _childRenders.Count; i++) {
+                        if (FadeFromBlack) {
+                            _childRenders[i].color = new Color(_fadeInColor, _fadeInColor, _fadeInColor, 1f);
+                        } else {
+                            _childRenders[i].color = new Color(1.0f, 1.0f, 1.0f, _fadeInColor);
                         }
-                    } else {
-                        if (FadeOutTime > 0.0f) {
-                            Destroy(this.gameObject);
+                    }
+                } else {
+                    _waitingTimeFadeOutCounter += Time.deltaTime;
+
+                    if (_waitingTimeFadeOutCounter >= WaitingTimeBeforeFadeOut) {
+                        if (FadeOutTime > 0.0f && _fadeOutColor > 0) {
+                            _fadeOutColor -= _fadeOutFactor;
+                            _fadeOutColor = Mathf.Clamp(_fadeOutColor, 0.0f, 1.0f);
+
+                            for (int i = 0; i < _childRenders.Count; i++) {
+                                if (FadeFromBlack) {
+                                    _childRenders[i].color = new Color(_fadeOutColor, _fadeOutColor, _fadeOutColor, 1f);
+                                } else {
+                                    _childRenders[i].color = new Color(1.0f, 1.0f, 1.0f, _fadeOutColor);
+                                }
+                            }
+                        } else {
+                            if (FadeOutTime > 0.0f) {
+                                Destroy(this.gameObject);
+                            }
                         }
                     }
                 }
             }
         }
 	}
+
+    public void ShowNow() {
+        _showNow = true;
+
+        for (int i = 0; i < _childRenders.Count; i++) {
+                _childRenders[i].color = new Color(1.0f, 1.0f, 1.0f, 1.0f);            
+        }
+    }
 }

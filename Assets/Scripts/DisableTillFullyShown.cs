@@ -6,8 +6,8 @@ public class DisableTillFullyShown : MonoBehaviour {
     SpriteRenderer _playerRenderer;
 	
 	void Start () {
-        this.GetComponent<MenuSelectorController>().enabled = false;
         _playerRenderer = this.GetComponent<SpriteRenderer>();
+        this.GetComponent<MenuSelectorController>().enabled = false;
 	}
 	
 	void Update () {
