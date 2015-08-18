@@ -1025,6 +1025,7 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 0
   PathBlocker: {fileID: 0}
   ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
@@ -1235,6 +1236,7 @@ MonoBehaviour:
   TransitionDirection: 1
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -2136,6 +2138,7 @@ MonoBehaviour:
   TransitionDirection: 1
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -3102,6 +3105,7 @@ MonoBehaviour:
   TransitionDirection: 2
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -4572,6 +4576,7 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 103704, guid: 3cd1673f091af514cb86e2047e60195d, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -4637,6 +4642,7 @@ MonoBehaviour:
   TransitionDirection: 2
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -6241,6 +6247,7 @@ MonoBehaviour:
   TransitionDirection: 2
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -6392,6 +6399,7 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 0
   PathBlocker: {fileID: 0}
   ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
@@ -6527,6 +6535,7 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -6755,6 +6764,7 @@ MonoBehaviour:
   TransitionDirection: 2
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -7159,6 +7169,7 @@ MonoBehaviour:
   TransitionDirection: 1
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -7279,6 +7290,7 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: .725490212, g: 0, b: 0, a: 1}
@@ -7625,6 +7637,7 @@ MonoBehaviour:
   TransitionDirection: 1
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 0}
   ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
@@ -7760,6 +7773,7 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 0
   PathBlocker: {fileID: 0}
   ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
@@ -8307,6 +8321,7 @@ MonoBehaviour:
   TransitionDirection: 0
   IsTransitioningToScene: 1
   SceneName: BossFight
+  TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
   PathBlocker: {fileID: 0}
   ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
