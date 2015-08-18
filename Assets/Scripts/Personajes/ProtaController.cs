@@ -7,6 +7,9 @@ namespace Player {
 
         [HideInInspector]
         public bool IsInTransition = false;
+        
+        private float _victorySoundDelay = 0.8f;
+        private float _victorySoundDelayCounter = 0.0f;
 
         void FixedUpdate() {
             if (IsFreeToMove && !IsInTransition && !IsDead) {                
@@ -21,6 +24,18 @@ namespace Player {
                     this.HorizontalMovement("left");
                 } else if(!IsJumping && !IsAttacking){
                     this.ChangePlayerState(PlayerState.Idle);
+                }
+            }
+        }
+
+        void Update() {
+            if (IsVictory) {
+                _victorySoundDelayCounter += Time.deltaTime;
+
+                if (_victorySoundDelayCounter >= _victorySoundDelay) {
+                    _victorySoundDelayCounter = 0.0f;
+                    audioSource.volume = 0.3f;
+                    audioSource.PlayOneShot(soundVictory, 1F);
                 }
             }
         }

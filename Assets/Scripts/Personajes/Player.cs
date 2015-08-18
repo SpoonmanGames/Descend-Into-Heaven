@@ -37,12 +37,12 @@ namespace Player {
 
         [Header("Audio Setup")]
         public AudioClip soundIdle;                
-	public AudioClip soundWalking;
-	public AudioClip soundAttacking;
-	public AudioClip soundJumping;
-	public AudioClip soundDead;
-	public AudioClip soundVictory;
-	public AudioClip soundHurt;
+	    public AudioClip soundWalking;
+	    public AudioClip soundAttacking;
+	    public AudioClip soundJumping;
+	    public AudioClip soundDead;
+	    public AudioClip soundVictory;
+	    public AudioClip soundHurt;
 
         [HideInInspector]
         public bool IsFreeToMove = true;
@@ -153,6 +153,7 @@ namespace Player {
         public bool IsAttacking { get { return PlayerState == PlayerState.Attacking; } }
         public bool IsJumping { get { return PlayerState == PlayerState.Jumping; } }
         public bool IsDead { get { return PlayerState == PlayerState.Dead; } }
+        public bool IsVictory { get { return PlayerState == PlayerState.Victory; } }
         public bool IsHurt { get { return PlayerState == PlayerState.Hurt; } }
     }
 }

@@ -9,6 +9,8 @@ public class SplashScreenController : MonoBehaviour {
     public float WaitingTimeBeforeFadeIn;
     public float FadeInTime;
     [Space(10)]
+    public AudioClip AudioWhenIn;
+    [Space(10)]
     public float WaitingTimeBeforeFadeOut;
     public float FadeOutTime;
 
@@ -77,6 +79,11 @@ public class SplashScreenController : MonoBehaviour {
                         } else {
                             _childRenders[i].color = new Color(1.0f, 1.0f, 1.0f, _fadeInColor);
                         }
+                    }
+
+                    if (_fadeInColor == 1.0f && AudioWhenIn != null) {
+                        this.GetComponent<AudioSource>().clip = AudioWhenIn;
+                        this.GetComponent<AudioSource>().Play();
                     }
                 } else {
                     _waitingTimeFadeOutCounter += Time.deltaTime;
