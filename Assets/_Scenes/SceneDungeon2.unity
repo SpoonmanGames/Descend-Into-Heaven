@@ -217,6 +217,10 @@ Prefab:
       propertyPath: m_Name
       value: UpperRockCeiling
       objectReference: {fileID: 0}
+    - target: {fileID: 6828088, guid: e076b7e649884474cafe8157240c436f, type: 2}
+      propertyPath: m_Offset.y
+      value: -.057
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e076b7e649884474cafe8157240c436f, type: 2}
   m_IsPrefabParent: 0
@@ -674,6 +678,10 @@ Prefab:
     - target: {fileID: 136230, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_Name
       value: RightRockCeiling
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828088, guid: e076b7e649884474cafe8157240c436f, type: 2}
+      propertyPath: m_Offset.y
+      value: -.057
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e076b7e649884474cafe8157240c436f, type: 2}
@@ -3795,11 +3803,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 21201270, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_SortingOrder
-      value: 1
+      value: -1
       objectReference: {fileID: 0}
     - target: {fileID: 136230, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_Name
       value: UpperRockCeiling
+      objectReference: {fileID: 0}
+    - target: {fileID: 6828088, guid: e076b7e649884474cafe8157240c436f, type: 2}
+      propertyPath: m_Offset.y
+      value: -.057
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e076b7e649884474cafe8157240c436f, type: 2}
