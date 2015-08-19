@@ -19,6 +19,7 @@ namespace Player {
         public bool DelayBeforeAttack = true;
 
         private float _delayToAttackCounter;
+        private bool _following = false;
 
         public void Hurt(int damage) {
             Life -= damage;
@@ -40,7 +41,10 @@ namespace Player {
             if (IsFreeToMove && !IsDead && !IsHurt) {
                 float hightPositionDifference = this.transform.position.y - _protaController.transform.position.y;
 
-                if (!IsAttacking && !IsHurt && hightPositionDifference >= -0.03 && hightPositionDifference <= 0.03) {
+                if (!IsAttacking && !IsHurt && (hightPositionDifference >= -0.03 && hightPositionDifference <= 0.03 || _following)) {
+
+                    _following = true;
+
                     if (!IsAttacking && !IsHurt 
                         && this.transform.position.x - RangeOfAttack <= _protaController.transform.position.x
                         && this.transform.position.x + RangeOfAttack >= _protaController.transform.position.x) {

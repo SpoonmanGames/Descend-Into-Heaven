@@ -1790,6 +1790,7 @@ MonoBehaviour:
   IsFreeToMove: 1
   PlayerState: 0
   PlayerRigidBody2D: {fileID: 0}
+  TransitionOut: {fileID: 148898, guid: f7d78b4f9682fbc49922f4470cb56070, type: 2}
   IsInTransition: 0
 --- !u!82 &532286723
 AudioSource:
@@ -1913,6 +1914,10 @@ MonoBehaviour:
   TimeOffSet: 3.4000001
   TargetXPosition: .100000001
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &553608604
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2049,6 +2054,10 @@ MonoBehaviour:
   TimeOffSet: 2
   TargetXPosition: .100000001
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &578715120
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2103,6 +2112,10 @@ MonoBehaviour:
   TimeOffSet: 3.4000001
   TargetXPosition: .100000001
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &599048060
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2181,6 +2194,10 @@ MonoBehaviour:
   TimeOffSet: 3.4000001
   TargetXPosition: .100000001
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &654912154
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3357,6 +3374,10 @@ MonoBehaviour:
   TimeOffSet: 3
   TargetXPosition: .100000001
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &1032985349
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -3647,6 +3668,10 @@ MonoBehaviour:
   TimeOffSet: 3.4000001
   TargetXPosition: .100000001
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &1123598999
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4479,6 +4504,10 @@ MonoBehaviour:
   TimeOffSet: 2
   TargetXPosition: .100000001
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &1418035639
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -6297,6 +6326,10 @@ MonoBehaviour:
   TimeOffSet: 0
   TargetXPosition: 0
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &1950467881
 BoxCollider2D:
   m_ObjectHideFlags: 0
