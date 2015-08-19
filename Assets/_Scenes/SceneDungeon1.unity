@@ -605,7 +605,7 @@ Transform:
   - {fileID: 1015695675}
   - {fileID: 714319799}
   m_Father: {fileID: 0}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!4 &125880150 stripped
 Transform:
   m_PrefabParentObject: {fileID: 450828, guid: 6cf9fd6ae98bcc3448e01fa0a48926ac, type: 2}
@@ -2593,7 +2593,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   player: {fileID: 532286715}
-  scrollMultiplier: 1
+  scrollMultiplier: .800000012
   movementWindowSize: {x: 8, y: 6}
   windowOffset: {x: 0, y: 0}
   limitCameraMovement: 1
@@ -2837,7 +2837,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 532286715}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.74000001, y: .5, z: 0}
+  m_LocalPosition: {x: 2.71000004, y: -6.88999987, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -9387,7 +9387,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1950467878}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
-  m_LocalPosition: {x: .00600000005, y: -2.30900002, z: 0}
+  m_LocalPosition: {x: .00600000005, y: -2.37400007, z: 0}
   m_LocalScale: {x: .020770004, y: 1.13, z: 1.23999977}
   m_Children: []
   m_Father: {fileID: 675445536}

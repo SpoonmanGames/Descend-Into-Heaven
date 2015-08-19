@@ -27,7 +27,7 @@ public class SuperMetroidCameraController : MonoBehaviour {
 	public GameObject player;
 
 	[Tooltip("Should be at least 1.1, as for this to work, the camera has to move faster than the player. Otherwise, it behaves as if the camera is locked to the player.")]
-	[Range (1, 10)]
+	[Range (-10, 10)]
 	public float scrollMultiplier = 1.8f;
 	[Space(10)]
 	[Tooltip("The player will be kept within this area on the screen. If you have trouble visualizing it, turn on the Debug Visuals below and press play to see it.")]
