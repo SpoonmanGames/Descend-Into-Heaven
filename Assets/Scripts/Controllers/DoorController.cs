@@ -99,7 +99,9 @@ public class DoorController : MonoBehaviour {
             } else {
                 if (!_isTransitioningOut) {
                     _isTransitioningOut = true;
-                    _transitionToLevel = Instantiate(TransitionEffect, this.transform.parent.position, this.transform.parent.rotation) as GameObject;
+                    Vector3 posicion = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
+                    posicion.z = this.transform.position.z;
+                    _transitionToLevel = Instantiate(TransitionEffect, posicion, this.transform.parent.rotation) as GameObject;
                     _transitionToLevel.GetComponent<Animator>().SetFloat("Speed", -1.0f);
                     _transitionToLevel.GetComponent<Animator>().Play("LoadingTransition", 0, 1.0f);
                 }
