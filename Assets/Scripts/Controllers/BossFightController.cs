@@ -8,6 +8,7 @@ public class BossFightController : MonoBehaviour {
     public Player.Player PlayerController;
     public Player.Player BossController;
     public GameObject TransitionOut;
+    public float DelayToEnd = 10.0f;
     public GameObject Credits;
 
     [Header("Audio Setup")]
@@ -21,6 +22,10 @@ public class BossFightController : MonoBehaviour {
     private float _transitionOut;
     private float _quarterNote;
     private bool _victoryAudio = false;
+    
+    private float _counterToEnd = 0.0f;
+    private bool _isTransitionOut = false;
+    private GameObject _transitionOutGameObject;
 
     void Start() {
 
@@ -67,6 +72,23 @@ public class BossFightController : MonoBehaviour {
                 Instantiate(Credits);
             }
 
+            if (!_isTransitionOut) {
+                _counterToEnd += Time.deltaTime;
+
+                if (_counterToEnd >= DelayToEnd) {
+                    _transitionOutGameObject = Instantiate(TransitionOut, this.transform.position, this.transform.rotation) as GameObject;
+                    _transitionOutGameObject.GetComponent<SpriteRenderer>().sortingOrder = 10;
+                    _transitionOutGameObject.GetComponent<Animator>().SetFloat("Speed", -1.0f);
+                    _transitionOutGameObject.GetComponent<Animator>().Play("LoadingTransition", 0, 1.0f);
+                    _isTransitionOut = true;
+                    _counterToEnd = DelayToEnd - 2.0f;
+                }
+            } else {
+                _counterToEnd += Time.deltaTime;
+                if (_counterToEnd >= DelayToEnd) {
+                    Application.LoadLevel("Menu");
+                }
+            }
         }
     }
 

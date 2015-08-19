@@ -422,7 +422,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 439870, guid: 5c195c3b676bf4042af068f3f899873d, type: 2}
       propertyPath: m_RootOrder
-      value: 4
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 2043858, guid: 5c195c3b676bf4042af068f3f899873d, type: 2}
       propertyPath: m_ClearFlags
@@ -526,7 +526,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 454780, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 136930, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
       propertyPath: m_IsActive
@@ -572,7 +572,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478040, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
     - target: {fileID: 478040, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
       propertyPath: m_LocalScale.x
@@ -811,7 +811,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   PlayerController: {fileID: 52714971}
   BossController: {fileID: 272839439}
-  TransitionOut: {fileID: 0}
+  TransitionOut: {fileID: 196954, guid: 328b65f722909a94994fcf37d29f04d4, type: 2}
+  DelayToEnd: 23
   Credits: {fileID: 148176, guid: 720252322b8bbdf428a76e6ba84d32ec, type: 2}
   endSnapshot: {fileID: 24571144, guid: 9a7732bdb34eb524990b955784e59363, type: 2}
   victoryAudio: {fileID: 8300000, guid: 2ec9deb9e2a3e874bb0dd281c2319490, type: 3}
@@ -828,7 +829,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 0
 --- !u!82 &1262562775
 AudioSource:
   m_ObjectHideFlags: 0
@@ -951,7 +952,7 @@ Transform:
   m_Children:
   - {fileID: 45823176}
   m_Father: {fileID: 0}
-  m_RootOrder: 1
+  m_RootOrder: 2
 --- !u!20 &1475315657
 Camera:
   m_ObjectHideFlags: 0
@@ -1183,7 +1184,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 3
 --- !u!1001 &1757544116
 Prefab:
   m_ObjectHideFlags: 0
@@ -1221,7 +1222,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 435506, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
       propertyPath: m_RootOrder
-      value: 5
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8216164, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
       propertyPath: OutputAudioMixerGroup
@@ -1272,7 +1273,7 @@ Transform:
   - {fileID: 107792453}
   - {fileID: 542070205}
   m_Father: {fileID: 0}
-  m_RootOrder: 6
+  m_RootOrder: 7
 --- !u!1001 &1929962217
 Prefab:
   m_ObjectHideFlags: 0
@@ -1310,7 +1311,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 489228, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: m_RootOrder
-      value: 3
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 21253300, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: m_Color.r
@@ -1344,6 +1345,10 @@ Prefab:
       propertyPath: soundVictory
       value: 
       objectReference: {fileID: 8300000, guid: 68738bbbc4037964f8fafe2c0b35f56c, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: TransitionOut
+      value: 
+      objectReference: {fileID: 136930, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0

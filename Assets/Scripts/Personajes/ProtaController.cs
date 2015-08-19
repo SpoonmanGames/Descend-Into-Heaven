@@ -5,22 +5,31 @@ namespace Player {
 
     public class ProtaController : Player {
 
+        [Header("Prota Transition")]
+        public GameObject TransitionOut;
+
         [HideInInspector]
         public bool IsInTransition = false;
         
         private float _victorySoundDelay = 0.8f;
         private float _victorySoundDelayCounter = 0.0f;
 
+        private GameObject _transitionOut;
+        private bool _exit = false;
+
+        private float _delayExit = 1.0f;
+        private float _delayExitCounter = 0.0f;
+
         void FixedUpdate() {
-            if (IsFreeToMove && !IsInTransition && !IsDead) {                
-                if (!IsJumping && !IsAttacking && Input.GetKey(KeyCode.UpArrow)) {
+            if (IsFreeToMove && !IsInTransition && !IsDead) {
+                if (!IsJumping && !IsAttacking && Input.GetAxis("Jump") == 1.0f) {
                     this.ChangePlayerState(PlayerState.Jumping);
                     PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
-                } else if (!IsAttacking && Input.GetKeyDown(KeyCode.A)) {
+                } else if (!IsAttacking && Input.GetAxis("Attack") == 1.0f) {
                     this.ChangePlayerState(PlayerState.Attacking);
-                } else if (!IsAttacking && Input.GetKey(KeyCode.RightArrow)) {
+                } else if (!IsAttacking && Input.GetAxis("Horizontal") == 1.0f) {
                     this.HorizontalMovement("right");
-                } else if (!IsAttacking &&  Input.GetKey(KeyCode.LeftArrow)) {
+                } else if (!IsAttacking && Input.GetAxis("Horizontal") == -1.0f) {
                     this.HorizontalMovement("left");
                 } else if(!IsJumping && !IsAttacking){
                     this.ChangePlayerState(PlayerState.Idle);
@@ -28,9 +37,20 @@ namespace Player {
             }
 
             if (IsFreeToMove) {
-                if (Input.GetKeyDown(KeyCode.Escape)) {
+                if (Input.GetAxis("Cancel") == 1.0f) {
                     IsFreeToMove = false;
-                    Application.LoadLevel("Menu");
+                    _exit = true;
+                    this.GetComponent<Rigidbody2D>().gravityScale = 0.0f;
+                    this.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                    TransitioningOut();
+                }
+            } else {
+                if (_exit) {
+                    _delayExitCounter += Time.deltaTime;
+
+                    if (_delayExitCounter >= _delayExit) {
+                        Application.LoadLevel("Menu");
+                    }
                 }
             }
         }
@@ -45,6 +65,23 @@ namespace Player {
                     audioSource.PlayOneShot(soundVictory, 1F);
                 }
             }
+
+            if (Life <= 0 && !IsDead) {
+                ChangePlayerState(PlayerState.Dead);
+
+                TransitioningOut();
+            }
+        }
+
+        void TransitioningOut() {
+            Vector3 posicion = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
+            posicion.z = this.transform.position.z;
+
+            _transitionOut = Instantiate(TransitionOut, posicion, this.transform.rotation) as GameObject;
+            _transitionOut.GetComponent<SpriteRenderer>().sortingOrder = 10;
+            _transitionOut.GetComponent<Animator>().SetFloat("Speed", -1.0f);
+            _transitionOut.GetComponent<Animator>().Play("LoadingTransition", 0, 1.0f);
         }
     }
+
 }

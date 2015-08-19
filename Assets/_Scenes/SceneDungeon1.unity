@@ -2692,6 +2692,7 @@ MonoBehaviour:
   IsFreeToMove: 1
   PlayerState: 0
   PlayerRigidBody2D: {fileID: 0}
+  TransitionOut: {fileID: 148898, guid: f7d78b4f9682fbc49922f4470cb56070, type: 2}
   IsInTransition: 0
 --- !u!82 &532286723
 AudioSource:
