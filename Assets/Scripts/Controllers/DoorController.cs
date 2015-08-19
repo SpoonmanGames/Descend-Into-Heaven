@@ -21,6 +21,11 @@ public class DoorController : MonoBehaviour {
     public float TimeOffSet = 0.0f;
     public float TargetXPosition = 0.0f;
     public float TargetYPosition = 0.0f;
+    [Space(10)]
+    public float LeftLimit = 0.0f;
+    public float RightLimit = 0.0f;
+    public float BottomLimit = 0.0f;
+    public float TopLimit = 0.0f;
 
     private bool _transition = false;
     private GameObject _spawedPathBloquer;
@@ -71,7 +76,7 @@ public class DoorController : MonoBehaviour {
                     PlayerTargetVector = new Vector3(PlayerTargetPositon, player.transform.position.y, player.transform.position.z);
 
                     cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
-                    cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition, transform.parent.position.y, transform.parent.position.y);
+                    cameraScript.ActivateLimits(CameraTargetPosition + LeftLimit, CameraTargetPosition + RightLimit, transform.parent.position.y + BottomLimit, transform.parent.position.y + TopLimit);
                 } else if (this.TransitionDirection == TransitionDirection.Down) {
                     CameraTargetPosition = transform.parent.position.y - 2.0f;
                     PlayerTargetPositon = player.transform.position.y - 0.522f;
@@ -80,7 +85,7 @@ public class DoorController : MonoBehaviour {
                     PlayerTargetVector = new Vector3(player.transform.position.x, PlayerTargetPositon, player.transform.position.z);
 
                     cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
-                    cameraScript.ActivateLimits(transform.parent.position.x, transform.parent.position.x, CameraTargetPosition, CameraTargetPosition);
+                    cameraScript.ActivateLimits(transform.parent.position.x + LeftLimit, transform.parent.position.x + RightLimit, CameraTargetPosition + BottomLimit, CameraTargetPosition + TopLimit);
                 } else if (this.TransitionDirection == TransitionDirection.Left) {
                     CameraTargetPosition = transform.parent.position.x - 2.22f;
                     PlayerTargetPositon = player.transform.position.x - 0.45f;
@@ -89,7 +94,7 @@ public class DoorController : MonoBehaviour {
                     PlayerTargetVector = new Vector3(PlayerTargetPositon, player.transform.position.y, player.transform.position.z);
 
                     cameraScript.MoveCamera(CameraTargetVector, PlayerTargetVector, TransitionSpeed);
-                    cameraScript.ActivateLimits(CameraTargetPosition, CameraTargetPosition, transform.parent.position.y, transform.parent.position.y);
+                    cameraScript.ActivateLimits(CameraTargetPosition + LeftLimit, CameraTargetPosition + RightLimit, transform.parent.position.y + BottomLimit, transform.parent.position.y + RightLimit);
                 }
             } else {
                 if (!_isTransitioningOut) {
