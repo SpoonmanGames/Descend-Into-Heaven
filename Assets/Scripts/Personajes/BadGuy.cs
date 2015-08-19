@@ -13,6 +13,7 @@ namespace Player {
         public ProtaController _protaController;
         public float LeftRangeOfSight = 0.5f;
         public float RightRangeOfSight = 0.5f;
+        public bool AlwaysFollow = false;
         [Space(10)]
         public float RangeOfAttack = 0.5f;
         public float DelayToAttack = 0.0f;
@@ -43,7 +44,9 @@ namespace Player {
 
                 if (!IsAttacking && !IsHurt && (hightPositionDifference >= -0.03 && hightPositionDifference <= 0.03 || _following)) {
 
-                    _following = true;
+                    if (AlwaysFollow) {
+                        _following = true;
+                    }
 
                     if (!IsAttacking && !IsHurt 
                         && this.transform.position.x - RangeOfAttack <= _protaController.transform.position.x
