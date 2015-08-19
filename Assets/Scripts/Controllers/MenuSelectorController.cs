@@ -27,6 +27,10 @@ public class MenuSelectorController : MonoBehaviour {
     private float _timeToLoad = 1.0f;
     private GameObject _transition;
 
+    private bool _axisUp = false;
+    private bool _axisDown = false;
+    private bool _axisEnter = false;
+
     void Start() {
         selectorSource = GetComponent<AudioSource>();
         _creditTargetPosition = new Vector2(0.0f, -5.5f);
@@ -47,14 +51,29 @@ public class MenuSelectorController : MonoBehaviour {
 	void Update () {
         if (!_returningFromCredits && !_returningToTitle) {
             if (!_loadingScreen) {
-                if (Input.GetKeyDown(KeyCode.UpArrow) || Input.GetKeyDown(KeyCode.W)) {
+                if (!_axisUp && Input.GetAxis("Vertical") == 1.0f) {
                     _actualPosition--;
+                    _axisUp = true;
                     selectorSource.PlayOneShot(moveSelectorSound, 1F);
-                } else if (Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S)) {
+                } else if (!_axisDown && Input.GetAxis("Vertical") == -1.0f) {
                     _actualPosition++;
+                    _axisDown = true;
                     selectorSource.PlayOneShot(moveSelectorSound, 1F);
-                } else if (Input.GetKeyDown(KeyCode.Return) || Input.GetKeyDown(KeyCode.KeypadEnter) || Input.GetKeyDown(KeyCode.Space) || Input.GetKeyDown(KeyCode.LeftControl) || Input.GetKeyDown(KeyCode.RightControl)) {
+                } else if (!_axisEnter && Input.GetAxis("Submit") == 1.0f) {
+                    _axisEnter = true;
                     ActionInMenu();
+                }
+
+                if (_axisUp && Input.GetAxis("Vertical") < 1.0f) {
+                    _axisUp = false;
+                }
+                
+                if (_axisDown && Input.GetAxis("Vertical") > -1.0f) {
+                    _axisDown = false;
+                }
+                
+                if (_axisEnter && Input.GetAxis("Submit") < 1.0f) {
+                    _axisEnter = false;
                 }
             } else {
                 _timeToLoadCounter += Time.deltaTime;
