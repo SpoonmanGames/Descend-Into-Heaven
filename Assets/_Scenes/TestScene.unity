@@ -141,8 +141,8 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 254741646}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .162, y: -.0170000009, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -.883000016, y: -.104999997, z: 0}
+  m_LocalScale: {x: 2.47281265, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1664758828}
   m_RootOrder: 2
@@ -879,11 +879,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 424942, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -.60799998
       objectReference: {fileID: 0}
     - target: {fileID: 424942, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -.158000007
       objectReference: {fileID: 0}
     - target: {fileID: 424942, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
       propertyPath: m_LocalPosition.z
@@ -916,6 +916,10 @@ Prefab:
     - target: {fileID: 11462450, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
       propertyPath: RangeOfAttack
       value: .400000006
+      objectReference: {fileID: 0}
+    - target: {fileID: 11462450, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
+      propertyPath: AlwaysFollow
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 122e56d63619fc54488f81ad6bb94b7a, type: 2}
@@ -1132,6 +1136,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransitionSpeed: 4
   TransitionDirection: 2
+  IsTransitioningToScene: 0
+  SceneName: 
+  TransitionEffect: {fileID: 0}
+  UsePathBlocker: 1
+  PathBlocker: {fileID: 0}
+  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
+  TimeOffSet: 0
+  TargetXPosition: 0
+  TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &1292889811
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1457,6 +1474,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransitionSpeed: 1
   TransitionDirection: 0
+  IsTransitioningToScene: 0
+  SceneName: 
+  TransitionEffect: {fileID: 0}
+  UsePathBlocker: 1
+  PathBlocker: {fileID: 0}
+  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
+  TimeOffSet: 0
+  TargetXPosition: 0
+  TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &1517027338
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -1813,6 +1843,19 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TransitionSpeed: 4
   TransitionDirection: 1
+  IsTransitioningToScene: 0
+  SceneName: 
+  TransitionEffect: {fileID: 0}
+  UsePathBlocker: 1
+  PathBlocker: {fileID: 0}
+  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
+  TimeOffSet: 0
+  TargetXPosition: 0
+  TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!61 &1972508262
 BoxCollider2D:
   m_ObjectHideFlags: 0

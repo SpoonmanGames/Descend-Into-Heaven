@@ -2781,7 +2781,7 @@ MonoBehaviour:
   IsFreeToMove: 1
   PlayerState: 0
   PlayerRigidBody2D: {fileID: 0}
-  TransitionOut: {fileID: 0}
+  TransitionOut: {fileID: 148898, guid: f7d78b4f9682fbc49922f4470cb56070, type: 2}
   IsInTransition: 0
 --- !u!82 &532286723
 AudioSource:
@@ -4763,7 +4763,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21f145c7d33aea43a8ce8a030b64285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1032589682
+  TransitionSpeed: 4
+  TransitionDirection: 1
+  IsTransitioningToScene: 0
+  SceneName: 
+  TransitionEffect: {fileID: 0}
+  UsePathBlocker: 1
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3
+  TargetXPosition: .100000001
+  TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
+--- !u!61 &1032985349
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6110190, guid: 48ba9d9d73a50614aaf974c2acb90a2a,
@@ -5210,7 +5225,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e21f145c7d33aea43a8ce8a030b64285, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
---- !u!61 &1071631514
+  TransitionSpeed: 4
+  TransitionDirection: 1
+  IsTransitioningToScene: 0
+  SceneName: 
+  TransitionEffect: {fileID: 0}
+  UsePathBlocker: 1
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3.4000001
+  TargetXPosition: .100000001
+  TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
+--- !u!61 &1123598999
 BoxCollider2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 6110190, guid: 48ba9d9d73a50614aaf974c2acb90a2a,
@@ -5809,10 +5839,78 @@ Transform:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 1202397076}
-  m_LocalRotation: {x: 0, y: 0, z: -.707106829, w: .707106829}
-  m_LocalPosition: {x: -.0320000648, y: .182999998, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_GameObject: {fileID: 1418035636}
+  m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
+  m_LocalPosition: {x: -0, y: -.298999995, z: 0}
+  m_LocalScale: {x: .0199999996, y: .600000024, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1178952804}
+  m_RootOrder: 3
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11406842, guid: 48ba9d9d73a50614aaf974c2acb90a2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418035636}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 895416bf643aeff4c843c0b5b72e8a19, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TransitionSpeed: 4
+  TransitionDirection: 0
+  IsTransitioningToScene: 0
+  SceneName: 
+  TransitionEffect: {fileID: 0}
+  UsePathBlocker: 1
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 2
+  TargetXPosition: .100000001
+  TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
+--- !u!61 &1418035639
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6115706, guid: 48ba9d9d73a50614aaf974c2acb90a2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1418035636}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
+--- !u!1 &1431733695
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 129738, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1431733696}
+  m_Layer: 0
+  m_Name: Escenario-Rocks 2 (4)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1431733696
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 435022, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1431733695}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -8.88000011, y: 0, z: 0}
+  m_LocalScale: {x: 3, y: 3, z: 1}
+>>>>>>> 2534aea154b34ddd0b011ce7e32f200009e8a0f7
   m_Children:
   - {fileID: 1405707651}
   - {fileID: 1595579598}

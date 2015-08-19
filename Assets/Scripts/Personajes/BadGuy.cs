@@ -13,12 +13,14 @@ namespace Player {
         public ProtaController _protaController;
         public float LeftRangeOfSight = 0.5f;
         public float RightRangeOfSight = 0.5f;
+        public bool AlwaysFollow = false;
         [Space(10)]
         public float RangeOfAttack = 0.5f;
         public float DelayToAttack = 0.0f;
         public bool DelayBeforeAttack = true;
 
         private float _delayToAttackCounter;
+        private bool _following = false;
 
         public void Hurt(int damage) {
             Life -= damage;
@@ -40,7 +42,12 @@ namespace Player {
             if (IsFreeToMove && !IsDead && !IsHurt) {
                 float hightPositionDifference = this.transform.position.y - _protaController.transform.position.y;
 
-                if (!IsAttacking && !IsHurt && hightPositionDifference >= -0.03 && hightPositionDifference <= 0.03) {
+                if (!IsAttacking && !IsHurt && (hightPositionDifference >= -0.03 && hightPositionDifference <= 0.03 || _following)) {
+
+                    if (AlwaysFollow) {
+                        _following = true;
+                    }
+
                     if (!IsAttacking && !IsHurt 
                         && this.transform.position.x - RangeOfAttack <= _protaController.transform.position.x
                         && this.transform.position.x + RangeOfAttack >= _protaController.transform.position.x) {
