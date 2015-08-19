@@ -1,6 +1,6 @@
 fileFormatVersion: 2
 guid: 8610dff8f5fd4034bb6a414134c01354
-timeCreated: 1439791733
+timeCreated: 1439940675
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
@@ -69,9 +69,9 @@ TextureImporter:
     - name: RocksSpriteSheet2_1
       rect:
         serializedVersion: 2
-        x: 165
+        x: 164
         y: 114
-        width: 160
+        width: 162
         height: 27
       alignment: 0
       pivot: {x: .5, y: .5}
@@ -79,9 +79,9 @@ TextureImporter:
     - name: RocksSpriteSheet2_2
       rect:
         serializedVersion: 2
-        x: 165
+        x: 164
         y: 83
-        width: 160
+        width: 162
         height: 23
       alignment: 0
       pivot: {x: .5, y: .5}
