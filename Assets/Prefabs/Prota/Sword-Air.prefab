@@ -10,7 +10,6 @@ GameObject:
   - 4: {fileID: 490570}
   - 61: {fileID: 6132246}
   - 114: {fileID: 11476284}
-  - 114: {fileID: 11448460}
   m_Layer: 0
   m_Name: Sword-Air
   m_TagString: Untagged
@@ -43,18 +42,6 @@ BoxCollider2D:
   m_Offset: {x: .232999995, y: .287}
   serializedVersion: 2
   m_Size: {x: .219999999, y: .349999994}
---- !u!114 &11448460
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 171046}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 520e42860d2c9484792b2e518f8288f4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  lifeTime: 1
 --- !u!114 &11476284
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -88,10 +75,6 @@ Prefab:
       value: 
       objectReference: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83,
         type: 2}
-    - target: {fileID: 0}
-      propertyPath: lifeTime
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: playerAttackingController
       value: 

@@ -7,6 +7,8 @@ public class BossFightController : MonoBehaviour {
 
     public Player.Player PlayerController;
     public Player.Player BossController;
+    public GameObject TransitionOut;
+    public GameObject Credits;
 
     [Header("Audio Setup")]
     public AudioMixerSnapshot endSnapshot;
@@ -19,9 +21,6 @@ public class BossFightController : MonoBehaviour {
     private float _transitionOut;
     private float _quarterNote;
     private bool _victoryAudio = false;
-
-
-
 
     void Start() {
 
@@ -65,6 +64,7 @@ public class BossFightController : MonoBehaviour {
                 endSnapshot.TransitionTo(_transitionOut);
                 _victoryAudio = true;
 
+                Instantiate(Credits);
             }
 
         }
