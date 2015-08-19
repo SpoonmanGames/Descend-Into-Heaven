@@ -1171,7 +1171,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   RenderCamera: {fileID: 45823175}
-  TargetMaterialRender: {fileID: 2100000, guid: d25600ea923985e4784936033aacd43b,
+  TargetMaterialRender: {fileID: 2100000, guid: a3adac39963c1db40b1724257f01072a,
     type: 2}
 --- !u!4 &1695941366
 Transform:
