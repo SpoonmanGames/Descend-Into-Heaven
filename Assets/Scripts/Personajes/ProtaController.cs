@@ -20,19 +20,26 @@ namespace Player {
         private float _delayExit = 1.0f;
         private float _delayExitCounter = 0.0f;
 
+        private bool _axisAttack = false;
+
         void FixedUpdate() {
             if (IsFreeToMove && !IsInTransition && !IsDead) {
                 if (!IsJumping && !IsAttacking && Input.GetAxis("Jump") == 1.0f) {
                     this.ChangePlayerState(PlayerState.Jumping);
                     PlayerRigidBody2D.AddForce(Vector2.up * JumpForce);
-                } else if (!IsAttacking && Input.GetAxis("Attack") == 1.0f) {
+                } else if (!_axisAttack && !IsAttacking && Input.GetAxis("Attack") == 1.0f) {
+                    _axisAttack = true;
                     this.ChangePlayerState(PlayerState.Attacking);
-                } else if (!IsAttacking && Input.GetAxis("Horizontal") == 1.0f) {
+                } else if (!IsAttacking && Input.GetAxis("Right") == 1.0f) {
                     this.HorizontalMovement("right");
-                } else if (!IsAttacking && Input.GetAxis("Horizontal") == -1.0f) {
+                } else if (!IsAttacking && Input.GetAxis("Left") == 1.0f) {
                     this.HorizontalMovement("left");
                 } else if(!IsJumping && !IsAttacking){
                     this.ChangePlayerState(PlayerState.Idle);
+                }
+
+                if (_axisAttack && Input.GetAxis("Attack") < 1.0f) {
+                    _axisAttack = false;
                 }
             }
 

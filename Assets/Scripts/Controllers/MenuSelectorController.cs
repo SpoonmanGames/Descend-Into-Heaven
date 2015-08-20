@@ -51,11 +51,11 @@ public class MenuSelectorController : MonoBehaviour {
 	void Update () {
         if (!_returningFromCredits && !_returningToTitle) {
             if (!_loadingScreen) {
-                if (!_axisUp && Input.GetAxis("Vertical") == 1.0f) {
+                if (!_axisUp && Input.GetAxis("Up") == 1.0f) {
                     _actualPosition--;
                     _axisUp = true;
                     selectorSource.PlayOneShot(moveSelectorSound, 1F);
-                } else if (!_axisDown && Input.GetAxis("Vertical") == -1.0f) {
+                } else if (!_axisDown && Input.GetAxis("Down") == 1.0f) {
                     _actualPosition++;
                     _axisDown = true;
                     selectorSource.PlayOneShot(moveSelectorSound, 1F);
@@ -64,11 +64,11 @@ public class MenuSelectorController : MonoBehaviour {
                     ActionInMenu();
                 }
 
-                if (_axisUp && Input.GetAxis("Vertical") < 1.0f) {
+                if (_axisUp && Input.GetAxis("Up") < 1.0f) {
                     _axisUp = false;
                 }
                 
-                if (_axisDown && Input.GetAxis("Vertical") > -1.0f) {
+                if (_axisDown && Input.GetAxis("Down") < 1.0f) {
                     _axisDown = false;
                 }
                 
