@@ -1194,11 +1194,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 435506, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 1.55299997
+      value: 1.53199995
       objectReference: {fileID: 0}
     - target: {fileID: 435506, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .0799999982
+      value: .143999994
       objectReference: {fileID: 0}
     - target: {fileID: 435506, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1223,19 +1223,6 @@ Prefab:
     - target: {fileID: 435506, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
       propertyPath: m_RootOrder
       value: 6
-      objectReference: {fileID: 0}
-    - target: {fileID: 8216164, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: OutputAudioMixerGroup
-      value: 
-      objectReference: {fileID: 24310168, guid: 9a7732bdb34eb524990b955784e59363,
-        type: 2}
-    - target: {fileID: 11425528, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: soundDead
-      value: 
-      objectReference: {fileID: 8300000, guid: a57735772ed3d8b47a1c4c344922d27b, type: 3}
-    - target: {fileID: 11425528, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}
-      propertyPath: Life
-      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 91123e9b089b46a44a0c4c43a32ef474, type: 2}

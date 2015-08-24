@@ -20,6 +20,36 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &196080
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 487586}
+  m_Layer: 0
+  m_Name: CeilingCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &196454
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 499468}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!4 &435506
 Transform:
   m_ObjectHideFlags: 1
@@ -27,11 +57,37 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 122784}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.55299997, y: .0799999982, z: 0}
+  m_LocalPosition: {x: 1.53199995, y: .143999994, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 487586}
+  - {fileID: 499468}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!4 &487586
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196080}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .199600026, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435506}
+  m_RootOrder: 0
+--- !u!4 &499468
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 196454}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 435506}
+  m_RootOrder: 1
 --- !u!60 &6034036
 PolygonCollider2D:
   m_ObjectHideFlags: 1
@@ -155,24 +211,25 @@ MonoBehaviour:
   AttackDamage: 1
   WalkingSpeed: 1
   JumpForce: 0
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  GroundedRadius: .0500000007
+  CeilingRadius: .00999999978
   StateVariableName: State
-  IdleAnimatorName: Boss-Idle
-  WalkingAnimatorName: 
-  AttackingAnimatorName: Boss-Attack
-  JumpingAnimatorName: 
-  DeadAnimatorName: Boss-Dead
-  VictoryAnimatorName: 
-  HurtAnimatorName: Boss-Hurt
-  soundIdle: {fileID: 0}
-  soundWalking: {fileID: 0}
-  soundAttacking: {fileID: 8300000, guid: 94e694913456a7246879bdf51ca5fea9, type: 3}
-  soundJumping: {fileID: 0}
-  soundDead: {fileID: 8300000, guid: a57735772ed3d8b47a1c4c344922d27b, type: 3}
-  soundVictory: {fileID: 0}
-  soundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+  SpeedVariableName: Speed
+  m_soundIdle: {fileID: 0}
+  m_soundWalking: {fileID: 0}
+  m_soundAttacking: {fileID: 8300000, guid: 94e694913456a7246879bdf51ca5fea9, type: 3}
+  m_soundJumping: {fileID: 0}
+  m_soundDead: {fileID: 8300000, guid: a57735772ed3d8b47a1c4c344922d27b, type: 3}
+  m_soundVictory: {fileID: 0}
+  m_soundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+  m_soundIdleAir: {fileID: 0}
+  EditorDebugMode: 1
   IsFreeToMove: 1
   PlayerState: 0
-  PlayerRigidBody2D: {fileID: 0}
   Velocity: .300000012
   PuntoFinal: .856000006
   PuntoInicial: 1.55299997
