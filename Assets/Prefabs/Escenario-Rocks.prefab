@@ -110,7 +110,7 @@ GameObject:
   - 212: {fileID: 21252298}
   - 61: {fileID: 6110190}
   - 114: {fileID: 11488612}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: Pinchos (7)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -426,6 +426,10 @@ MonoBehaviour:
   TimeOffSet: 0
   TargetXPosition: 0
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!114 &11488612
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -674,7 +678,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 0
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

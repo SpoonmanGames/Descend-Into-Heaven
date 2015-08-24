@@ -1,0 +1,655 @@
+fileFormatVersion: 2
+guid: 8a2ab505754fcce4c980257b88cd729f
+timeCreated: 1440200162
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: ProtaJump_0
+    21300002: ProtaIdle_0
+    21300004: ProtaAirIdle_1
+    21300006: ProtaDead_0
+    21300008: ProtaIdle_1
+    21300010: ProtaIdle_2
+    21300012: ProtaJump_1
+    21300014: ProtaWalk_0
+    21300016: ProtaAirAttack_0
+    21300018: ProtaDead_1
+    21300020: ProtaAttack_0
+    21300022: ProtaVictory_0
+    21300024: ProtaAirIdle_0
+    21300026: ProtaWalk_1
+    21300028: ProtaAirAttack_1
+    21300030: ProtaDead_2
+    21300032: ProtaAttack_1
+    21300034: ProtaVictory_1
+    21300036: ProtaWalk_2
+    21300038: ProtaAirAttack_2
+    21300040: ProtaDead_3
+    21300042: ProtaAttack_2
+    21300044: ProtaVictory_2
+    21300046: ProtaWalk_3
+    21300048: ProtaAirAttack_3
+    21300050: ProtaDead_4
+    21300052: ProtaAttack_3
+    21300054: ProtaVictory_3
+    21300056: ProtaWalk_4
+    21300058: ProtaAirAttack_4
+    21300060: ProtaDead_5
+    21300062: ProtaAttack_4
+    21300064: ProtaVictory_4
+    21300066: ProtaWalk_5
+    21300068: ProtaAirAttack_5
+    21300070: ProtaDead_6
+    21300072: ProtaAttack_5
+    21300074: ProtaVictory_5
+    21300076: ProtaWalk_6
+    21300078: ProtaDead_7
+    21300080: ProtaVictory_6
+    21300082: ProtaDead_8
+    21300084: ProtaVictory_7
+    21300086: ProtaDead_9
+    21300088: ProtaVictory_8
+    21300090: ProtaVictory_9
+    21300092: ProtaVictory_10
+    21300094: ProtaVictory_11
+    21300096: ProtaVictory_12
+    21300098: ProtaVictory_13
+    21300100: ProtaJump_0
+    21300102: ProtaWalk_0
+    21300104: ProtaIdleAir_1
+    21300106: ProtaDead_0
+    21300108: ProtaIdle_0
+    21300110: ProtaIdle_1
+    21300112: ProtaJump_1
+    21300114: ProtaWalk_1
+    21300116: ProtaAirAttack_0
+    21300118: ProtaDead_1
+    21300120: ProtaAttack_0
+    21300122: ProtaVictory_0
+    21300124: ProtaIdleAir_0
+    21300126: ProtaWalk_2
+    21300128: ProtaAirAttack_1
+    21300130: ProtaDead_2
+    21300132: ProtaAttack_1
+    21300134: ProtaVictory_1
+    21300136: ProtaWalk_3
+    21300138: ProtaAirAttack_2
+    21300140: ProtaDead_3
+    21300142: ProtaAttack_2
+    21300144: ProtaVictory_2
+    21300146: ProtaWalk_4
+    21300148: ProtaAirAttack_3
+    21300150: ProtaDead_4
+    21300152: ProtaAttack_3
+    21300154: ProtaVictory_3
+    21300156: ProtaWalk_5
+    21300158: ProtaAirAttack_4
+    21300160: ProtaDead_5
+    21300162: ProtaAttack_4
+    21300164: ProtaVictory_4
+    21300166: ProtaWalk_6
+    21300168: ProtaAirAttack_5
+    21300170: ProtaDead_6
+    21300172: ProtaAttack_5
+    21300174: ProtaVictory_5
+    21300176: ProtaWalk_7
+    21300178: ProtaDead_7
+    21300180: ProtaVictory_6
+    21300182: ProtaDead_8
+    21300184: ProtaVictory_7
+    21300186: ProtaDead_9
+    21300188: ProtaVictory_8
+    21300190: ProtaVictory_9
+    21300192: ProtaVictory_10
+    21300194: ProtaVictory_11
+    21300196: ProtaVictory_12
+    21300198: ProtaVictory_13
+    21300200: ProtaDied_0
+    21300202: ProtaDied_1
+    21300204: ProtaDied_2
+    21300206: ProtaDied_3
+    21300208: ProtaDied_4
+    21300210: ProtaDied_5
+    21300212: ProtaDied_6
+    21300214: ProtaDied_7
+    21300216: ProtaDied_8
+    21300218: ProtaDied_9
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -3
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: 0
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 216
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: ProtaIdle_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 546
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaWalk_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 546
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAttack_0
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 546
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_0
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 546
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaIdle_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 504
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaWalk_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 504
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAttack_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 504
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_1
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 504
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 462
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaWalk_2
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 462
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAttack_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 462
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_2
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 462
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_1
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 420
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaWalk_3
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 420
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAttack_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 420
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_3
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 420
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_2
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 378
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaWalk_4
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 378
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAttack_4
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 378
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_4
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 378
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_3
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 336
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaWalk_5
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 336
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAttack_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 336
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_5
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 336
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_4
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 294
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaWalk_6
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 294
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirAttack_0
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 294
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_6
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 294
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_5
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 252
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirIdle_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 252
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirAttack_1
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 252
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_7
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 252
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_6
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 210
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirIdle_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 210
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirAttack_2
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 210
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_8
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 210
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_7
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 168
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaJump_0
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 168
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirAttack_3
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 168
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_9
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 168
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_8
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaJump_1
+      rect:
+        serializedVersion: 2
+        x: 62
+        y: 126
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirAttack_4
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 126
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_10
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 126
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaDied_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 84
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaAirAttack_5
+      rect:
+        serializedVersion: 2
+        x: 124
+        y: 84
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_11
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 84
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_12
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 42
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: ProtaVictory_13
+      rect:
+        serializedVersion: 2
+        x: 186
+        y: 0
+        width: 62
+        height: 42
+      alignment: 7
+      pivot: {x: .5, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

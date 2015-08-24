@@ -1,5 +1,20 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!1 &142600
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 459350}
+  m_Layer: 0
+  m_Name: GroundCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
 --- !u!1 &145990
 GameObject:
   m_ObjectHideFlags: 0
@@ -22,6 +37,45 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
+--- !u!1 &165774
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 457664}
+  m_Layer: 0
+  m_Name: CeilingCheck
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &457664
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 165774}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .117399998, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 489228}
+  m_RootOrder: 1
+--- !u!4 &459350
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 142600}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: .000600000028, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 489228}
+  m_RootOrder: 0
 --- !u!4 &489228
 Transform:
   m_ObjectHideFlags: 1
@@ -29,9 +83,11 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 145990}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -.846000016, y: 1, z: 0}
+  m_LocalPosition: {x: -.787, y: -.58099997, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 459350}
+  - {fileID: 457664}
   m_Father: {fileID: 0}
   m_RootOrder: 0
 --- !u!50 &5082064
@@ -157,7 +213,7 @@ Animator:
   m_Avatar: {fileID: 0}
   m_Controller: {fileID: 9100000, guid: f39bb5dbdd6ad73418c5733545512a2f, type: 2}
   m_CullingMode: 0
-  m_UpdateMode: 0
+  m_UpdateMode: 1
   m_ApplyRootMotion: 0
   m_LinearVelocityBlending: 0
   m_WarningMessage: 
@@ -178,24 +234,26 @@ MonoBehaviour:
   AttackDamage: 1
   WalkingSpeed: 1
   JumpForce: 160
+  m_AirControl: 1
+  m_WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  GroundedRadius: .0700000003
+  CeilingRadius: .00999999978
   StateVariableName: State
-  IdleAnimatorName: Prota-Idle
-  WalkingAnimatorName: Prota-Walk
-  AttackingAnimatorName: Prota-Attack
-  JumpingAnimatorName: Prota-Jumping
-  DeadAnimatorName: Prota-Died
-  VictoryAnimatorName: Prota-Victory
-  HurtAnimatorName: 
-  soundIdle: {fileID: 0}
-  soundWalking: {fileID: 0}
-  soundAttacking: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
-  soundJumping: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
-  soundDead: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
-  soundVictory: {fileID: 0}
-  soundHurt: {fileID: 0}
+  SpeedVariableName: Speed
+  m_soundIdle: {fileID: 0}
+  m_soundWalking: {fileID: 0}
+  m_soundAttacking: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+  m_soundJumping: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
+  m_soundDead: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
+  m_soundVictory: {fileID: 8300000, guid: 68738bbbc4037964f8fafe2c0b35f56c, type: 3}
+  m_soundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+  m_soundIdleAir: {fileID: 0}
+  EditorDebugMode: 1
   IsFreeToMove: 1
   PlayerState: 0
-  PlayerRigidBody2D: {fileID: 0}
+  TransitionOut: {fileID: 196954, guid: 328b65f722909a94994fcf37d29f04d4, type: 2}
   IsInTransition: 0
 --- !u!212 &21253300
 SpriteRenderer:
@@ -221,7 +279,7 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d678350024f0bd049b8cdd516b557bc3, type: 3}
+  m_Sprite: {fileID: 21300002, guid: 8a2ab505754fcce4c980257b88cd729f, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1001 &100100000
 Prefab:
@@ -246,6 +304,15 @@ Prefab:
       propertyPath: soundDead
       value: 
       objectReference: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300002, guid: 8a2ab505754fcce4c980257b88cd729f,
+        type: 3}
+    - target: {fileID: 0}
+      propertyPath: m_UpdateMode
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 145990}

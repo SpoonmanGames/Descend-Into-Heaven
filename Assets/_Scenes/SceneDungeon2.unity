@@ -1140,7 +1140,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452102, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .00200000009
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 452102, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_LocalPosition.z
@@ -1164,7 +1164,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 452102, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_RootOrder
-      value: 0
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 21201270, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_Color.r
@@ -1189,6 +1189,14 @@ Prefab:
     - target: {fileID: 6828088, guid: e076b7e649884474cafe8157240c436f, type: 2}
       propertyPath: m_Offset.y
       value: -.057
+      objectReference: {fileID: 0}
+    - target: {fileID: 452102, guid: e076b7e649884474cafe8157240c436f, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 452102, guid: e076b7e649884474cafe8157240c436f, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e076b7e649884474cafe8157240c436f, type: 2}
@@ -1483,6 +1491,10 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300010, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!4 &275907505 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 452102, guid: e076b7e649884474cafe8157240c436f, type: 2}
+  m_PrefabInternal: {fileID: 201490724}
 --- !u!1 &290617692
 GameObject:
   m_ObjectHideFlags: 0
@@ -1878,7 +1890,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1337720445}
-  m_RootOrder: 7
+  m_RootOrder: 6
 --- !u!114 &381296247
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2291,7 +2303,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1337720445}
-  m_RootOrder: 5
+  m_RootOrder: 4
 --- !u!1001 &510486074
 Prefab:
   m_ObjectHideFlags: 0
@@ -2951,7 +2963,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1337720445}
-  m_RootOrder: 6
+  m_RootOrder: 5
 --- !u!61 &561941039
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4174,7 +4186,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1337720445}
-  m_RootOrder: 4
+  m_RootOrder: 3
 --- !u!61 &873537167
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -4832,7 +4844,7 @@ Transform:
   m_LocalScale: {x: .0199999996, y: .600000024, z: 1}
   m_Children: []
   m_Father: {fileID: 1337720445}
-  m_RootOrder: 3
+  m_RootOrder: 2
 --- !u!114 &1032985348
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5560,7 +5572,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1337720445}
-  m_RootOrder: 2
+  m_RootOrder: 1
 --- !u!68 &1166910250
 EdgeCollider2D:
   m_ObjectHideFlags: 0
@@ -6200,7 +6212,6 @@ Transform:
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children:
-  - {fileID: 1850664397}
   - {fileID: 2007456530}
   - {fileID: 1166910249}
   - {fileID: 1032985347}
@@ -6208,6 +6219,7 @@ Transform:
   - {fileID: 464931511}
   - {fileID: 561941038}
   - {fileID: 381296246}
+  - {fileID: 275907505}
   m_Father: {fileID: 0}
   m_RootOrder: 19
 --- !u!1 &1356517475
@@ -9014,10 +9026,6 @@ SpriteRenderer:
   m_SortingOrder: -1
   m_Sprite: {fileID: 21300010, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
---- !u!4 &1850664397 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 452102, guid: e076b7e649884474cafe8157240c436f, type: 2}
-  m_PrefabInternal: {fileID: 201490724}
 --- !u!1 &1853443172
 GameObject:
   m_ObjectHideFlags: 0
@@ -9792,7 +9800,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 1337720445}
-  m_RootOrder: 1
+  m_RootOrder: 0
 --- !u!212 &2007456531
 SpriteRenderer:
   m_ObjectHideFlags: 0

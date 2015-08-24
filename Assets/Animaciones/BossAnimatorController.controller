@@ -13,7 +13,13 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 9100000}
+    m_Controller: {fileID: 0}
+  - m_Name: Speed
+    m_Type: 1
+    m_DefaultFloat: 1
+    m_DefaultInt: 0
+    m_DefaultBool: 0
+    m_Controller: {fileID: 0}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -73,11 +79,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37dafcf49bf91144a9e4bc27a82b9dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateVariableName: State
+  IsPlayer: 1
   NextPlayerState: 0
+  StateVariableName: State
+  NextStateValue: 0
   NextStateName: Boss-Idle
   StartingPosition: 0
+  SpeedVariableName: Speed
+  StartingSpeedValue: 1
   WhenChange: 1
+  WhenSpeedIs: 1
 --- !u!114 &11443448
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -101,11 +112,16 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37dafcf49bf91144a9e4bc27a82b9dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateVariableName: State
+  IsPlayer: 1
   NextPlayerState: 0
+  StateVariableName: State
+  NextStateValue: 0
   NextStateName: Boss-Idle
   StartingPosition: 0
+  SpeedVariableName: Speed
+  StartingSpeedValue: 1
   WhenChange: 1
+  WhenSpeedIs: 1
 --- !u!114 &11485020
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -117,10 +133,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b617f85779e7b384c88fd9485c87a792, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateVariableName: State
+  IsPlayer: 1
   NextPlayerState: 4
+  StateVariableName: State
+  NextStateValue: 0
   NextStateName: Boss-Dead
   StartingPosition: 0
+  SpeedVariableName: Speed
+  StartingSpeedValue: 1
   Life: 0
 --- !u!1101 &110109394
 AnimatorStateTransition:

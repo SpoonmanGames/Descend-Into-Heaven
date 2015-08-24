@@ -39,6 +39,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   DependsOnSpeed: 0
+  SpeedVariableName: Speed
+  Speed: 1
+  WhenChange: 0
 --- !u!114 &11496032
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -50,9 +53,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 37dafcf49bf91144a9e4bc27a82b9dcb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  StateVariableName: State
   IsPlayer: 0
   NextPlayerState: 0
+  StateVariableName: State
   NextStateValue: 1
   NextStateName: FullBossShot-Idle
   StartingPosition: 0

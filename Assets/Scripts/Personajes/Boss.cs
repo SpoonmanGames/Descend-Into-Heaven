@@ -41,8 +41,7 @@ namespace Player {
             ChangePlayerState(PlayerState.Hurt);
         }
 
-        override protected void Start() {
-            base.Start();
+        void Start() {
             this._currentDirection = "left";
             _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
@@ -359,10 +358,5 @@ namespace Player {
 
             Instantiate(SpawnBullet, _spawnPosition, this.transform.rotation);
         }
-
-        void Update() {
-
-        }
-
     }
 }

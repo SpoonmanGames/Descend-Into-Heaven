@@ -27,9 +27,7 @@ namespace Player {
             this.ChangePlayerState(PlayerState.Hurt);
         }
 
-        protected override void Start() {
-            base.Start();
-
+        void Start() {
             this._currentDirection = "left";
             if (DelayBeforeAttack) {
                 _delayToAttackCounter = 0.0f;
@@ -38,7 +36,9 @@ namespace Player {
             }
         }
 
-        void FixedUpdate() {
+        override protected void FixedUpdate() {
+            base.FixedUpdate();
+
             if (IsFreeToMove && !IsDead && !IsHurt) {
                 float hightPositionDifference = this.transform.position.y - _protaController.transform.position.y;
 

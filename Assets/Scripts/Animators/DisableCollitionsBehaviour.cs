@@ -5,7 +5,10 @@ public class DisableCollitionsBehaviour : StateMachineBehaviour {
 
     public bool DisableGravity = true;
 
-    Collider2D[] _playerCollider2D;
+    private Collider2D[] _playerCollider2D;
+    private Rigidbody2D _playerRigidBody2D;
+    private float _gravitySaved;
+    private Vector2 _velocitySaved;
     
 
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
@@ -16,7 +19,12 @@ public class DisableCollitionsBehaviour : StateMachineBehaviour {
         }
 
         if (DisableGravity) {
-            animator.GetComponentInParent<Rigidbody2D>().gravityScale = 0.0f;
+            _playerRigidBody2D = animator.GetComponentInParent<Rigidbody2D>();
+            _gravitySaved = _playerRigidBody2D.gravityScale;
+            _playerRigidBody2D.gravityScale = 0.0f;
+
+            _velocitySaved = _playerRigidBody2D.velocity;
+            _playerRigidBody2D.velocity = Vector2.zero;
         }
 
     }
@@ -30,6 +38,11 @@ public class DisableCollitionsBehaviour : StateMachineBehaviour {
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         for (int i = 0; i < _playerCollider2D.Length; i++) {
             _playerCollider2D[i].enabled = true;
+        }
+
+        if (DisableGravity) {
+            _playerRigidBody2D.gravityScale = _gravitySaved;
+            _playerRigidBody2D.velocity = _velocitySaved;
         }
     }
 

@@ -3,6 +3,10 @@ using System.Collections;
 
 public class ProtaDiedBehaviour : StateMachineBehaviour {
 
+    public float WaitingTime = 1.0f;
+
+    private float _counterWaitingTime = 0.0f;
+
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
 	//
@@ -11,7 +15,12 @@ public class ProtaDiedBehaviour : StateMachineBehaviour {
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
         if (stateInfo.normalizedTime > 1 && !animator.IsInTransition(layerIndex)) {
-            Application.LoadLevel(Application.loadedLevel);
+
+            _counterWaitingTime += Time.deltaTime;
+
+            if (_counterWaitingTime >= WaitingTime) {
+                Application.LoadLevel(Application.loadedLevel);
+            }
         }
 	}
 
