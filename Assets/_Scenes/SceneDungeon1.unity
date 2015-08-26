@@ -196,6 +196,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 23
       objectReference: {fileID: 0}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: WhatIsGround.m_Bits
+      value: 4294967295
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0
@@ -2422,7 +2426,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: UseGroundAndCeilingDetection
-      propertyPath: m_WhatIsGround.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3115,7 +3118,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: UseGroundAndCeilingDetection
-      propertyPath: m_WhatIsGround.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -3254,7 +3256,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: UseGroundAndCeilingDetection
-      propertyPath: m_WhatIsGround.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -5415,7 +5416,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: UseGroundAndCeilingDetection
-      propertyPath: m_WhatIsGround.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
@@ -8110,7 +8110,6 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: UseGroundAndCeilingDetection
-      propertyPath: m_WhatIsGround.m_Bits
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
