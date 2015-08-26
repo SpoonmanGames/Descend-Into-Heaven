@@ -21,26 +21,29 @@ namespace Player {
         public int Life = 1;
         public int AttackDamage = 1;
         [Space(10)]
-        public float WalkingSpeed = 1;
-        public float JumpForce = 200;
-        [SerializeField] private bool m_AirControl = true;
-        [SerializeField] private LayerMask m_WhatIsGround;
+        public float WalkingSpeed = 1.0f;
+        public float JumpForce = 200.0f;
+        public bool AirControl = true;
+        public bool UseGroundAndCeilingDetection = true;
+        public LayerMask WhatIsGround;
         [Header("Ground and Ceiling Setup")]
         public float GroundedRadius = 0.2f;
         public float CeilingRadius = 0.01f;
         [Header("Animator Setup")]
         public string StateVariableName = "State";
         public string SpeedVariableName = "Speed";
+        public string vSpeedVariableName = "vSpeed";
+        public string GroundVariableName = "Ground";
 
         [Header("Audio Setup")]
-        [SerializeField] protected AudioClip m_soundIdle;                
-	    [SerializeField] protected AudioClip m_soundWalking;
-	    [SerializeField] protected AudioClip m_soundAttacking;
-	    [SerializeField] protected AudioClip m_soundJumping;
-	    [SerializeField] protected AudioClip m_soundDead;
-	    [SerializeField] protected AudioClip m_soundVictory;
-	    [SerializeField] protected AudioClip m_soundHurt;
-        [SerializeField] protected AudioClip m_soundIdleAir;
+        public AudioClip SoundIdle;                
+	    public AudioClip SoundWalking;
+	    public AudioClip SoundAttacking;
+	    public AudioClip SoundJumping;
+	    public AudioClip SoundDead;
+	    public AudioClip SoundVictory;
+	    public AudioClip SoundHurt;
+        public AudioClip SoundIdleAir;
 
         [Header("Debbuger Setup")]
         public bool EditorDebugMode = true;
@@ -88,20 +91,31 @@ namespace Player {
         virtual protected void FixedUpdate() {
             _Grounded = false;
 
-            // Esto se podría hacer usando layers
-            Collider2D[] colliders = Physics2D.OverlapCircleAll(_GroundCheck.position, GroundedRadius, m_WhatIsGround);
-            for (int i = 0; i < colliders.Length; i++) {
-                if (colliders[i].gameObject != this.gameObject)
-                    _Grounded = true;
+            if (UseGroundAndCeilingDetection) {
+                Collider2D[] colliders = Physics2D.OverlapCircleAll(_GroundCheck.position, GroundedRadius, WhatIsGround);
+                for (int i = 0; i < colliders.Length; i++) {
+                    if (colliders[i].gameObject != this.gameObject)
+                        _Grounded = true;
+                }
+
+                if (GroundVariableName != string.Empty) {
+                    _playerAnimator.SetBool(GroundVariableName, _Grounded);
+                }
             }
-            _playerAnimator.SetBool("Ground", _Grounded);
-            _playerAnimator.SetFloat("vSpeed", _playerRigidBody2D.velocity.y);
+
+            if (_playerRigidBody2D != null) {
+                if (vSpeedVariableName != string.Empty) {
+                    _playerAnimator.SetFloat(vSpeedVariableName, _playerRigidBody2D.velocity.y);
+                }
+            }
         }
 
         virtual protected void Update() {
             if (EditorDebugMode) {
-                DebugExtension.DebugWireSphere(_CeilingCheck.position, Color.red, CeilingRadius);
-                DebugExtension.DebugWireSphere(_GroundCheck.position, Color.red, GroundedRadius);
+                if (UseGroundAndCeilingDetection) {
+                    DebugExtension.DebugWireSphere(_CeilingCheck.position, Color.red, CeilingRadius);
+                    DebugExtension.DebugWireSphere(_GroundCheck.position, Color.red, GroundedRadius);
+                }
             }
         }
 
@@ -113,49 +127,57 @@ namespace Player {
             if (PlayerState != playerState) {
 		        switch (playerState){
 			        case PlayerState.Idle:
-			            _playerAudioSource.PlayOneShot(m_soundIdle, 1.0f);
+			            _playerAudioSource.PlayOneShot(SoundIdle, 1.0f);
   			            break;
   			        case PlayerState.Walking:
-			            _playerAudioSource.PlayOneShot(m_soundWalking, 1.0f);
+			            _playerAudioSource.PlayOneShot(SoundWalking, 1.0f);
   			            break;
   			        case PlayerState.Attacking:
-			            _playerAudioSource.PlayOneShot(m_soundAttacking, 1.0f);
+			            _playerAudioSource.PlayOneShot(SoundAttacking, 1.0f);
   			            break;
   			        case PlayerState.Dead:
-			            _playerAudioSource.PlayOneShot(m_soundDead, 1.0f);
+			            _playerAudioSource.PlayOneShot(SoundDead, 1.0f);
   			            break;
   			        case PlayerState.Victory:
-			            _playerAudioSource.PlayOneShot(m_soundVictory, 0.3f);
+			            _playerAudioSource.PlayOneShot(SoundVictory, 0.3f);
   			            break;
   			        case PlayerState.Hurt:
-			            _playerAudioSource.PlayOneShot(m_soundHurt, 1.0f);
+			            _playerAudioSource.PlayOneShot(SoundHurt, 1.0f);
   			            break;
                     case PlayerState.IdleAir:
-                        _playerAudioSource.PlayOneShot(m_soundIdleAir, 1.0f);
+                        _playerAudioSource.PlayOneShot(SoundIdleAir, 1.0f);
                         break;
                 }                
 	
                 PlayerState = playerState;
 
                 if (!IsJumping) {
-                    _playerAnimator.SetFloat(SpeedVariableName, 1.0f);
+                    if (SpeedVariableName != string.Empty) {
+                        _playerAnimator.SetFloat(SpeedVariableName, 1.0f);
+                    }
                 }
 
-                _playerAnimator.SetInteger(StateVariableName, (int)PlayerState);
+                if (StateVariableName != string.Empty) {
+                    _playerAnimator.SetInteger(StateVariableName, (int)PlayerState);
+                }
             }
         }
 
         protected void VerticalMovement() {
             if (_Grounded) {
                 _Grounded = false;
-                _playerAnimator.SetBool("Ground", _Grounded);
+
+                if (GroundVariableName != string.Empty) {
+                    _playerAnimator.SetBool(GroundVariableName, _Grounded);
+                }
+
                 ChangePlayerState(PlayerState.Jumping);
                 _playerRigidBody2D.AddForce(Vector2.up * JumpForce);
             }
         }
 
         protected void HorizontalMovement(string directionOfMovement) {
-            if (_Grounded || m_AirControl) {
+            if (_Grounded || AirControl) {
                 Vector2 direction;
 
                 if (directionOfMovement == "right") {

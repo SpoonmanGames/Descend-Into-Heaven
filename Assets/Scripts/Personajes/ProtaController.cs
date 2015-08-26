@@ -25,7 +25,7 @@ namespace Player {
 
             if (IsFreeToMove && !IsInTransition && !IsDead && !IsAttacking) {
                 if (!IsJumping && !IsIdleAir && _Grounded && jumping) {
-                    _playerAudioSource.PlayOneShot(m_soundJumping, 1.0f);
+                    _playerAudioSource.PlayOneShot(SoundJumping, 1.0f);
                     this.VerticalMovement();
                 } else if (attacking) {
                     this.ChangePlayerState(PlayerState.Attacking);

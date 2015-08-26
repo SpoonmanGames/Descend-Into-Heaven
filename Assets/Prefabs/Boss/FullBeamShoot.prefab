@@ -101,9 +101,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   "Da\xF1o": 1
   Tiempo: 1
-  DestruirAlTerminar: 0
+  DestruirAlTerminar: 1
   Direccion: -1
-  TargetPosition: {x: .393999785, y: .16181916}
+  TargetPosition: {x: 0, y: 0}
 --- !u!212 &21287602
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -151,11 +151,19 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: DestruirAlTerminar
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: Direccion
       value: -1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TargetPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: TargetPosition.y
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

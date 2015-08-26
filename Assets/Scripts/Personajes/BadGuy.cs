@@ -4,11 +4,6 @@ using System.Collections;
 namespace Player {
     public class BadGuy : Player {        
 
-        //delay antes o despues de atacar
-        //te sigue cuando estas a su misma altura
-        //según su rango
-        //ataca en su rango
-
         [Header("Behaviour")]
         public ProtaController _protaController;
         public float LeftRangeOfSight = 0.5f;
