@@ -2501,6 +2501,10 @@ Prefab:
       propertyPath: GroundedRadius
       value: .0500000007
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_IsPrefabParent: 0
@@ -2737,7 +2741,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 090ceda419a1f984482abedcf19ae611, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 0}
+  player: {fileID: 1209443847}
   scrollMultiplier: .800000012
   movementWindowSize: {x: 8, y: 6}
   windowOffset: {x: 0, y: 0}
@@ -3193,6 +3197,10 @@ Prefab:
       propertyPath: GroundedRadius
       value: .0500000007
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_IsPrefabParent: 0
@@ -3330,6 +3338,10 @@ Prefab:
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: GroundedRadius
       value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
@@ -5491,6 +5503,10 @@ Prefab:
       propertyPath: GroundedRadius
       value: .0500000007
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_IsPrefabParent: 0
@@ -5968,6 +5984,10 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 489354, guid: ace824dcac9131346ba6271c1363428a, type: 2}
   m_PrefabInternal: {fileID: 1206432107}
+--- !u!1 &1209443847 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 145990, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+  m_PrefabInternal: {fileID: 11086481}
 --- !u!1001 &1227730459
 Prefab:
   m_ObjectHideFlags: 0
@@ -8342,6 +8362,10 @@ Prefab:
     - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: GroundedRadius
       value: .0500000007
+      objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}

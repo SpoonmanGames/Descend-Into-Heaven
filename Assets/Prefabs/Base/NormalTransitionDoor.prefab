@@ -10,7 +10,7 @@ GameObject:
   - 4: {fileID: 428858}
   - 61: {fileID: 6141608}
   - 114: {fileID: 11488956}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NormalTransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -57,11 +57,17 @@ MonoBehaviour:
   TransitionDirection: 2
   IsTransitioningToScene: 0
   SceneName: 
+  TransitionEffect: {fileID: 0}
+  UsePathBlocker: 1
   PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
   ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
   TimeOffSet: 3.4000001
   TargetXPosition: -.143999994
   TargetYPosition: 0
+  LeftLimit: 0
+  RightLimit: 0
+  BottomLimit: 0
+  TopLimit: 0
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
@@ -104,6 +110,10 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: ColorOfPathBlocker.b
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

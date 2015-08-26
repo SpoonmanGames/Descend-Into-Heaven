@@ -26,7 +26,6 @@ GameObject:
   - 212: {fileID: 21253300}
   - 95: {fileID: 9592936}
   - 61: {fileID: 6151292}
-  - 58: {fileID: 5832780}
   - 50: {fileID: 5082064}
   - 114: {fileID: 11451760}
   - 82: {fileID: 8287572}
@@ -106,19 +105,6 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 1
   m_Constraints: 4
---- !u!58 &5832780
-CircleCollider2D:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 145990}
-  m_Enabled: 1
-  m_Material: {fileID: 0}
-  m_IsTrigger: 0
-  m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .0419999994}
-  serializedVersion: 2
-  m_Radius: .0417401195
 --- !u!61 &6151292
 BoxCollider2D:
   m_ObjectHideFlags: 1
@@ -129,9 +115,9 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_UsedByEffector: 0
-  m_Offset: {x: 0, y: .0719041079}
+  m_Offset: {x: 0, y: .0576657318}
   serializedVersion: 2
-  m_Size: {x: .0500000007, y: .078415066}
+  m_Size: {x: .0500000007, y: .1068919}
 --- !u!82 &8287572
 AudioSource:
   m_ObjectHideFlags: 1
@@ -237,7 +223,7 @@ MonoBehaviour:
   m_AirControl: 1
   m_WhatIsGround:
     serializedVersion: 2
-    m_Bits: 4294967295
+    m_Bits: 1
   GroundedRadius: .0700000003
   CeilingRadius: .00999999978
   StateVariableName: State
@@ -312,6 +298,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_UpdateMode
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Size.y
+      value: .1068919
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Offset.y
+      value: .0576657318
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
