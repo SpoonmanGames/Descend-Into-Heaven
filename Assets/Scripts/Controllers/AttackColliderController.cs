@@ -13,6 +13,9 @@ public class AttackColliderController : MonoBehaviour {
         } else if (other.tag == "Golem") {
             BadGuy badGuy = other.GetComponentInParent<BadGuy>();
             badGuy.Hurt(playerAttackingController.AttackDamage);
+        } else if (other.tag == "CrossEnemy") {
+            CrossEnemy crossEnemy = other.GetComponentInParent<CrossEnemy>();
+            crossEnemy.Hurt(playerAttackingController.AttackDamage);
         } else if (other.tag == "Player") {
             ProtaController prota = other.GetComponentInParent<ProtaController>();
             prota.Life -= playerAttackingController.AttackDamage;

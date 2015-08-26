@@ -6,12 +6,12 @@ namespace Player {
     public class CrossEnemy : Player {
 
         [Header("Cross Setup")]
-        public Player PlayerController;
-        public GameObject BulletToSpawn;
-        public Bounds DetectionBlock;
+        [SerializeField] private Player PlayerController;
+        [SerializeField] private GameObject BulletToSpawn;
+        [SerializeField] private Bounds DetectionBlock;
         public float AttackDelay = 1.0f;
         public bool ShootAtTarget = false;
-        public bool ChoseShootDirections = false;
+        public bool ChooseShootDirections = false;
         public bool ShootLeft = false;
         public bool ShootUp = false;
         public bool ShootRight = false;
@@ -22,7 +22,7 @@ namespace Player {
         private Vector3 _rightSpawnPosition = new Vector3(0.2283f, -0.1545f);
         private float _attackDelayCounter = 0.0f;
 
-        public GameObject _BulletToSpawn;
+        private GameObject _BulletToSpawn;
         
         protected override void Update() {
             base.Update();
@@ -41,7 +41,7 @@ namespace Player {
                 } else {
                     
 
-                    if (ChoseShootDirections) {
+                    if (ChooseShootDirections) {
 
                     } else {
                         _attackDelayCounter += Time.deltaTime;
@@ -67,6 +67,11 @@ namespace Player {
                 }
             }
 
+        }
+
+        public override void Hurt(int damage) {
+            Life -= damage;
+            this.ChangePlayerState(PlayerState.Hurt);
         }
     }
 }

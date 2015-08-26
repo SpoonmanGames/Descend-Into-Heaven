@@ -12,6 +12,8 @@ TagManager:
   - Golem
   - RenderCamera
   - MusicPlayer
+  - CrossEnemy
+  - Cross
   layers:
   - Default
   - TransparentFX

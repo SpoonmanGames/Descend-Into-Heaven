@@ -17,7 +17,7 @@ namespace Player {
         private float _delayToAttackCounter;
         private bool _following = false;
 
-        public void Hurt(int damage) {
+        public override void Hurt(int damage) {
             Life -= damage;
             this.ChangePlayerState(PlayerState.Hurt);
         }
