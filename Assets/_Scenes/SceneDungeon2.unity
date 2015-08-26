@@ -4014,11 +4014,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 417034, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.46700001
+      value: -8.87100029
       objectReference: {fileID: 0}
     - target: {fileID: 417034, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .175300002
+      value: -4.1869998
       objectReference: {fileID: 0}
     - target: {fileID: 417034, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
       propertyPath: m_LocalPosition.z
@@ -4122,7 +4122,7 @@ GameObject:
   - 4: {fileID: 654912152}
   - 61: {fileID: 654912154}
   - 114: {fileID: 654912153}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NormalTransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -5731,7 +5731,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 450828, guid: 6cf9fd6ae98bcc3448e01fa0a48926ac, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .00400002813
+      value: .00400000019
       objectReference: {fileID: 0}
     - target: {fileID: 450828, guid: 6cf9fd6ae98bcc3448e01fa0a48926ac, type: 2}
       propertyPath: m_LocalPosition.y
@@ -8613,7 +8613,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 148898, guid: f7d78b4f9682fbc49922f4470cb56070, type: 2}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7d78b4f9682fbc49922f4470cb56070, type: 2}
@@ -8740,7 +8740,7 @@ GameObject:
   - 4: {fileID: 1411159943}
   - 61: {fileID: 1411159945}
   - 114: {fileID: 1411159944}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NormalTransitionDoor (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -8963,7 +8963,7 @@ GameObject:
   - 4: {fileID: 1418035637}
   - 61: {fileID: 1418035639}
   - 114: {fileID: 1418035638}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NormalTransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -11101,11 +11101,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 489228, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: m_LocalPosition.x
-      value: .514999986
+      value: -12.6049995
       objectReference: {fileID: 0}
     - target: {fileID: 489228, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: m_LocalPosition.y
-      value: .646000028
+      value: -1.52600002
       objectReference: {fileID: 0}
     - target: {fileID: 489228, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: m_LocalPosition.z
@@ -11131,7 +11131,28 @@ Prefab:
       propertyPath: m_RootOrder
       value: 22
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 0}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151292, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: m_Offset.y
+      value: .057665728
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151292, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: m_Size.x
+      value: .0500000045
+      objectReference: {fileID: 0}
+    - target: {fileID: 6151292, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: m_Size.y
+      value: .10689187
+      objectReference: {fileID: 0}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: m_WhatIsGround.m_Bits
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 0}
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0
 --- !u!114 &1744490329 stripped
@@ -12842,7 +12863,7 @@ GameObject:
   - 4: {fileID: 1950467879}
   - 61: {fileID: 1950467881}
   - 114: {fileID: 1950467880}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
