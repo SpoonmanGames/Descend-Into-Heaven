@@ -4,11 +4,11 @@ using Player;
 
 public class SpawnBehaviour : StateMachineBehaviour {
 
-    public GameObject SpawnGameObject;
-    public float SpawnTime = 0.0f;
-    public bool DependOnThisState = true;
-    public float DestroyTime = 0.0f;
-    public float OffsetDueDirection = 0.0f;
+    [SerializeField] private GameObject SpawnGameObject;
+    [SerializeField] private float SpawnTime = 0.0f;
+    [SerializeField] private bool DependOnThisState = true;
+    [SerializeField] private float DestroyTime = 0.0f;
+    [SerializeField] private float OffsetDueDirection = 0.0f;
 
     private bool _spawning;
     private GameObject _spawnedGameObject;

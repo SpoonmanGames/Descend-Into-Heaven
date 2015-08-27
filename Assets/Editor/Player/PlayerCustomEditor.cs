@@ -47,24 +47,15 @@ public abstract class PlayerCustomEditor : Editor {
         EditorGUILayout.Space(); EditorGUILayout.Space();
         EditorGUILayout.LabelField("Player Base Setup", EditorStyles.boldLabel);
 
-        Life.intValue =
-            EditorGUILayout.IntField("Life", Life.intValue);
-
-        AttackDamage.intValue =
-            EditorGUILayout.IntField("Attack Damage", AttackDamage.intValue);
+        EditorGUILayout.PropertyField(Life);
+        EditorGUILayout.PropertyField(AttackDamage);
 
         EditorGUILayout.Space(); EditorGUILayout.Space();
-        WalkingSpeed.floatValue =
-            EditorGUILayout.FloatField("Walking Speed", WalkingSpeed.floatValue);
 
-        JumpForce.floatValue =
-            EditorGUILayout.FloatField("Jump Force", JumpForce.floatValue);
-
-        AirControl.boolValue =
-            EditorGUILayout.Toggle("Air Control?", AirControl.boolValue);
-
-        UseGroundAndCeilingDetection.boolValue =
-            EditorGUILayout.Toggle("Use Ground and Ceiling Detection?", UseGroundAndCeilingDetection.boolValue);
+        EditorGUILayout.PropertyField(WalkingSpeed);
+        EditorGUILayout.PropertyField(JumpForce);
+        EditorGUILayout.PropertyField(AirControl);
+        EditorGUILayout.PropertyField(UseGroundAndCeilingDetection);
 
         if (UseGroundAndCeilingDetection.boolValue) {
 
@@ -73,18 +64,10 @@ public abstract class PlayerCustomEditor : Editor {
 
             EditorGUILayout.HelpBox(_groundAndCeilingWarning, MessageType.Warning);
             EditorGUILayout.HelpBox(_groundAndCeilingInfo, MessageType.Info);
-
-            List<string> layersName = new List<string>();
-            GetLayerNames(layersName);
-
-            WhatIsGround.intValue =
-                EditorGUILayout.MaskField("What is Ground?", WhatIsGround.intValue, layersName.ToArray());
-
-            GroundedRadius.floatValue =
-                EditorGUILayout.FloatField("Grounded Radius", GroundedRadius.floatValue);
-
-            CeilingRadius.floatValue =
-                EditorGUILayout.FloatField("Ceiling Radius", CeilingRadius.floatValue);
+            
+            EditorGUILayout.PropertyField(WhatIsGround);
+            EditorGUILayout.PropertyField(GroundedRadius);
+            EditorGUILayout.PropertyField(CeilingRadius);
 
             if (GroundedRadius.floatValue <= 0 || CeilingRadius.floatValue <= 0) {
                 EditorGUILayout.HelpBox(_groundAndCeilingError, MessageType.Info);
@@ -96,17 +79,10 @@ public abstract class PlayerCustomEditor : Editor {
 
         EditorGUILayout.HelpBox(_animatorInfo, MessageType.Info);
 
-        StateVariableName.stringValue =
-                EditorGUILayout.TextField("State Variable Name", StateVariableName.stringValue);
-
-        SpeedVariableName.stringValue =
-                EditorGUILayout.TextField("Speed Variable Name", SpeedVariableName.stringValue);
-
-        vSpeedVariableName.stringValue =
-                EditorGUILayout.TextField("Vertical Speed Variable Name", vSpeedVariableName.stringValue);
-
-        GroundVariableName.stringValue =
-                EditorGUILayout.TextField("Ground Variable Name", GroundVariableName.stringValue);
+        EditorGUILayout.PropertyField(StateVariableName);
+        EditorGUILayout.PropertyField(SpeedVariableName);
+        EditorGUILayout.PropertyField(vSpeedVariableName);
+        EditorGUILayout.PropertyField(GroundVariableName);
 
         EditorGUILayout.Space(); EditorGUILayout.Space();
         EditorGUILayout.LabelField("Player Audio Setup", EditorStyles.boldLabel);
@@ -114,46 +90,28 @@ public abstract class PlayerCustomEditor : Editor {
         EditorGUILayout.HelpBox(_audioWarning, MessageType.Warning);
         EditorGUILayout.HelpBox(_audioInfo, MessageType.Info);
 
-        SoundIdle.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Idle", SoundIdle.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
-        SoundWalking.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Walking", SoundWalking.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
-        SoundAttacking.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Attacking", SoundAttacking.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
-        SoundJumping.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Jumping", SoundJumping.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
-        SoundDead.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Dead", SoundDead.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
-        SoundVictory.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Victory", SoundVictory.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
-        SoundHurt.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Hurt", SoundHurt.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
-        SoundIdleAir.objectReferenceValue =
-            EditorGUILayout.ObjectField("Sound Idle Air", SoundIdleAir.objectReferenceValue, typeof(AudioClip), false) as AudioClip;
+
+        EditorGUILayout.PropertyField(SoundIdle);
+        EditorGUILayout.PropertyField(SoundWalking);
+        EditorGUILayout.PropertyField(SoundAttacking);
+        EditorGUILayout.PropertyField(SoundJumping);
+        EditorGUILayout.PropertyField(SoundDead);
+        EditorGUILayout.PropertyField(SoundVictory);
+        EditorGUILayout.PropertyField(SoundHurt);
+        EditorGUILayout.PropertyField(SoundIdleAir);
 
         EditorGUILayout.Space(); EditorGUILayout.Space();
         EditorGUILayout.LabelField("Player Debug Setup", EditorStyles.boldLabel);
 
         EditorGUILayout.HelpBox(_debugInfo, MessageType.Info);
 
-        EditorDebugMode.boolValue =
-            EditorGUILayout.Toggle("Editor Debug Mode?", EditorDebugMode.boolValue);
+        EditorGUILayout.PropertyField(EditorDebugMode);
+
+        myScript.ApplyModifiedProperties();
 
         ExtraGUI();
     }
 
     public abstract void ExtraGUI();
 
-    private void GetLayerNames(List<string> layersName) {
-        string actualName;
-
-        for (int i = 0; i < 31; i++) {
-            actualName = LayerMask.LayerToName(i);
-
-            if (actualName.Length > 0) {
-                layersName.Add(actualName);
-            }
-        }
-
-    }
 }

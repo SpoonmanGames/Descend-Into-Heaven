@@ -27,7 +27,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 114594}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .428000003, y: -.345999986, z: 0}
+  m_LocalPosition: {x: .769999981, y: -.35800001, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -176,23 +176,26 @@ MonoBehaviour:
   SoundJumping: {fileID: 0}
   SoundDead: {fileID: 0}
   SoundVictory: {fileID: 0}
-  SoundHurt: {fileID: 0}
+  SoundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
   SoundIdleAir: {fileID: 0}
   EditorDebugMode: 1
   IsFreeToMove: 1
   PlayerState: 0
   PlayerController: {fileID: 0}
   BulletToSpawn: {fileID: 132844, guid: f8c9008f3f8b3664cbf5ac2d79bacd22, type: 2}
+  AttackDelay: .300000012
+  ShootAlways: 1
   DetectionBlock:
     m_Center: {x: 0, y: 0, z: 0}
     m_Extent: {x: 1, y: .5, z: 0}
-  AttackDelay: 1
+  ShootRangeBlock:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 1, y: 1, z: 0}
   ShootAtTarget: 0
-  ChoseShootDirections: 0
-  ShootLeft: 1
+  ChooseShootDirections: 1
+  ShootLeft: 0
   ShootUp: 1
-  ShootRight: 1
-  _BulletToSpawn: {fileID: 0}
+  ShootRight: 0
 --- !u!212 &21229676
 SpriteRenderer:
   m_ObjectHideFlags: 1

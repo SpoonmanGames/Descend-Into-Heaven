@@ -3,7 +3,7 @@ using System.Collections;
 
 public class DisableCollitionsBehaviour : StateMachineBehaviour {
 
-    public bool DisableGravity = true;
+    [SerializeField] private bool DisableGravity = true;
 
     private Collider2D[] _playerCollider2D;
     private Rigidbody2D _playerRigidBody2D;
@@ -27,6 +27,7 @@ public class DisableCollitionsBehaviour : StateMachineBehaviour {
             _playerRigidBody2D.velocity = Vector2.zero;
         }
 
+        Debug.Log("Starting dead");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

@@ -6,7 +6,7 @@ namespace Player {
     public class ProtaController : Player {
 
         [Header("Prota Setup")]
-        public GameObject TransitionOut;
+        [SerializeField] private GameObject TransitionOut;
 
         [HideInInspector] public bool IsInTransition = false;
 

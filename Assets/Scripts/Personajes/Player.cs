@@ -127,6 +127,7 @@ namespace Player {
 
         public void ChangePlayerState(PlayerState playerState) {
             if (PlayerState != playerState) {
+                
 		        switch (playerState){
 			        case PlayerState.Idle:
 			            _playerAudioSource.PlayOneShot(SoundIdle, 1.0f);
