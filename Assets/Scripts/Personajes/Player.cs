@@ -64,8 +64,6 @@ namespace Player {
             _playerAnimator = this.GetComponent<Animator>();            
             _playerRigidBody2D = this.GetComponent<Rigidbody2D>();
             _playerAudioSource = GetComponent<AudioSource>();
-            _GroundCheck = transform.Find("GroundCheck");
-            _CeilingCheck = transform.Find("CeilingCheck");
 
             if (_playerAnimator == null) {
                 Debug.LogWarning("The Player doesn't have an Animator Component.");
@@ -79,12 +77,17 @@ namespace Player {
                 Debug.LogWarning("The Player doesn't have a AudioSource Component.");
             }
 
-            if (_GroundCheck == null) {
-                Debug.LogWarning("The Player doesn't have a GroundCheck Child.");
-            }
+            if (UseGroundAndCeilingDetection) {
+                _GroundCheck = transform.Find("GroundCheck");
+                _CeilingCheck = transform.Find("CeilingCheck");
 
-            if (_CeilingCheck == null) {
-                Debug.LogWarning("The Player doesn't have a CeilingCheck Child.");
+                if (_GroundCheck == null) {
+                    Debug.LogWarning("The Player doesn't have a GroundCheck Child.");
+                }
+
+                if (_CeilingCheck == null) {
+                    Debug.LogWarning("The Player doesn't have a CeilingCheck Child.");
+                }
             }
         }
 

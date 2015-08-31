@@ -814,6 +814,7 @@ GameObject:
   - 4: {fileID: 1254529199}
   - 212: {fileID: 1254529201}
   - 68: {fileID: 1254529200}
+  - 114: {fileID: 1254529202}
   m_Layer: 8
   m_Name: UpperRockCeiling (2)
   m_TagString: Untagged
@@ -875,6 +876,19 @@ SpriteRenderer:
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!114 &1254529202
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1254529198}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2c15b6c2830e10b448e82c187a4ac183, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  TranslationTime: 10
+  TargetPosition: {x: 1, y: 1, z: 0}
 --- !u!1 &1259709937
 GameObject:
   m_ObjectHideFlags: 0

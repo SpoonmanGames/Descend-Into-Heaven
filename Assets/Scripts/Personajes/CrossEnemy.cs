@@ -76,7 +76,7 @@ namespace Player {
                             _BulletToSpawn.GetComponent<BulletController>().SetVelocity();
                         }
 
-                        if (!ChooseShootDirections || ShootLeft) {
+                        if (!ChooseShootDirections || ShootRight) {
                             _BulletToSpawn = Instantiate(BulletToSpawn, this.transform.position + _rightSpawnPosition, this.transform.rotation) as GameObject;
                             _BulletToSpawn.GetComponent<BulletController>().TargetPosition = new Vector2(_realShootRangeBlock.max.x, _BulletToSpawn.transform.position.y);
                             _BulletToSpawn.GetComponent<BulletController>().Direccion = 1;
