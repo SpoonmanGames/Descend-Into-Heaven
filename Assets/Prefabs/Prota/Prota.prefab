@@ -220,22 +220,25 @@ MonoBehaviour:
   AttackDamage: 1
   WalkingSpeed: 1
   JumpForce: 160
-  m_AirControl: 1
-  m_WhatIsGround:
+  AirControl: 1
+  UseGroundAndCeilingDetection: 1
+  WhatIsGround:
     serializedVersion: 2
-    m_Bits: 1
-  GroundedRadius: .0700000003
+    m_Bits: 4294965759
+  GroundedRadius: .0949999988
   CeilingRadius: .00999999978
   StateVariableName: State
   SpeedVariableName: Speed
-  m_soundIdle: {fileID: 0}
-  m_soundWalking: {fileID: 0}
-  m_soundAttacking: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
-  m_soundJumping: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
-  m_soundDead: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
-  m_soundVictory: {fileID: 8300000, guid: 68738bbbc4037964f8fafe2c0b35f56c, type: 3}
-  m_soundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
-  m_soundIdleAir: {fileID: 0}
+  vSpeedVariableName: vSpeed
+  GroundVariableName: Ground
+  SoundIdle: {fileID: 0}
+  SoundWalking: {fileID: 0}
+  SoundAttacking: {fileID: 0}
+  SoundJumping: {fileID: 8300000, guid: e812cb2cba0f806418547ebc0971ff3e, type: 3}
+  SoundDead: {fileID: 0}
+  SoundVictory: {fileID: 0}
+  SoundHurt: {fileID: 0}
+  SoundIdleAir: {fileID: 0}
   EditorDebugMode: 1
   IsFreeToMove: 1
   PlayerState: 0

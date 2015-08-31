@@ -26,8 +26,6 @@ public class DisableCollitionsBehaviour : StateMachineBehaviour {
             _velocitySaved = _playerRigidBody2D.velocity;
             _playerRigidBody2D.velocity = Vector2.zero;
         }
-
-        Debug.Log("Starting dead");
     }
 
     // OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks

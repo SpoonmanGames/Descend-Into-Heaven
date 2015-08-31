@@ -18,6 +18,7 @@ public class BadGuyCustomEditor : PlayerCustomEditor {
         SerializedProperty RangeOfAttack = myScript.FindProperty("RangeOfAttack");
         SerializedProperty DelayToAttack = myScript.FindProperty("DelayToAttack");
         SerializedProperty DelayBeforeAttack = myScript.FindProperty("DelayBeforeAttack");
+        SerializedProperty BackOffForce = myScript.FindProperty("BackOffForce");
 
         EditorGUILayout.Space(); EditorGUILayout.Space();
         EditorGUILayout.LabelField("BadGuy Base Setup", EditorStyles.boldLabel);
@@ -49,6 +50,7 @@ public class BadGuyCustomEditor : PlayerCustomEditor {
         }
 
         EditorGUILayout.PropertyField(DelayBeforeAttack);
+        EditorGUILayout.PropertyField(BackOffForce);
 
         myScript.ApplyModifiedProperties();
     }

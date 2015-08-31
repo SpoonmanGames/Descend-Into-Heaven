@@ -28,7 +28,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 183566}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: .726000011, y: -.68599999, z: 0}
   m_LocalScale: {x: 3, y: 3, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -164,30 +164,38 @@ MonoBehaviour:
   AttackDamage: 1
   WalkingSpeed: 1
   JumpForce: 200
+  AirControl: 1
+  UseGroundAndCeilingDetection: 0
+  WhatIsGround:
+    serializedVersion: 2
+    m_Bits: 0
+  GroundedRadius: .200000003
+  CeilingRadius: .00999999978
   StateVariableName: State
-  IdleAnimatorName: BadGuyReposo
-  WalkingAnimatorName: BadGuyWalk
-  AttackingAnimatorName: BadGuyAttack
-  JumpingAnimatorName: 
-  DeadAnimatorName: BadGuyDeath
-  VictoryAnimatorName: 
-  HurtAnimatorName: BadGuyHurt
-  soundIdle: {fileID: 0}
-  soundWalking: {fileID: 0}
-  soundAttacking: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
-  soundJumping: {fileID: 0}
-  soundDead: {fileID: 8300000, guid: d8d0fdcb75f04c844b0d9d0644f0258c, type: 3}
-  soundVictory: {fileID: 0}
-  soundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+  SpeedVariableName: Speed
+  vSpeedVariableName: 
+  GroundVariableName: 
+  SoundIdle: {fileID: 0}
+  SoundWalking: {fileID: 0}
+  SoundAttacking: {fileID: 0}
+  SoundJumping: {fileID: 0}
+  SoundDead: {fileID: 0}
+  SoundVictory: {fileID: 0}
+  SoundHurt: {fileID: 0}
+  SoundIdleAir: {fileID: 0}
+  EditorDebugMode: 1
   IsFreeToMove: 1
   PlayerState: 0
-  PlayerRigidBody2D: {fileID: 0}
-  _protaController: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
-  LeftRangeOfSight: 1
-  RightRangeOfSight: 1
+  ProtaController: {fileID: 0}
+  DetectionBlock:
+    m_Center: {x: 0, y: .25, z: 0}
+    m_Extent: {x: 1, y: .25, z: 0}
+  UseHightDetection: 1
+  AlwaysFollow: 0
   RangeOfAttack: .400000006
   DelayToAttack: 0
   DelayBeforeAttack: 1
+  BackOffForce: 600
 --- !u!212 &21259650
 SpriteRenderer:
   m_ObjectHideFlags: 1

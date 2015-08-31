@@ -10,8 +10,9 @@ GameObject:
   - 4: {fileID: 489354}
   - 212: {fileID: 21207002}
   - 61: {fileID: 6165904}
+  - 61: {fileID: 6188428}
   - 114: {fileID: 11490936}
-  m_Layer: 9
+  m_Layer: 10
   m_Name: Pinchos
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -25,7 +26,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 198196}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: .0200999994, y: -.219500005, z: 0}
+  m_LocalPosition: {x: .0625, y: -.199300006, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -40,9 +41,22 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IsTrigger: 1
   m_UsedByEffector: 0
-  m_Offset: {x: .0036534071, y: -.000348106027}
+  m_Offset: {x: .003652944, y: -.00741627812}
   serializedVersion: 2
-  m_Size: {x: .0276039392, y: .0548599623}
+  m_Size: {x: .0276039355, y: .0407235436}
+--- !u!61 &6188428
+BoxCollider2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 198196}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: -.0192666501}
+  serializedVersion: 2
+  m_Size: {x: .0648148209, y: .0170227699}
 --- !u!114 &11490936
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -97,7 +111,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 0}
       propertyPath: m_Layer
-      value: 9
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}

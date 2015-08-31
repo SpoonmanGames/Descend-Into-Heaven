@@ -13,19 +13,19 @@ AnimatorController:
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: Speed
     m_Type: 1
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   - m_Name: vSpeed
     m_Type: 1
     m_DefaultFloat: 0
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -121,6 +121,24 @@ MonoBehaviour:
   StartingSpeedValue: 1
   WhenChange: 1
   WhenSpeedIs: 1
+--- !u!114 &11473556
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d2c67404e202eaf418dd079ec93227a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  SpeedVariableName: Speed
+  DelaySpeedValue: 0
+  SpeedDecreaseFactor: 1
+  SpeedAugmentedFactor: 1
+  WhenApplyDelay: 0
+  WhenResumeSpeed: 1
+  ResumeSpeedValue: 1
 --- !u!114 &11478514
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -165,9 +183,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   SpawnGameObject: {fileID: 169976, guid: 2526911bde2e2a4458e69cea12eb1ceb, type: 2}
-  SpawnTime: 0
+  SpawnTime: .273000002
   DependOnThisState: 1
-  DestroyTime: .725000024
+  DestroyTime: .639999986
   OffsetDueDirection: -.456
 --- !u!114 &11492056
 MonoBehaviour:
@@ -523,6 +541,7 @@ AnimatorState:
   - {fileID: 11478514}
   - {fileID: 11447104}
   - {fileID: 11489480}
+  - {fileID: 11473556}
   m_Position: {x: 50, y: 50, z: 0}
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
