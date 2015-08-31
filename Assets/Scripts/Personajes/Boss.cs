@@ -33,7 +33,7 @@ namespace Player {
         private bool _isOutofScene = false;
         private bool _isMovingIntoTheScene = false;
 
-        public void Hurt(int damage) {            
+        public override void Hurt(int damage) {            
             Life -= damage;
             Fase++;
             _isOutofScene = false;

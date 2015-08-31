@@ -3,7 +3,8 @@ using System.Collections;
 
 public class ProtaDiedBehaviour : StateMachineBehaviour {
 
-    public float WaitingTime = 1.0f;
+    [Space(10)]
+    [SerializeField] private float WaitingTime = 1.0f;
 
     private float _counterWaitingTime = 0.0f;
 

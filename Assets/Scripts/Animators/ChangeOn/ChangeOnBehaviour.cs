@@ -4,14 +4,14 @@ using System.Collections;
 namespace Animators.ChangeOn {
     public abstract class ChangeOnBehaviour : StateMachineBehaviour {
 
-        public bool IsPlayer = true;
-        public Player.PlayerState NextPlayerState;
-        public string StateVariableName = "State";
-        public int NextStateValue;
-        public string NextStateName;
-        public float StartingPosition = 0.0f;
-        public string SpeedVariableName = "Speed";
-        public float StartingSpeedValue = 1.0f;
+        [SerializeField] private bool IsPlayer = true;
+        [SerializeField] private Player.PlayerState NextPlayerState;
+        [SerializeField] private string StateVariableName = "State";
+        [SerializeField] private int NextStateValue;
+        [SerializeField] private string NextStateName;
+        [SerializeField] private float StartingPosition = 0.0f;
+        [SerializeField] protected string SpeedVariableName = "Speed";
+        [SerializeField] private float StartingSpeedValue = 1.0f;
 
         protected Player.Player _playerController;
 

@@ -3,10 +3,10 @@ using System.Collections;
 
 public class DestroyOnTimeBehaviour : StateMachineBehaviour {
 
-    public bool DependsOnSpeed = true;
-    public string SpeedVariableName = "Speed";
-    public float Speed = 1.0f;
-    public float WhenChange;
+    [SerializeField] private bool DependsOnSpeed = true;
+    [SerializeField] private string SpeedVariableName = "Speed";
+    [SerializeField] private float Speed = 1.0f;
+    [SerializeField] private float WhenChange;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {

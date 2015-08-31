@@ -23,30 +23,30 @@ namespace Player {
         [Space(10)]
         public float WalkingSpeed = 1.0f;
         public float JumpForce = 200.0f;
-        public bool AirControl = true;
-        public bool UseGroundAndCeilingDetection = true;
-        public LayerMask WhatIsGround;
+        [SerializeField] private bool AirControl = true;
+        [SerializeField] private bool UseGroundAndCeilingDetection = true;
+        [SerializeField] private LayerMask WhatIsGround;
         [Header("Ground and Ceiling Setup")]
-        public float GroundedRadius = 0.2f;
-        public float CeilingRadius = 0.01f;
+        [SerializeField] private float GroundedRadius = 0.2f;
+        [SerializeField] private float CeilingRadius = 0.01f;
         [Header("Animator Setup")]
-        public string StateVariableName = "State";
-        public string SpeedVariableName = "Speed";
-        public string vSpeedVariableName = "vSpeed";
-        public string GroundVariableName = "Ground";
+        [SerializeField] protected string StateVariableName = "State";
+        [SerializeField] protected string SpeedVariableName = "Speed";
+        [SerializeField] protected string vSpeedVariableName = "vSpeed";
+        [SerializeField] protected string GroundVariableName = "Ground";
 
         [Header("Audio Setup")]
-        public AudioClip SoundIdle;                
-	    public AudioClip SoundWalking;
-	    public AudioClip SoundAttacking;
-	    public AudioClip SoundJumping;
-	    public AudioClip SoundDead;
-	    public AudioClip SoundVictory;
-	    public AudioClip SoundHurt;
-        public AudioClip SoundIdleAir;
+        [SerializeField] protected AudioClip SoundIdle;                
+	    [SerializeField] protected AudioClip SoundWalking;
+	    [SerializeField] protected AudioClip SoundAttacking;
+	    [SerializeField] protected AudioClip SoundJumping;
+	    [SerializeField] protected AudioClip SoundDead;
+	    [SerializeField] protected AudioClip SoundVictory;
+	    [SerializeField] protected AudioClip SoundHurt;
+        [SerializeField] protected AudioClip SoundIdleAir;
 
         [Header("Debbuger Setup")]
-        public bool EditorDebugMode = true;
+        [SerializeField] protected bool EditorDebugMode = true;
 
         [HideInInspector] public bool IsFreeToMove = true;
         [HideInInspector] public PlayerState PlayerState = PlayerState.Idle;
@@ -123,8 +123,11 @@ namespace Player {
          * Methods
          */
 
+        public abstract void Hurt(int damage);
+
         public void ChangePlayerState(PlayerState playerState) {
             if (PlayerState != playerState) {
+                
 		        switch (playerState){
 			        case PlayerState.Idle:
 			            _playerAudioSource.PlayOneShot(SoundIdle, 1.0f);

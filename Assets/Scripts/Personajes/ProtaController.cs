@@ -6,7 +6,7 @@ namespace Player {
     public class ProtaController : Player {
 
         [Header("Prota Setup")]
-        public GameObject TransitionOut;
+        [SerializeField] private GameObject TransitionOut;
 
         [HideInInspector] public bool IsInTransition = false;
 
@@ -85,7 +85,11 @@ namespace Player {
             _transitionOut.GetComponent<SpriteRenderer>().sortingOrder = 10;
             _transitionOut.GetComponent<Animator>().SetFloat("Speed", -1.0f);
             _transitionOut.GetComponent<Animator>().Play("LoadingTransition", 0, 1.0f);
-        }        
+        }
+
+        public override void Hurt(int damage) {
+            throw new System.NotImplementedException();
+        }
     }
 
 }
