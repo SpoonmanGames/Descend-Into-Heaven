@@ -136,8 +136,8 @@ MonoBehaviour:
   DelaySpeedValue: 0
   SpeedDecreaseFactor: 1
   SpeedAugmentedFactor: 1
-  WhenApplyDelay: 0
-  WhenResumeSpeed: 1
+  WhenApplyDelay: .100000001
+  TimeTillResume: .300000012
   ResumeSpeedValue: 1
 --- !u!114 &11478514
 MonoBehaviour:
@@ -546,7 +546,7 @@ AnimatorState:
   m_IKOnFeet: 0
   m_WriteDefaultValues: 1
   m_Mirror: 0
-  m_SpeedParameterActive: 0
+  m_SpeedParameterActive: 1
   m_MirrorParameterActive: 0
   m_CycleOffsetParameterActive: 0
   m_Motion: {fileID: 7400000, guid: 024b661693bc86246b4a2e741c553950, type: 2}

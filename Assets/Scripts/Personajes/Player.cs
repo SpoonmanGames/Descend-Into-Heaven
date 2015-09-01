@@ -1,5 +1,8 @@
 ﻿using UnityEngine;
 using System.Collections;
+using System.Collections.Generic;
+using System;
+using UnityCSExtension;
 
 namespace Player {
 
@@ -58,7 +61,9 @@ namespace Player {
 
         private Transform _GroundCheck;        
         protected bool _Grounded;
-        private Transform _CeilingCheck;        
+        private Transform _CeilingCheck;
+
+        private Dictionary<PlayerState, Tuple<AudioClip, float>> _soundMap;
 
         virtual protected void Awake() {
             _playerAnimator = this.GetComponent<Animator>();            
@@ -89,6 +94,16 @@ namespace Player {
                     Debug.LogWarning("The Player doesn't have a CeilingCheck Child.");
                 }
             }
+            
+            _soundMap = new Dictionary<PlayerState, Tuple<AudioClip, float>>() {
+                { PlayerState.Idle, new Tuple<AudioClip, float>(SoundIdle, 1.0f) },
+                { PlayerState.Walking, new Tuple<AudioClip, float>(SoundWalking, 1.0f) },
+                { PlayerState.Attacking, new Tuple<AudioClip, float>(SoundAttacking, 1.0f) },
+                { PlayerState.Dead, new Tuple<AudioClip, float>(SoundDead, 1.0f) },
+                { PlayerState.Victory, new Tuple<AudioClip, float>(SoundVictory, 0.3f) },
+                { PlayerState.Hurt, new Tuple<AudioClip, float>(SoundHurt, 1.0f) },
+                { PlayerState.IdleAir, new Tuple<AudioClip, float>(SoundIdleAir, 1.0f)},
+            };
         }
 
         virtual protected void FixedUpdate() {
@@ -128,32 +143,15 @@ namespace Player {
 
         public abstract void Hurt(int damage);
 
-        public void ChangePlayerState(PlayerState playerState) {
+        public void ChangePlayerState(PlayerState playerState) {            
+
             if (PlayerState != playerState) {
+
+                if (playerState != PlayerState.Jumping) {
+                    Tuple<AudioClip, float> audioData = _soundMap[playerState];
                 
-		        switch (playerState){
-			        case PlayerState.Idle:
-			            _playerAudioSource.PlayOneShot(SoundIdle, 1.0f);
-  			            break;
-  			        case PlayerState.Walking:
-			            _playerAudioSource.PlayOneShot(SoundWalking, 1.0f);
-  			            break;
-  			        case PlayerState.Attacking:
-			            _playerAudioSource.PlayOneShot(SoundAttacking, 1.0f);
-  			            break;
-  			        case PlayerState.Dead:
-			            _playerAudioSource.PlayOneShot(SoundDead, 1.0f);
-  			            break;
-  			        case PlayerState.Victory:
-			            _playerAudioSource.PlayOneShot(SoundVictory, 0.3f);
-  			            break;
-  			        case PlayerState.Hurt:
-			            _playerAudioSource.PlayOneShot(SoundHurt, 1.0f);
-  			            break;
-                    case PlayerState.IdleAir:
-                        _playerAudioSource.PlayOneShot(SoundIdleAir, 1.0f);
-                        break;
-                }                
+                    _playerAudioSource.PlayOneShot(audioData.First, audioData.Second);
+                }
 	
                 PlayerState = playerState;
 

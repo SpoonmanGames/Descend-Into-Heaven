@@ -2,7 +2,6 @@
 using System.Collections;
 using UnityEditor;
 using System.Collections.Generic;
-using CustomPlugins;
 
 [CustomEditor(typeof(Player.Player))]
 public abstract class PlayerCustomEditor : Editor {
