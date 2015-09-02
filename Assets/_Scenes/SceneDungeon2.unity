@@ -2835,7 +2835,6 @@ MonoBehaviour:
   "Da\xF1o": 1
   Tiempo: 1.5
   DestruirAlTerminar: 0
-  Direccion: -1
   TargetPosition: {x: -13.7109995, y: -3.05299997}
 --- !u!1 &421326583
 GameObject:
@@ -10178,6 +10177,10 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 148898, guid: f7d78b4f9682fbc49922f4470cb56070, type: 2}
+      propertyPath: m_Layer
+      value: 10
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f7d78b4f9682fbc49922f4470cb56070, type: 2}
   m_IsPrefabParent: 0
@@ -15139,6 +15142,7 @@ MonoBehaviour:
   limitTop: 0
   showDebugBoxes: 1
   activeTracking: 1
+  PlayerIsDead: 0
 --- !u!1 &2007456529
 GameObject:
   m_ObjectHideFlags: 0
@@ -15494,7 +15498,7 @@ Transform:
   m_GameObject: {fileID: 2037353305}
   m_LocalRotation: {x: 0, y: 0, z: .707106829, w: .707106829}
   m_LocalPosition: {x: .00700000022, y: -.187000006, z: 0}
-  m_LocalScale: {x: .0207700096, y: .480249733, z: 1.23999977}
+  m_LocalScale: {x: .0207700096, y: .792411804, z: 1.23999977}
   m_Children: []
   m_Father: {fileID: 1417929760}
   m_RootOrder: 6
