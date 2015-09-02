@@ -11,7 +11,7 @@ public class DestroyOnTimeBehaviourCustomEditor : Editor {
         SerializedProperty DependsOnSpeed = myScript.FindProperty("DependsOnSpeed");
         SerializedProperty SpeedVariableName = myScript.FindProperty("SpeedVariableName");
         SerializedProperty Speed = myScript.FindProperty("Speed");
-        SerializedProperty WhenChange = myScript.FindProperty("WhenChange");
+        SerializedProperty WhenDestroy = myScript.FindProperty("WhenDestroy");
 
         EditorGUILayout.Space(); EditorGUILayout.Space();
         EditorGUILayout.PropertyField(DependsOnSpeed);
@@ -19,7 +19,7 @@ public class DestroyOnTimeBehaviourCustomEditor : Editor {
         if (DependsOnSpeed.boolValue) {
             EditorGUILayout.PropertyField(SpeedVariableName);
             EditorGUILayout.Slider(Speed, -1.0f, 1.0f);
-            EditorGUILayout.Slider(WhenChange, 0.0f, 1.0f);
+            EditorGUILayout.Slider(WhenDestroy, 0.0f, 1.0f);
         }
 
         myScript.ApplyModifiedProperties();

@@ -6,7 +6,7 @@ public class DestroyOnTimeBehaviour : StateMachineBehaviour {
     [SerializeField] private bool DependsOnSpeed = true;
     [SerializeField] private string SpeedVariableName = "Speed";
     [SerializeField] private float Speed = 1.0f;
-    [SerializeField] private float WhenChange;
+    [SerializeField] private float WhenDestroy;
 
 	 // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
 	//override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
@@ -15,7 +15,7 @@ public class DestroyOnTimeBehaviour : StateMachineBehaviour {
 
 	// OnStateUpdate is called on each Update frame between OnStateEnter and OnStateExit callbacks
 	override public void OnStateUpdate(Animator animator, AnimatorStateInfo stateInfo, int layerIndex) {
-        if (stateInfo.normalizedTime > WhenChange && !animator.IsInTransition(layerIndex)) {
+        if (stateInfo.normalizedTime > WhenDestroy && !animator.IsInTransition(layerIndex)) {
             if (DependsOnSpeed) {
                 if (animator.GetFloat(SpeedVariableName) == Speed) {
                     Destroy(animator.gameObject);

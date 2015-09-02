@@ -200,6 +200,22 @@ Prefab:
       propertyPath: WhatIsGround.m_Bits
       value: 4294966271
       objectReference: {fileID: 0}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: SoundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: SoundVictory
+      value: 
+      objectReference: {fileID: 8300000, guid: 68738bbbc4037964f8fafe2c0b35f56c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0
@@ -2332,6 +2348,18 @@ Prefab:
       propertyPath: DetectionBlock.m_Center.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: d8d0fdcb75f04c844b0d9d0644f0258c, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
     m_RemovedComponents:
     - {fileID: 5851366, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
@@ -2517,6 +2545,18 @@ Prefab:
       propertyPath: DetectionBlock.m_Extent.x
       value: 1.55999994
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: d8d0fdcb75f04c844b0d9d0644f0258c, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
     m_RemovedComponents:
     - {fileID: 5851366, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
@@ -3293,6 +3333,18 @@ Prefab:
       propertyPath: UseHightDetection
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: d8d0fdcb75f04c844b0d9d0644f0258c, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
     m_RemovedComponents:
     - {fileID: 5851366, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
@@ -3460,6 +3512,18 @@ Prefab:
       propertyPath: DetectionBlock.m_Center.x
       value: -.349999994
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: d8d0fdcb75f04c844b0d9d0644f0258c, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
     m_RemovedComponents:
     - {fileID: 5851366, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
@@ -5600,6 +5664,18 @@ Prefab:
       propertyPath: UseHightDetection
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: d8d0fdcb75f04c844b0d9d0644f0258c, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
     m_RemovedComponents:
     - {fileID: 5851366, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
@@ -8330,6 +8406,18 @@ Prefab:
       propertyPath: ProtaController
       value: 
       objectReference: {fileID: 11086482}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: d8d0fdcb75f04c844b0d9d0644f0258c, type: 3}
+    - target: {fileID: 11411182, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
+      propertyPath: SoundHurt
+      value: 
+      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
     m_RemovedComponents:
     - {fileID: 5851366, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 3806e22f64ac45544be7081e0bc82624, type: 2}

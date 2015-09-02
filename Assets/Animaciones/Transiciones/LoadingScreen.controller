@@ -13,7 +13,7 @@ AnimatorController:
     m_DefaultFloat: 1
     m_DefaultInt: 0
     m_DefaultBool: 0
-    m_Controller: {fileID: 0}
+    m_Controller: {fileID: 9100000}
   m_AnimatorLayers:
   - serializedVersion: 5
     m_Name: Base Layer
@@ -38,6 +38,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 7ed07df8cb6178346b2b0f3b61291357, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  DependsOnSpeed: 1
+  SpeedVariableName: Speed
+  Speed: 1
+  WhenDestroy: 1
 --- !u!1102 &110289484
 AnimatorState:
   serializedVersion: 5

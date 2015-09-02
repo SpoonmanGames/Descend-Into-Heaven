@@ -19,6 +19,7 @@ public class CrossEnemyCustomEditor : PlayerCustomEditor {
         SerializedProperty PlayerController = myScript.FindProperty("PlayerController");
         SerializedProperty BulletToSpawn = myScript.FindProperty("BulletToSpawn");
         SerializedProperty AttackDelay = myScript.FindProperty("AttackDelay");
+        SerializedProperty DelayBeforeAttack = myScript.FindProperty("DelayBeforeAttack");
         SerializedProperty ShootAlways = myScript.FindProperty("ShootAlways");
         SerializedProperty DetectionBlock = myScript.FindProperty("DetectionBlock");
         SerializedProperty ShootRangeBlock = myScript.FindProperty("ShootRangeBlock");
@@ -49,6 +50,7 @@ public class CrossEnemyCustomEditor : PlayerCustomEditor {
             EditorGUILayout.HelpBox(_attackDelayError, MessageType.Error);
         }
 
+        EditorGUILayout.PropertyField(DelayBeforeAttack);
         EditorGUILayout.PropertyField(ShootAlways);
 
         if (ShootAlways.boolValue) {

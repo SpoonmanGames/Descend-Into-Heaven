@@ -9,6 +9,7 @@ namespace Player {
         [SerializeField] private Player PlayerController;
         [SerializeField] private GameObject BulletToSpawn;
         public float AttackDelay = 1.0f;
+        [SerializeField] private bool DelayBeforeAttack = true;
         public bool ShootAlways = false;
         [SerializeField] private Bounds DetectionBlock;
         [SerializeField] private Bounds ShootRangeBlock;
@@ -31,6 +32,10 @@ namespace Player {
             base.Awake();
 
             ChangePlayerState(PlayerState.Idle);
+
+            if (!DelayBeforeAttack) {
+                _attackDelayCounter = AttackDelay;
+            }
         }
 
         protected override void Update() {
