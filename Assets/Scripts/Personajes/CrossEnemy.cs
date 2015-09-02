@@ -60,7 +60,6 @@ namespace Player {
                     if (ShootAtTarget) {
                         _BulletToSpawn = Instantiate(BulletToSpawn, this.transform.position + _upSpawnPosition, this.transform.rotation) as GameObject;
                         _BulletToSpawn.GetComponent<BulletController>().TargetPosition = PlayerController.transform.position;
-                        _BulletToSpawn.GetComponent<BulletController>().Direccion = -1;
                         _BulletToSpawn.GetComponent<BulletController>().SetVelocity();
                     } else {
                         if (!ChooseShootDirections || ShootLeft) {
@@ -72,14 +71,12 @@ namespace Player {
                         if (!ChooseShootDirections || ShootUp) {
                             _BulletToSpawn = Instantiate(BulletToSpawn, this.transform.position + _upSpawnPosition, this.transform.rotation) as GameObject;
                             _BulletToSpawn.GetComponent<BulletController>().TargetPosition = new Vector2(_BulletToSpawn.transform.position.x, _realShootRangeBlock.max.y);
-                            _BulletToSpawn.GetComponent<BulletController>().Direccion = 1;
                             _BulletToSpawn.GetComponent<BulletController>().SetVelocity();
                         }
 
                         if (!ChooseShootDirections || ShootRight) {
                             _BulletToSpawn = Instantiate(BulletToSpawn, this.transform.position + _rightSpawnPosition, this.transform.rotation) as GameObject;
                             _BulletToSpawn.GetComponent<BulletController>().TargetPosition = new Vector2(_realShootRangeBlock.max.x, _BulletToSpawn.transform.position.y);
-                            _BulletToSpawn.GetComponent<BulletController>().Direccion = 1;
                             _BulletToSpawn.GetComponent<BulletController>().SetVelocity();
                         }
                     }

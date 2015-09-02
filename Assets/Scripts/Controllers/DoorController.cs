@@ -119,19 +119,16 @@ public class DoorController : MonoBehaviour {
                 case TransitionDirection.Down:
                     spawPositon = this.transform.position + Vector3.up * 2.5f;
                     spawnQuaternion = new Quaternion(0.0f, 0.0f, 0.0f, 1.0f);
-                    bulletController.Direccion = -1;
                     bulletController.TargetPosition = new Vector2(this.transform.position.x, this.transform.position.y + TargetYPosition);
                     break;
                 case TransitionDirection.Left:
                     spawPositon = this.transform.position + Vector3.right * 2.5f;
                     spawnQuaternion = new Quaternion(0.0f, 0.0f, -1.0f, 1.0f);
-                    bulletController.Direccion = -1;                    
                     bulletController.TargetPosition = new Vector2(this.transform.position.x + TargetXPosition, this.transform.position.y);
                     break;
                 case TransitionDirection.Right:
                     spawPositon = this.transform.position - Vector3.right * 2.5f;
                     spawnQuaternion = new Quaternion(0.0f, 0.0f, 1.0f, 1.0f);
-                    bulletController.Direccion = 1;
                     bulletController.TargetPosition = new Vector2(this.transform.position.x + TargetXPosition, this.transform.position.y);
                     break;
             }

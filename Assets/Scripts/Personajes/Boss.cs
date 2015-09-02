@@ -45,7 +45,6 @@ namespace Player {
             this._currentDirection = "left";
             _playerController = GameObject.FindGameObjectWithTag("Player").GetComponent<Player>();
 
-            SpawnBullet.GetComponent<BulletController>().Direccion = -1;
             SpawnBullet.GetComponent<BulletController>().Tiempo = 1.0f;
             SpawnBullet.GetComponent<ChangeByTime>().LifeTime = 0.9f;
             SpawnBullet.GetComponent<BulletController>().SetVelocity();
@@ -195,7 +194,6 @@ namespace Player {
                 }
 
                 if (!dontSpawn) {
-                    SpawnBullet.GetComponent<BulletController>().Direccion = direction;
                     SpawnBullet.GetComponent<BulletController>().Tiempo = time;
                     SpawnBullet.GetComponent<ChangeByTime>().LifeTime = 0.6f;
                     SpawnBullet.GetComponent<BulletController>().TargetPosition = new Vector2(finalX, fixedY);
@@ -224,7 +222,6 @@ namespace Player {
                 fixedX = -0.701f - i * -0.466f;
 
                 if (i != hole) {
-                    SpawnBullet.GetComponent<BulletController>().Direccion = direction;
                     SpawnBullet.GetComponent<BulletController>().TargetPosition = new Vector2(fixedX, finalY);
                     SpawnBulletInHand(fixedX, initialY);
                 }

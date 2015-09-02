@@ -96,28 +96,28 @@ public class BossFightController : MonoBehaviour {
         switch (Fase) {
             case 2:
                 MoverPlataforma(
-                    0, -1,
+                    0,
                     new Vector2(
                         _plataforms[0].transform.position.x,
                         -0.086f * 3
                     )
                 );
                 MoverPlataforma(
-                    1, 1,
+                    1,
                     new Vector2(
                         _plataforms[1].transform.position.x,
                         0.091f * 3
                     )
                 );
                 MoverPlataforma(
-                    2, -1,
+                    2,
                     new Vector2(
                         _plataforms[2].transform.position.x,
                         -0.086f * 3
                     )
                 );
                 MoverPlataforma(
-                    3, 1,
+                    3,
                     new Vector2(
                         _plataforms[3].transform.position.x,
                         0.091f * 3
@@ -126,28 +126,28 @@ public class BossFightController : MonoBehaviour {
                 break;
             case 3:
                 MoverPlataforma(
-                    0, -1,
+                    0,
                     new Vector2(
                         _plataforms[0].transform.position.x,
                         -0.28f * 3
                     )
                 );
                 MoverPlataforma(
-                    1, -1,
+                    1,
                     new Vector2(
                         _plataforms[1].transform.position.x,
                         -0.148f * 3
                     )
                 );
                 MoverPlataforma(
-                    2, 1,
+                    2,
                     new Vector2(
                         _plataforms[2].transform.position.x,
                         -0.016f * 3
                     )
                 );
                 MoverPlataforma(
-                    3, 1,
+                    3,
                     new Vector2(
                         _plataforms[3].transform.position.x,
                         0.116f * 3
@@ -156,28 +156,28 @@ public class BossFightController : MonoBehaviour {
                 break;
             case 4:
                 MoverPlataforma(
-                    0, 1,
+                    0,
                     new Vector2(
                         _plataforms[0].transform.position.x,
                         0.0f
                     )
                 );
                 MoverPlataforma(
-                    1, 1,
+                    1,
                     new Vector2(
                         _plataforms[1].transform.position.x,
                         0.0f
                     )
                 );
                 MoverPlataforma(
-                    2, -1,
+                    2,
                     new Vector2(
                         _plataforms[2].transform.position.x,
                         0.0f
                     )
                 );
                 MoverPlataforma(
-                    3, -1,
+                    3,
                     new Vector2(
                         _plataforms[3].transform.position.x,
                         0.0f
@@ -187,9 +187,8 @@ public class BossFightController : MonoBehaviour {
         }
     }
 
-    void MoverPlataforma(int id, int direccion, Vector2 targetPosition){
+    void MoverPlataforma(int id, Vector2 targetPosition){
         _plataforms[id].GetComponent<BulletController>().TargetPosition = targetPosition;
-        _plataforms[id].GetComponent<BulletController>().Direccion = direccion;
         _plataforms[id].GetComponent<BulletController>().SetVelocity();
     }
 }
