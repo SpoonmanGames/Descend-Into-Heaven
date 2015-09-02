@@ -560,6 +560,7 @@ MonoBehaviour:
   limitTop: 0
   showDebugBoxes: 1
   activeTracking: 1
+  PlayerIsDead: 0
 --- !u!1 &240764330
 GameObject:
   m_ObjectHideFlags: 0
@@ -921,7 +922,7 @@ GameObject:
   - 4: {fileID: 461751020}
   - 61: {fileID: 461751019}
   - 114: {fileID: 461751018}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -946,10 +947,10 @@ MonoBehaviour:
   SceneName: 
   TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
-  PathBlocker: {fileID: 0}
-  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
-  TimeOffSet: 0
-  TargetXPosition: 0
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3.4000001
+  TargetXPosition: -.0500000007
   TargetYPosition: 0
   LeftLimit: 0
   RightLimit: 0
@@ -1320,7 +1321,7 @@ GameObject:
   - 4: {fileID: 733449891}
   - 61: {fileID: 733449893}
   - 114: {fileID: 733449892}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1357,10 +1358,10 @@ MonoBehaviour:
   SceneName: 
   TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
-  PathBlocker: {fileID: 0}
-  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
-  TimeOffSet: 0
-  TargetXPosition: 0
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3.4000001
+  TargetXPosition: -.0359999985
   TargetYPosition: 0
   LeftLimit: 0
   RightLimit: 0
@@ -1473,7 +1474,7 @@ GameObject:
   - 4: {fileID: 797975347}
   - 61: {fileID: 797975346}
   - 114: {fileID: 797975345}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -1498,10 +1499,10 @@ MonoBehaviour:
   SceneName: 
   TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
-  PathBlocker: {fileID: 0}
-  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
-  TimeOffSet: 0
-  TargetXPosition: 0
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3.4000001
+  TargetXPosition: -.0359999985
   TargetYPosition: 0
   LeftLimit: 0
   RightLimit: 0
@@ -1995,7 +1996,7 @@ GameObject:
   - 4: {fileID: 1219407849}
   - 61: {fileID: 1219407851}
   - 114: {fileID: 1219407850}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2032,10 +2033,10 @@ MonoBehaviour:
   SceneName: 
   TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
-  PathBlocker: {fileID: 0}
-  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
-  TimeOffSet: 0
-  TargetXPosition: 0
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3.4000001
+  TargetXPosition: -.0359999985
   TargetYPosition: 0
   LeftLimit: 0
   RightLimit: 0
@@ -2207,7 +2208,7 @@ GameObject:
   - 4: {fileID: 1392687358}
   - 61: {fileID: 1392687360}
   - 114: {fileID: 1392687359}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: TransitionDoor
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2244,10 +2245,10 @@ MonoBehaviour:
   SceneName: 
   TransitionEffect: {fileID: 0}
   UsePathBlocker: 1
-  PathBlocker: {fileID: 0}
-  ColorOfPathBlocker: {r: 0, g: 0, b: 0, a: 0}
-  TimeOffSet: 0
-  TargetXPosition: 0
+  PathBlocker: {fileID: 147170, guid: 139feec6146383d44ac6c4702f1d8a58, type: 2}
+  ColorOfPathBlocker: {r: 1, g: 1, b: 1, a: 1}
+  TimeOffSet: 3.4000001
+  TargetXPosition: -.0359999985
   TargetYPosition: 0
   LeftLimit: 0
   RightLimit: 0
@@ -2337,6 +2338,76 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300002, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+--- !u!1 &1510102278
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 144010, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1510102279}
+  - 212: {fileID: 1510102281}
+  - 61: {fileID: 1510102280}
+  m_Layer: 0
+  m_Name: MediumRockPlataform (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1510102279
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 433814, guid: 48ba9d9d73a50614aaf974c2acb90a2a, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1510102278}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: .00600000005, y: -.0930000022, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1754583486}
+  m_RootOrder: 4
+--- !u!61 &1510102280
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 6102360, guid: 48ba9d9d73a50614aaf974c2acb90a2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1510102278}
+  m_Enabled: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_UsedByEffector: 0
+  m_Offset: {x: 1.49011612e-08, y: 0}
+  serializedVersion: 2
+  m_Size: {x: .137999997, y: .0251000002}
+--- !u!212 &1510102281
+SpriteRenderer:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 21268776, guid: 48ba9d9d73a50614aaf974c2acb90a2a,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1510102278}
+  m_Enabled: 1
+  m_CastShadows: 0
+  m_ReceiveShadows: 0
+  m_Materials:
+  - {fileID: 10754, guid: 0000000000000000e000000000000000, type: 0}
+  m_SubsetIndices: 
+  m_StaticBatchRoot: {fileID: 0}
+  m_UseLightProbes: 1
+  m_ReflectionProbeUsage: 1
+  m_ProbeAnchor: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_ImportantGI: 0
+  m_AutoUVMaxDistance: .5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingOrder: 0
+  m_Sprite: {fileID: 21300008, guid: 8610dff8f5fd4034bb6a414134c01354, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1592016501
 GameObject:
@@ -2502,7 +2573,7 @@ GameObject:
   - 4: {fileID: 1739968164}
   - 212: {fileID: 1739968166}
   - 68: {fileID: 1739968165}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UpperRockCeiling (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -2592,6 +2663,7 @@ Transform:
   - {fileID: 1459520556}
   - {fileID: 1696323032}
   - {fileID: 797975347}
+  - {fileID: 1510102279}
   m_Father: {fileID: 0}
   m_RootOrder: 2
 --- !u!1 &1790520387
@@ -2738,7 +2810,7 @@ GameObject:
   - 4: {fileID: 1926094472}
   - 212: {fileID: 1926094474}
   - 68: {fileID: 1926094473}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: UpperRockCeiling
   m_TagString: Untagged
   m_Icon: {fileID: 0}

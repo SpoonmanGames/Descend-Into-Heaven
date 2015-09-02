@@ -58,8 +58,7 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: .599999905
   DestruirAlTerminar: 0
-  Direccion: 1
-  TargetPosition: {x: 3.22799993, y: 0}
+  TargetPosition: {x: 9.92399979, y: 0}
 --- !u!212 &21201098
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -112,6 +111,18 @@ Prefab:
     - target: {fileID: 0}
       propertyPath: m_Layer
       value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.r
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 0}
+      propertyPath: m_Color.b
+      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
