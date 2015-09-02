@@ -177,10 +177,10 @@ namespace Player {
 
             if (direction == -1) {
                 initialX = 1.256f;
-                finalX = -1.437595f;
+                finalX = -2.837595f;
             } else {
                 initialX = -1.437595f;
-                finalX = 1.256f;
+                finalX = 2.856f;
             }
 
             for (int i = 0; i < numberfShots; i++) {
@@ -212,10 +212,10 @@ namespace Player {
 
             if (direction == -1) {
                 initialY = 1.15f;
-                finalY = -1.158f;
+                finalY = -2.158f;
             } else {
                 initialY = -1.158f;
-                finalY = 1.15f;
+                finalY = 2.15f;
             }
 
             for (int i = 0; i < 4; i++) {

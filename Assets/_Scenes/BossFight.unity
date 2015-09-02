@@ -202,8 +202,8 @@ MonoBehaviour:
   CeilingRadius: .00999999978
   StateVariableName: State
   SpeedVariableName: Speed
-  vSpeedVariableName: vSpeed
-  GroundVariableName: Ground
+  vSpeedVariableName: 
+  GroundVariableName: 
   SoundIdle: {fileID: 0}
   SoundWalking: {fileID: 0}
   SoundAttacking: {fileID: 8300000, guid: 94e694913456a7246879bdf51ca5fea9, type: 3}
