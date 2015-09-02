@@ -20,25 +20,22 @@ namespace Player {
     [ExecuteInEditMode]
     public abstract class Player : MonoBehaviour {
 
-        [Header("Base Setup")]
         public int Life = 1;
-        public int AttackDamage = 1;
-        [Space(10)]
+        public int AttackDamage = 1;      
         public float WalkingSpeed = 1.0f;
         public float JumpForce = 200.0f;
         [SerializeField] private bool AirControl = true;
         [SerializeField] private bool UseGroundAndCeilingDetection = true;
         [SerializeField] private LayerMask WhatIsGround;
-        [Header("Ground and Ceiling Setup")]
+
         [SerializeField] private float GroundedRadius = 0.2f;
         [SerializeField] private float CeilingRadius = 0.01f;
-        [Header("Animator Setup")]
+        
         [SerializeField] protected string StateVariableName = "State";
         [SerializeField] protected string SpeedVariableName = "Speed";
         [SerializeField] protected string vSpeedVariableName = "vSpeed";
         [SerializeField] protected string GroundVariableName = "Ground";
 
-        [Header("Audio Setup")]
         [SerializeField] protected AudioClip SoundIdle;                
 	    [SerializeField] protected AudioClip SoundWalking;
 	    [SerializeField] protected AudioClip SoundAttacking;
@@ -48,7 +45,6 @@ namespace Player {
 	    [SerializeField] protected AudioClip SoundHurt;
         [SerializeField] protected AudioClip SoundIdleAir;
 
-        [Header("Debbuger Setup")]
         [SerializeField] protected bool EditorDebugMode = true;
 
         [HideInInspector] public bool IsFreeToMove = true;
