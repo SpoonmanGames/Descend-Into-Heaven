@@ -468,7 +468,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 10
   DestruirAlTerminar: 0
-  Direccion: -1
   TargetPosition: {x: 0, y: .354000002}
 --- !u!1 &1113220011
 GameObject:
@@ -543,7 +542,7 @@ MonoBehaviour:
   - {x: -.600000024, y: -.308999985}
   - {x: -.75, y: -.573000073}
   - {x: -.540000021, y: -.851999879}
-  SceneToLoad: SceneDungeon2
+  SceneToLoad: SceneDungeon3
   TitleCreditScreen: {fileID: 1050062154}
   MenuOptions: {fileID: 1730101081}
   TransitionToScene: {fileID: 136930, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}

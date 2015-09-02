@@ -13,3 +13,5 @@ EditorBuildSettings:
     path: Assets/_Scenes/SceneDungeon1.unity
   - enabled: 1
     path: Assets/_Scenes/SceneDungeon2.unity
+  - enabled: 1
+    path: Assets/_Scenes/SceneDungeon3.unity
