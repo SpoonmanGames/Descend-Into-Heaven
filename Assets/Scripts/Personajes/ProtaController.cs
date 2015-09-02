@@ -80,6 +80,7 @@ namespace Player {
         void TransitioningOut() {
             Vector3 posicion = GameObject.FindGameObjectWithTag("MainCamera").transform.position;
             posicion.z = this.transform.position.z;
+            GameObject.FindGameObjectWithTag("MainCamera").GetComponent<SuperMetroidCameraController>().PlayerIsDead = true;
 
             _transitionOut = Instantiate(TransitionOut, posicion, this.transform.rotation) as GameObject;
             _transitionOut.GetComponent<SpriteRenderer>().sortingOrder = 10;

@@ -60,10 +60,13 @@ public class SuperMetroidCameraController : MonoBehaviour {
 	[HideInInspector] 
 	public bool activeTracking = true;
 
+    [HideInInspector]
+    public bool PlayerIsDead = false;
+
 	private Vector3 cameraPosition;
 	private Vector3 playerPosition;
 	private Vector3 previousPlayerPosition;
-	private Rect windowRect;
+	private Rect windowRect;    
 	
 	void Start () {
 		
@@ -90,11 +93,12 @@ public class SuperMetroidCameraController : MonoBehaviour {
 
 	}
 	
-	
 	void LateUpdate()
 	{
 		//Updates the camera position based on player location
-		CameraUpdate();
+        if (!PlayerIsDead) {
+            CameraUpdate();
+        }
 		
 		// This draws the camera boundary rectangle
 		if(showDebugBoxes) DrawDebugBox();
