@@ -13107,7 +13107,7 @@ Prefab:
     - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: SoundHurt
       value: 
-      objectReference: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: SoundJumping
       value: 
@@ -13119,7 +13119,7 @@ Prefab:
     - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: SoundVictory
       value: 
-      objectReference: {fileID: 8300000, guid: 68738bbbc4037964f8fafe2c0b35f56c, type: 3}
+      objectReference: {fileID: 0}
     - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
       propertyPath: SoundAttacking
       value: 
