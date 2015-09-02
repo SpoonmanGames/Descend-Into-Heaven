@@ -206,11 +206,11 @@ MonoBehaviour:
   GroundVariableName: Ground
   SoundIdle: {fileID: 0}
   SoundWalking: {fileID: 0}
-  SoundAttacking: {fileID: 0}
+  SoundAttacking: {fileID: 8300000, guid: 94e694913456a7246879bdf51ca5fea9, type: 3}
   SoundJumping: {fileID: 0}
-  SoundDead: {fileID: 0}
+  SoundDead: {fileID: 8300000, guid: a57735772ed3d8b47a1c4c344922d27b, type: 3}
   SoundVictory: {fileID: 0}
-  SoundHurt: {fileID: 0}
+  SoundHurt: {fileID: 8300000, guid: c72f6eaba71fba7449dbeadfaaebafb3, type: 3}
   SoundIdleAir: {fileID: 0}
   EditorDebugMode: 1
   IsFreeToMove: 1
@@ -292,7 +292,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!1001 &472836478
 Prefab:
@@ -523,6 +522,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 10
       objectReference: {fileID: 0}
+    - target: {fileID: 8259506, guid: 429b3a0f8dff78b4da523b4b76084a96, type: 2}
+      propertyPath: m_Volume
+      value: .600000024
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 429b3a0f8dff78b4da523b4b76084a96, type: 2}
   m_IsPrefabParent: 0
@@ -567,7 +570,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 136930, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
@@ -585,7 +588,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478040, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: .349999994
       objectReference: {fileID: 0}
     - target: {fileID: 478040, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
       propertyPath: m_LocalPosition.z
@@ -613,11 +616,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 478040, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
       propertyPath: m_LocalScale.x
-      value: 2.23749971
+      value: 2.46124983
       objectReference: {fileID: 0}
     - target: {fileID: 478040, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1.99999952
+      value: 2.92000008
+      objectReference: {fileID: 0}
+    - target: {fileID: 137846, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
+      propertyPath: m_Layer
+      value: 10
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e2a2bfeac49bc2d4c9685157de048b7e, type: 2}
@@ -740,7 +747,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!1 &1090608176 stripped
 GameObject:
@@ -768,6 +774,7 @@ MonoBehaviour:
   limitTop: 0
   showDebugBoxes: 1
   activeTracking: 1
+  PlayerIsDead: 0
 --- !u!1001 &1205071854
 Prefab:
   m_ObjectHideFlags: 0
@@ -955,7 +962,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!4 &1453841226 stripped
 Transform:
@@ -1178,7 +1184,6 @@ MonoBehaviour:
   "Da\xF1o": 0
   Tiempo: 1
   DestruirAlTerminar: 0
-  Direccion: -1
   TargetPosition: {x: 0, y: 0}
 --- !u!1 &1695941364
 GameObject:
@@ -1501,6 +1506,18 @@ Prefab:
       propertyPath: TransitionOut
       value: 
       objectReference: {fileID: 136930, guid: dd0716e764d8ff04f88a0bce7b788ca0, type: 2}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: SoundAttacking
+      value: 
+      objectReference: {fileID: 8300000, guid: 8efbd34aee1868e42b180b1065add2e5, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: SoundDead
+      value: 
+      objectReference: {fileID: 8300000, guid: b0356e7df8704bb4ea53f9592cfd5ec3, type: 3}
+    - target: {fileID: 11451760, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
+      propertyPath: SoundVictory
+      value: 
+      objectReference: {fileID: 8300000, guid: 68738bbbc4037964f8fafe2c0b35f56c, type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e315fd74dec7ae043bcd8551ed0f4c83, type: 2}
   m_IsPrefabParent: 0

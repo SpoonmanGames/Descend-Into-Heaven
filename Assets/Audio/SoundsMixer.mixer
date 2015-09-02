@@ -13,7 +13,7 @@ AudioMixerController:
   - {fileID: 24571144}
   - {fileID: 24500003}
   - {fileID: 24563676}
-  m_StartSnapshot: {fileID: 24563676}
+  m_StartSnapshot: {fileID: 24509296}
   m_SuspendThreshold: -80
   m_EnableSuspend: 1
   m_ExposedParameters: []
@@ -26,7 +26,7 @@ AudioMixerController:
     - d63ac1457a9b0e342a49cc4cdf0326ac
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 24563676}
+  m_TargetSnapshot: {fileID: 24571144}
 --- !u!243 &24300001
 AudioMixerGroupController:
   m_ObjectHideFlags: 0
@@ -190,7 +190,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 8176d4fd68d200644b8d7a76ca150136
   m_FloatValues:
-    a491e142df519aa4a9dc1a60e50cfce7: -13.6372557
+    a491e142df519aa4a9dc1a60e50cfce7: -.166851878
     03298536bea349746bfa0dafbc9b6e9a: -80
     bea2444a0d44f234e938a650c54e9925: -80
   m_TransitionOverrides: {}
@@ -203,10 +203,10 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 5e58c7d206c0e374281acb38942afbbb
   m_FloatValues:
-    a491e142df519aa4a9dc1a60e50cfce7: -9.83328629
+    a491e142df519aa4a9dc1a60e50cfce7: 0
     03298536bea349746bfa0dafbc9b6e9a: -80
     bea2444a0d44f234e938a650c54e9925: -.272099018
-    c40aab2f06faf544890639e6cd94647f: -9.33211231
+    c40aab2f06faf544890639e6cd94647f: -4.93564129
   m_TransitionOverrides: {}
 --- !u!245 &24563676
 AudioMixerSnapshotController:
@@ -217,7 +217,7 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 4554cd72898eeca4fa811404d2e03f27
   m_FloatValues:
-    a491e142df519aa4a9dc1a60e50cfce7: -10.3452072
+    a491e142df519aa4a9dc1a60e50cfce7: -.397626281
     bea2444a0d44f234e938a650c54e9925: .10800299
     c40aab2f06faf544890639e6cd94647f: -80
   m_TransitionOverrides: {}
@@ -230,8 +230,8 @@ AudioMixerSnapshotController:
   m_AudioMixer: {fileID: 24100000}
   m_SnapshotID: 6937badb4cf490346842d9ec9001aa33
   m_FloatValues:
-    a491e142df519aa4a9dc1a60e50cfce7: -9.83328629
+    a491e142df519aa4a9dc1a60e50cfce7: -.0837482885
     a4675f373bd0090439a641c8ad746720: -80
     bea2444a0d44f234e938a650c54e9925: -.272099018
-    c40aab2f06faf544890639e6cd94647f: -3.18411088
+    c40aab2f06faf544890639e6cd94647f: -2.87229538
   m_TransitionOverrides: {}
